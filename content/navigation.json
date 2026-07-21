@@ -1,0 +1,17 @@
+{
+  "header": [
+    { "label": "Tours", "url": "/tours" },
+    { "label": "Places", "url": "/places" },
+    { "label": "Planning", "url": "/planning" },
+    { "label": "How it works", "url": "/how-it-works" },
+    { "label": "Contact", "url": "/contact" }
+  ],
+  "footer": [
+    { "label": "Home", "url": "/" },
+    { "label": "Private tours", "url": "/tours" },
+    { "label": "Places", "url": "/places" },
+    { "label": "Planning", "url": "/planning" },
+    { "label": "How it works", "url": "/how-it-works" },
+    { "label": "Contact", "url": "/contact" }
+  ]
+}

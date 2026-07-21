@@ -1,0 +1,23 @@
+---
+import type { CTABannerBlock } from '../../lib/types'
+import Button from '../ui/Button.astro'
+
+const { heading, body, button, style } = Astro.props as CTABannerBlock
+---
+
+{/* Shallower rhythm than a content section on purpose (a banner is one line
+    of intent, not a section of reading), but it still steps across two tiers
+    rather than sitting at a single fixed height at every width. */}
+<section class="reveal relative isolate overflow-hidden bg-brand-primary py-12 md:py-16 lg:py-20 text-white">
+  <div class="mx-auto max-w-4xl px-6 text-center">
+    <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-balance">{heading}</h2>
+    {body && <p class="mt-4 text-white/85">{body}</p>}
+    {button?.label && (
+      <div class="mt-7 lg:mt-8">
+        <Button href={button.url} variant={style === 'outline' ? 'outline' : 'solid'} class={style === 'outline' ? '!border-white !text-white hover:!bg-white hover:!text-brand-primary' : ''}>
+          {button.label}
+        </Button>
+      </div>
+    )}
+  </div>
+</section>

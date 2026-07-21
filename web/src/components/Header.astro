@@ -1,0 +1,127 @@
+---
+import type { SiteSettings, Navigation } from '../lib/types'
+import { mediaUrl } from '../lib/content'
+
+interface Props {
+  siteSettings: SiteSettings
+  navigation: Navigation
+}
+
+const { siteSettings, navigation } = Astro.props
+
+// The lockup is the harvested mark (plane + dotted flight path, redrawn as
+// SVG and re-inked per brand-direction.md's logo decision) with the wordmark
+// re-set live in the display face beside it. Setting the wordmark as styled
+// text is the "keep the mark, re-set the wordmark" outcome, not a skipped
+// logo: an SVG <img> cannot load the page's webfont, so baking Alegreya into
+// the file would mean outlining type for no benefit.
+//
+// The booking path is a person (the language's guardrail), so the header's
+// action is tap-to-call: Geoff's mobile on md+, and both people inside the
+// mobile panel.
+const person = siteSettings.contact?.people?.[0]
+const tel = (phone: string) => `tel:${phone.replace(/\s+/g, '')}`
+---
+
+<header class="sticky top-0 z-50 bg-brand-surface/95 backdrop-blur border-b border-brand-rule-light">
+  <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
+    {/* Eager but never fetchpriority=high: that belongs to the hero image. */}
+    <a href="/" class="flex items-center gap-2.5 shrink-0">
+      {siteSettings.logo && (
+        <img
+          src={mediaUrl(siteSettings.logo.url)}
+          alt=""
+          class="h-7 sm:h-8 w-auto"
+          decoding="async"
+        />
+      )}
+      <span class="font-heading text-lg sm:text-xl font-bold text-brand-secondary leading-none">{siteSettings.businessName}</span>
+    </a>
+
+    {/* Desktop nav and call button are hidden md:*, with the mobile
+        equivalent relocated (not deleted) into the <details> panel below. */}
+    <nav class="hidden md:flex gap-5 lg:gap-7 text-sm font-bold">
+      {navigation.header?.map((link) => (
+        <a href={link.url} class="text-brand-secondary hover:text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{link.label}</a>
+      ))}
+    </nav>
+
+    {person && (
+      <a
+        href={tel(person.phone)}
+        class="hidden md:inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2 text-sm font-bold text-brand-text-invert hover:bg-brand-primary-light transition-colors duration-(--motion-fast) ease-brand"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Call {person.name}
+      </a>
+    )}
+
+    {/* Mobile nav: native <details>/<summary>. The script below adds
+        aria-expanded, outside-tap close and Escape close; the menu works
+        without it. */}
+    <details class="group md:hidden relative" data-mobile-menu>
+      <summary class="list-none cursor-pointer p-3 -m-3 [&::-webkit-details-marker]:hidden">
+        <span class="sr-only group-open:hidden">Open menu</span>
+        <span class="sr-only hidden group-open:inline">Close menu</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="text-brand-secondary" />
+        </svg>
+      </summary>
+      <div class="absolute right-0 top-full mt-3 w-72 rounded-brand-md bg-brand-surface shadow-brand-card border border-brand-rule-light p-5 flex flex-col gap-4">
+        <nav class="flex flex-col gap-1 text-sm font-bold">
+          {navigation.header?.map((link) => (
+            <a href={link.url} class="py-2.5 text-brand-secondary hover:text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{link.label}</a>
+          ))}
+        </nav>
+        {siteSettings.contact?.people?.length && (
+          <div class="border-t border-brand-rule-light pt-4 flex flex-col gap-2">
+            {siteSettings.contact.people.map((p) => (
+              <a
+                href={tel(p.phone)}
+                class="inline-flex items-center justify-between rounded-full bg-brand-primary px-5 py-3 text-sm font-bold text-brand-text-invert hover:bg-brand-primary-light transition-colors duration-(--motion-fast) ease-brand"
+              >
+                <span>Call {p.name}</span>
+                <span>{p.phone}</span>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </details>
+  </div>
+</header>
+
+<script>
+  // Progressive enhancement for the <details> mobile menu: explicit
+  // aria-expanded, outside-tap close, Escape close with focus return. The
+  // menu is operable without any of it (native <summary> semantics).
+  function initMobileMenu() {
+    const menus = document.querySelectorAll<HTMLDetailsElement>('details[data-mobile-menu]')
+    menus.forEach((menu) => {
+      if (menu.dataset.menuBound === 'true') return
+      menu.dataset.menuBound = 'true'
+
+      const summary = menu.querySelector('summary')
+      if (!summary) return
+
+      const sync = () => summary.setAttribute('aria-expanded', String(menu.open))
+      sync()
+      menu.addEventListener('toggle', sync)
+
+      document.addEventListener('click', (event) => {
+        const target = event.target as Node | null
+        if (menu.open && target && !menu.contains(target)) menu.open = false
+      })
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu.open) {
+          menu.open = false
+          summary.focus()
+        }
+      })
+    })
+  }
+
+  initMobileMenu()
+  document.addEventListener('astro:page-load', initMobileMenu)
+</script>

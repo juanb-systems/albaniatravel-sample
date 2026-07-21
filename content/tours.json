@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Albania Highlights",
+    "slug": "albania-highlights",
+    "style": "9-day leisurely cultural private tour",
+    "days": 9,
+    "nights": 8,
+    "priceFromEUR": 1220,
+    "summary": "A relaxed north-to-south loop for travellers who want to see as much of Albania as nine days allows: the Alps, the castles, the winery table, the boat day and the Riviera, ending in Tirana.",
+    "priceTiers": [
+      { "label": "Self-drive", "fromEUR": 1220, "covers": "3-star plus hotels, half board, vehicle and vehicle insurance" },
+      { "label": "With an English-speaking driver-guide", "fromEUR": 1970, "covers": "adds fuel, tolls, parking and entry fees" },
+      { "label": "Premium hotels with driver-guide", "fromEUR": 2440, "covers": "4 and 5-star stays where the route allows" }
+    ],
+    "entryOption": null,
+    "countries": ["Albania"],
+    "routeStops": [
+      { "days": "Day 1", "place": "Shkodra", "note": "Arrive at Tirana's Mother Teresa Airport and travel north for the first night in the lakeside university town." },
+      { "days": "Day 2", "place": "Lake Komani and Valbona", "note": "The ferry through the Komani gorges, then up into the Valbona valley under the Accursed Mountains." },
+      { "days": "Day 3", "place": "Kruja", "note": "South to Skanderbeg's hilltop castle, the museum and the old bazaar." },
+      { "days": "Day 4", "place": "Berat", "note": "The town of a thousand windows. The night is spent in a family-run guest house inside the castle walls." },
+      { "days": "Day 5", "place": "Ardenica and Vlora", "note": "A winery in the Ardenica hills, cooking from the grandmother's recipes, then on to Vlora." },
+      { "days": "Day 6", "place": "Sazan and Karaburun", "note": "By boat to Albania's only island, once a Cold War base, and the beaches of the Karaburun peninsula." },
+      { "days": "Day 7", "place": "The Riviera", "note": "The Ionian coastline: Himara, Porto Palermo, Gjipe and Dhermi, with time for a swim." },
+      { "days": "Day 8", "place": "Blue Eye and Gjirokastra", "note": "The spring, then the UNESCO stone city, then north to the capital." },
+      { "days": "Day 9", "place": "Tirana", "note": "Depart Albania, or begin your own itinerary." }
+    ],
+    "order": 1
+  },
+  {
+    "name": "Albania Discovery",
+    "slug": "albania-discovery",
+    "style": "9-day unhurried tour with extended stays",
+    "days": 9,
+    "nights": 8,
+    "priceFromEUR": 1220,
+    "summary": "The same country at half the pace: multi-night stays in four places instead of a new bed every night, with each day's excursion chosen on the day. Their word for it is unhurried, and it is the right word.",
+    "priceTiers": [
+      { "label": "Self-drive", "fromEUR": 1220, "covers": "3-star plus hotels, half board, vehicle and vehicle insurance" },
+      { "label": "With an English-speaking driver-guide", "fromEUR": 1970, "covers": "adds fuel, tolls, parking and entry fees" },
+      { "label": "Premium hotels with driver-guide", "fromEUR": 2440, "covers": "4 and 5-star stays where the route allows" }
+    ],
+    "entryOption": "Start from Tirana, or fly to Corfu and cross to Sarande by ferry in about forty minutes.",
+    "countries": ["Albania"],
+    "routeStops": [
+      { "days": "Days 1 and 2", "place": "Sarande", "note": "Settle in on the Riviera. Butrint, Ksamil, the Blue Eye, Gjirokastra and Permet are all day trips, or stay put on the esplanade." },
+      { "days": "Day 3", "place": "The Riviera road", "note": "Himara, Porto Palermo, Jal, Gjipe and Dhermi on the way north, ending inside Berat castle for the night." },
+      { "days": "Day 4", "place": "Berat to Tirana", "note": "Via the lake country of Belshi, with lunch at the Manushi family's table: her recipes, his home-made wine." },
+      { "days": "Days 5 and 6", "place": "Tirana, Kruja and Durres", "note": "The capital's museums and cafes, Kruja's castle and bazaar, and the old Roman port of Durres." },
+      { "days": "Days 7 and 8", "place": "Shkodra", "note": "Two nights in the north, with the lakes, the mountains and the scenic walks within reach." },
+      { "days": "Day 9", "place": "Tirana", "note": "Back to the capital in time for your departure." }
+    ],
+    "order": 2
+  },
+  {
+    "name": "Balkans Explorer",
+    "slug": "balkans-explorer",
+    "style": "14-day regional private tour",
+    "days": 14,
+    "nights": 13,
+    "priceFromEUR": 2740,
+    "summary": "Two weeks across four countries: the whole Albanian circuit plus Kosovo's monastery towns, Skopje, Lake Ohrid and a ferry day on Corfu. Border crossings are straightforward on an Australian passport.",
+    "priceTiers": [
+      { "label": "Self-drive", "fromEUR": 2740, "covers": "3-star plus hotels, half board, vehicle, insurance and the return Corfu ferry" },
+      { "label": "With an English-speaking driver-guide", "fromEUR": 3660, "covers": "adds fuel, tolls, parking and entry fees" },
+      { "label": "Premium hotels with driver-guide", "fromEUR": 4410, "covers": "4 and 5-star stays where the route allows" }
+    ],
+    "entryOption": null,
+    "countries": ["Albania", "Kosovo", "North Macedonia", "Corfu (Greece)"],
+    "routeStops": [
+      { "days": "Days 1 and 2", "place": "Shkodra and the Alps", "note": "Arrive and head north, then take the Komani ferry and walk the Valbona valley." },
+      { "days": "Day 3", "place": "Decan and Prizren", "note": "Across the Kosovo border to the 13th-century Decan Monastery and the cobbled streets of Prizren." },
+      { "days": "Day 4", "place": "Skopje", "note": "Into North Macedonia, with a local guide for the centre and the old Carshija quarter." },
+      { "days": "Day 5", "place": "Lake Ohrid", "note": "One of Europe's deepest and oldest lakes, with the night on the Albanian shore at Pogradec." },
+      { "days": "Day 6", "place": "Korca and Voskopoja", "note": "The old bazaar and Albania's oldest brewery, then a hotel in the pines at Voskopoja." },
+      { "days": "Day 7", "place": "The Vjosa and Permet", "note": "Along the wild river to a family farm, the thermal springs and the Lengarica canyon." },
+      { "days": "Day 8", "place": "Gjirokastra to Sarande", "note": "The stone city, the Blue Eye and Butrint, ending at a seafront hotel." },
+      { "days": "Day 9", "place": "Corfu", "note": "The forty-minute ferry across for a day in the old town, returning to Sarande." },
+      { "days": "Day 10", "place": "The Riviera and Llogara", "note": "Porto Palermo, Himara and Dhermi, then over the 1,100-metre pass to an alpine hotel and Caesar's Path." },
+      { "days": "Day 11", "place": "Berat", "note": "The castle with a local guide, the Onufri Museum, and a converted house within the walls for the night." },
+      { "days": "Days 12 to 14", "place": "Durres and Tirana", "note": "The old Roman seaport, founded in 627 BC, then the capital until departure." }
+    ],
+    "order": 3
+  }
+]

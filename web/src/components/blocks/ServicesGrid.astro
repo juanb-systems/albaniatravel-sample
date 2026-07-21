@@ -1,0 +1,67 @@
+---
+import type { ServicesGridBlock } from '../../lib/types'
+import { mediaUrl } from '../../lib/content'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { eyebrow, heading, subheading, services, columns } = Astro.props as ServicesGridBlock
+
+// Every column count steps through 2-up before it reaches its target, rather
+// than jumping straight from a single column to three or four. The 640-1024
+// band is a real population (large phones in landscape, small tablets, split
+// windows) and giving it the phone layout wastes half the screen while giving
+// it the desktop layout produces unreadably narrow cards.
+const colClass: Record<string, string> = {
+  '2': 'sm:grid-cols-2',
+  '3': 'sm:grid-cols-2 lg:grid-cols-3',
+  '4': 'sm:grid-cols-2 lg:grid-cols-4',
+}
+---
+
+<section class="reveal bg-brand-surface py-14 md:py-24 lg:py-32">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="max-w-2xl">
+      <Eyebrow text={eyebrow} />
+      <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-balance">{heading}</h2>
+      {subheading && <p class="mt-4 text-brand-secondary/70">{subheading}</p>}
+    </div>
+    <div class={`mt-10 lg:mt-12 grid gap-6 sm:gap-8 ${colClass[columns]}`}>
+      {services?.map((service, i) => (
+        /* The reveal root is a WRAPPER, not the card itself, and that is
+           deliberate rather than incidental markup. `.reveal` owns the
+           element's `transition` shorthand at entrance speed; the card owns
+           its own transition at interaction speed for the hover lift. Put
+           both on one element and the unlayered `.reveal` rule wins, so the
+           hover lift silently inherits the slow entrance timing and the card
+           feels sluggish to the touch. One element, one motion job.
+
+           Each wrapper carries its own --i so the grid populates as a
+           cascade rather than every card arriving on one frame, which reads
+           as a page-load flash rather than a reveal. The cascade cap lives
+           in the `.reveal` rule in global.css, not here. */
+        <div class="reveal" style={`--i:${i}`}>
+        <a href={`/services/${service.slug}`} class="group relative block h-full rounded-brand-lg border border-black/5 p-6 sm:p-8 shadow-brand-card hover:-translate-y-1 transition-all duration-(--motion-fast) ease-brand bg-white overflow-hidden">
+          {/* Top accent rule appears on hover instead of relying on lift alone:
+              a second, non-color-dependent signal, and a small structured
+              detail that reads as considered rather than a stock card. */}
+          <span class="absolute inset-x-0 top-0 h-1 bg-brand-accent-strong scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-(--motion-base) ease-brand" aria-hidden="true"></span>
+          {service.image && (
+            <img
+              src={mediaUrl(service.image.url)}
+              alt={service.image.alt}
+              class="w-full h-40 object-cover rounded-brand-md mb-6"
+              loading="lazy"
+              decoding="async"
+            />
+          )}
+          {/* No decorative index number: prominent numerals read as invented
+              "stats" and the client dislikes them (see SKILL.md). */}
+          <h3 class="font-heading text-lg sm:text-xl font-semibold text-brand-secondary group-hover:text-brand-accent-strong transition-colors duration-(--motion-fast) ease-brand">
+            {service.title}
+          </h3>
+          <p class="mt-3 text-sm text-brand-secondary/70">{service.summary}</p>
+        </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

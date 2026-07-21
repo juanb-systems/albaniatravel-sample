@@ -1,0 +1,49 @@
+---
+import type { FAQBlock } from '../../lib/types'
+import { renderRichText } from '../../lib/richtext'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { eyebrow, heading, background, items, groups } = Astro.props as FAQBlock
+
+// Used exactly once, on Planning, where the client's own FAQ is genuinely
+// their strongest practical content. Grouped by topic because a flat list of
+// twenty-plus answers is unscannable; a flat `items` list still renders for
+// kit compatibility. Native <details>/<summary>: keyboard-operable with no
+// script. This page deliberately ends here with no CTA (site-structure.json):
+// it answers practicalities and stops.
+
+const renderGroups = groups?.length
+  ? groups
+  : items?.length
+    ? [{ title: '', items }]
+    : []
+---
+
+<section class={`reveal ${bgClass(background)}`}>
+  <div class="mx-auto max-w-4xl px-6 py-16 md:py-24 lg:py-28">
+    <Eyebrow text={eyebrow} />
+    {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+
+    <div class="mt-10 space-y-10">
+      {renderGroups.map((group) => (
+        <div class="reveal">
+          {group.title && <h3 class="font-heading text-xl font-bold text-brand-primary">{group.title}</h3>}
+          <div class="mt-3 divide-y divide-brand-rule-light">
+            {group.items.map((item, i) => (
+              <details class="group py-1" style={`--i:${i}`}>
+                {/* px-2 sm:px-4: the wide-screen indent is width the question
+                    needs back at 390px. py-4 keeps the row over 44px. */}
+                <summary class="flex cursor-pointer items-center justify-between gap-4 rounded-brand-sm px-2 sm:px-4 py-4 font-bold text-brand-secondary transition-colors duration-(--motion-fast) ease-brand hover:bg-brand-primary-soft [&::-webkit-details-marker]:hidden list-none">
+                  {item.question}
+                  <span class="shrink-0 transition-transform duration-(--motion-base) ease-brand group-open:rotate-45 text-brand-accent-strong text-xl leading-none" aria-hidden="true">+</span>
+                </summary>
+                <div class="flow mx-2 sm:mx-4 mt-1 mb-4 border-l-2 border-brand-primary/30 py-1 pl-4 text-brand-text-muted" set:html={renderRichText(item.answer)} />
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

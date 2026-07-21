@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlockRenderer from '../components/BlockRenderer.astro'
+import { getPages } from '../lib/content'
+
+export async function getStaticPaths() {
+  const pages = await getPages()
+  return pages
+    .filter((p) => p.slug !== 'home')
+    .map((p) => ({ params: { slug: p.slug }, props: { page: p } }))
+}
+
+const { page } = Astro.props
+---
+
+<BaseLayout title={page.seo?.metaTitle || page.title} description={page.seo?.metaDescription}>
+  <BlockRenderer blocks={page.layout} />
+</BaseLayout>

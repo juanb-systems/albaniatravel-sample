@@ -1,0 +1,101 @@
+---
+import type { EnquiryFormBlock } from '../../lib/types'
+import { bgClass } from '../../lib/backgrounds'
+
+const { background, heading, intro, tourOptions, responseNote, people } = Astro.props as EnquiryFormBlock
+
+// Mirrors the client's own live form fields (name, adults, children, phone,
+// email, preferred contact method, notes) plus which tour shape the enquiry
+// is about, because that is the first thing Geoff or James would ask. The
+// direct details sit beside the form WITH EQUAL WEIGHT: the phone is not a
+// fallback here, it is the product.
+//
+// Static build: the form posts nowhere yet and the responseNote says so
+// honestly. Wiring it to a handler is a Stage 9 handoff task (recorded in
+// site-structure.json and the QA report).
+
+const tel = (phone: string) => `tel:${phone.replace(/\s+/g, '')}`
+const inputClasses = 'w-full rounded-brand-sm border border-brand-border-light bg-brand-surface px-4 py-3 text-brand-neutral-dark placeholder:text-brand-text-muted/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary transition-shadow duration-(--motion-fast) ease-brand'
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-14 md:py-20 lg:py-24">
+    <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16">
+      <div>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-brand-secondary">{heading}</h2>
+        {intro && <p class="mt-3 text-brand-text-muted max-w-prose">{intro}</p>}
+
+        <form class="mt-8 grid gap-5 sm:grid-cols-2" action="#" method="post">
+          <div class="sm:col-span-2">
+            <label for="fullName" class="mb-1.5 block text-sm font-bold text-brand-secondary">Your name</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" class={inputClasses} />
+          </div>
+          <div>
+            <label for="adults" class="mb-1.5 block text-sm font-bold text-brand-secondary">Adults travelling</label>
+            <input id="adults" name="adults" type="number" min="1" inputmode="numeric" class={inputClasses} />
+          </div>
+          <div>
+            <label for="children" class="mb-1.5 block text-sm font-bold text-brand-secondary">Children travelling</label>
+            <input id="children" name="children" type="number" min="0" inputmode="numeric" class={inputClasses} />
+          </div>
+          <div>
+            <label for="phone" class="mb-1.5 block text-sm font-bold text-brand-secondary">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" class={inputClasses} />
+          </div>
+          <div>
+            <label for="email" class="mb-1.5 block text-sm font-bold text-brand-secondary">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" class={inputClasses} />
+          </div>
+          <fieldset class="sm:col-span-2">
+            <legend class="mb-2 text-sm font-bold text-brand-secondary">How should we come back to you?</legend>
+            <div class="flex gap-6">
+              <label class="flex items-center gap-2 py-2 cursor-pointer">
+                <input type="radio" name="preferredContact" value="phone" class="h-4 w-4 accent-[color:var(--color-primary)]" />
+                <span>A phone call</span>
+              </label>
+              <label class="flex items-center gap-2 py-2 cursor-pointer">
+                <input type="radio" name="preferredContact" value="email" class="h-4 w-4 accent-[color:var(--color-primary)]" />
+                <span>An email</span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="sm:col-span-2">
+            <label for="tourShape" class="mb-1.5 block text-sm font-bold text-brand-secondary">Which shape are you thinking about?</label>
+            <select id="tourShape" name="tourShape" class={inputClasses}>
+              {tourOptions.map((option) => <option value={option}>{option}</option>)}
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="notes" class="mb-1.5 block text-sm font-bold text-brand-secondary">Anything else worth knowing?</label>
+            <textarea id="notes" name="notes" rows="5" class={inputClasses} placeholder="Rough dates, pace, places you already have in mind, mobility needs"></textarea>
+          </div>
+          {responseNote && <p class="sm:col-span-2 text-xs text-brand-text-muted">{responseNote}</p>}
+          <div class="sm:col-span-2">
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-full bg-brand-accent px-7 py-3 text-sm font-bold text-white hover:bg-brand-accent-strong hover:-translate-y-0.5 active:translate-y-0 transition-all duration-(--motion-fast) ease-brand"
+            >
+              Send it to Geoff and James
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="lg:pt-2">
+        <div class="rounded-brand-md bg-brand-primary-soft p-6 sm:p-7">
+          <h3 class="font-heading text-xl font-bold text-brand-secondary">Or skip the form entirely</h3>
+          <p class="mt-2 text-sm text-brand-text-muted">These are personal mobiles, answered on Australian time.</p>
+          <ul class="mt-5 space-y-5">
+            {people.map((person) => (
+              <li>
+                <p class="font-heading text-lg font-bold text-brand-primary">{person.name}</p>
+                <a href={tel(person.phone)} class="mt-1 block py-1 text-lg font-bold text-brand-secondary hover:text-brand-primary hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{person.phone}</a>
+                <a href={`mailto:${person.email}`} class="block py-1 text-sm text-brand-text-muted hover:text-brand-primary hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand break-all">{person.email}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

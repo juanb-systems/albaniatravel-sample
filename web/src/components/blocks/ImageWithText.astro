@@ -1,0 +1,52 @@
+---
+import type { ImageWithTextBlock } from '../../lib/types'
+import { mediaUrl } from '../../lib/content'
+import { renderRichText } from '../../lib/richtext'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { eyebrow, heading, body, image, layout, imagePosition, background } = Astro.props as ImageWithTextBlock
+const bodyHtml = renderRichText(body)
+
+const srcsetFor = (m: { url: string; width?: number }) =>
+  m.width && m.width > 1000
+    ? `${mediaUrl(m.url)} ${m.width}w, ${mediaUrl(m.url.replace(/\.jpg$/, '.w900.jpg'))} 900w`
+    : undefined
+
+// Three instances sitewide, alternating sides per the layout rhythm rule:
+// Tours (right), Planning (left), How it works (right). The image takes the
+// arch (the language's recurring crop) with a solid offset tint block behind
+// it, flipped away from the text column. Body text renders through .flow,
+// never `prose`: the typography plugin is not installed in this stack and a
+// dead prose class has shipped twice before.
+
+const side = layout ?? (imagePosition === 'left' ? 'image-left' : 'image-right')
+const imageLeft = side === 'image-left'
+---
+
+<section class={`reveal relative isolate overflow-hidden ${bgClass(background)}`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28 grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+    <div class={`relative ${imageLeft ? 'md:order-1' : 'md:order-2'}`}>
+      {/* Offset shrinks on small screens: the same absolute displacement is a
+          much larger share of a phone-width image and stops reading as a
+          deliberate depth cue. Solid tint tokens, not a faint opacity: an
+          accent too faint to register is the trap signature-design-patterns
+          warns about. */}
+      <div class={`absolute -z-10 inset-0 ${imageLeft ? '-translate-x-3 md:-translate-x-5' : 'translate-x-3 md:translate-x-5'} translate-y-3 md:translate-y-5 arch ${background === 'primarySoft' ? 'bg-brand-accent-tint' : 'bg-brand-primary-soft'}`} aria-hidden="true"></div>
+      <img
+        src={mediaUrl(image.url)}
+        alt={image.alt}
+        class="w-full h-auto arch arch-reveal shadow-brand-card object-cover aspect-[4/5] ring-1 ring-black/5"
+        srcset={srcsetFor(image)}
+        sizes="(min-width: 768px) 50vw, 100vw"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class={imageLeft ? 'md:order-2' : 'md:order-1'}>
+      <Eyebrow text={eyebrow} />
+      {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+      <div class="flow mt-6 text-brand-secondary/85 max-w-prose" set:html={bodyHtml} />
+    </div>
+  </div>
+</section>

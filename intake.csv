@@ -1,0 +1,34 @@
+field,value,status,note
+businessName,Albania Travel,REQUIRED,trading site albania-travel.com.au
+industry,travel and tourism (outbound tour booking),REQUIRED,Australian intermediary selling private customised tours of Albania run by a local operator
+partnerOperator,Wander Albania,REQUIRED,"the Albanian operator who runs the tours; Albania Travel is the Australian planning and booking side"
+foundingReason,"established to minimise the number of third parties extracting payments from Australians booking to travel to Albania",REQUIRED,client's own published words; the honest no-middlemen pitch is the brand
+services,"Albania Highlights 9-day private cultural tour; Albania Discovery with Extended Stays 9-day unhurried tour; Balkans Explorer 14-day regional private tour; full itinerary customisation; Australia-based pre-departure planning",REQUIRED,all tours private and customised
+pricesPublished,"Highlights from EUR 1220 pp; Discovery from EUR 1220 pp; Balkans Explorer from EUR 2740 pp",DEFAULT,client-published and therefore usable; prices are in euros on their site
+durationsPublished,"9 days / 8 nights (both 9-day tours); 14 days / 13 nights (Balkans Explorer)",DEFAULT,client-published
+inclusionsPublished,"minimum 3-star accommodation; half-board meals; private vehicle with driver; insurance fuel tolls parking; airport transfers; entrance fees; customisable daily itineraries",DEFAULT,client-published standard inclusions across all tours
+targetAudience,"Australian travellers, mostly couples and small private groups, experienced travellers looking for value and somewhere not yet crowded",INFERRED,"testimonials say 'decades of travelling'; tours are private, not coach groups"
+address,none published,DEFAULT,no physical address on the site; omit map block
+phone,"Geoff 0432 848 573; James 0433 944 603",REQUIRED,two named contacts with personal mobiles
+email,"geoff@albania-travel.com.au; james@albania-travel.com.au",REQUIRED,
+people,"Geoff S. and James C., pictured as ambassadors; guides Ermal and Ylli named in testimonials",DEFAULT,no full surnames or bios published; none to be invented
+serviceArea,Australia-wide (phone and email planning); tours operate in Albania and neighbouring countries,INFERRED,
+sliderPlayfulSerious,2,REQUIRED,INFERRED from site tone and first-name contact; confirm with client
+sliderTraditionalModern,3,REQUIRED,INFERRED
+sliderMinimalBold,3,REQUIRED,INFERRED; bold in imagery and modest in ornament
+sliderCorporateApproachable,5,REQUIRED,INFERRED; the founding pitch is explicitly anti-corporate and both contacts list personal mobiles
+sliderLuxuryEveryday,4,REQUIRED,INFERRED; value-led with 3-star base inclusions but aspirational scenery
+feelWords,"unhurried, genuine, undiscovered",REQUIRED,"INFERRED from their own copy: tours literally named 'Leisurely' and 'Unhurried'; 'the hidden treasure in Europe waiting to be found'; confirm with client"
+admiredBusiness,none named,DEFAULT,no reference site given; note in brand-direction.md
+headingFont,no preference,REQUIRED,Stage 2 to choose and record as inferred
+bodyFont,no preference,REQUIRED,"Stage 2 to choose; ledger forbids Geist (nj-electrical) and Cabin (mojo-steel)"
+colours,no preference stated,REQUIRED,"Stage 2 to derive; current site leans on sea/sky photography; nothing stated by client"
+logo,harvest from live site,REQUIRED,"header logo /wp-content/uploads/2022/01/Group-11.png and footer variant /wp-content/uploads/2024/11/Group-11-1.png; keep/refresh decision recorded in brand-direction.md"
+websiteUrl,https://albania-travel.com.au,REQUIRED,HTTP 200 on 2026-07-21 (curl 234747 bytes); WordPress Hello Elementor theme
+imageSource,existing website,REQUIRED,"crawl their media library; NOTE their own homepage mixes real destination photos with Unsplash stock and AI-generated images (Gemini_Generated_Image files); Stage 4 must separate the genuine photography from stand-ins"
+imageRights,partially unclear,DEFAULT,"their library contains stock (Unsplash, numbered stock-agency files) and AI-generated files; treat their genuine destination photos as cleared, flag stock-derived per image in IMAGE-CREDITS.md"
+testimonialsSource,real and published,REQUIRED,"five detailed reviews on the live site naming guides Ermal and Ylli; use verbatim, none invented"
+identifiableFaces,yes,DEFAULT,"Geoff and James pictured on the site; already public on their own site"
+teamData,"first names and photos only (Geoff, James)",DEFAULT,no bios or surnames published; none to be invented
+blog,not requested,DEFAULT,omit
+locale,Australian English,REQUIRED,.com.au and Australian audience; write en-AU throughout

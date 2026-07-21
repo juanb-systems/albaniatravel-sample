@@ -1,0 +1,44 @@
+---
+import type { PersonCtaBlock } from '../../lib/types'
+import Button from '../ui/Button.astro'
+
+const { heading, note, formLink, people } = Astro.props as PersonCtaBlock
+
+// The call to action is two named people with personal mobiles, which is the
+// single most differentiating fact this business publishes. This is the deep
+// foliage-green ground (one of at most two per page; the language forbids
+// moody near-black bands, so it stays garden green).
+//
+// Contrast on this ground, measured: text-invert 7.05:1, text-invert-muted
+// 4.88:1, accent-tint 11.89:1 (used for links); raw accent is forbidden here
+// in every role (2.94:1).
+
+const tel = (phone: string) => `tel:${phone.replace(/\s+/g, '')}`
+---
+
+<section class="bg-brand-primary reveal">
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 lg:py-24">
+    <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
+      <div class="max-w-xl">
+        <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-text-invert text-balance">{heading}</h2>
+        {note && <p class="mt-4 text-brand-text-invert-muted">{note}</p>}
+        {formLink && (
+          <div class="mt-7">
+            <Button href="/contact" variant="solid-invert">Send an enquiry instead</Button>
+          </div>
+        )}
+      </div>
+      <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+        {people.map((person) => (
+          <li class="rounded-brand-md bg-brand-text-invert/10 p-5 sm:p-6">
+            <p class="font-heading text-xl font-bold text-brand-text-invert">{person.name}</p>
+            {/* Tap-to-call is the mobile-native affordance: on a phone the
+                number IS the button. py keeps both rows over 44px. */}
+            <a href={tel(person.phone)} class="mt-2 block py-1.5 text-lg font-bold text-brand-accent-tint hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{person.phone}</a>
+            <a href={`mailto:${person.email}`} class="block py-1.5 text-sm text-brand-text-invert-muted hover:text-brand-text-invert hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand break-all">{person.email}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

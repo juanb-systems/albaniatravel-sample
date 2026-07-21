@@ -1,0 +1,58 @@
+---
+import type { WhenToGoBlock } from '../../lib/types'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { variant, background, eyebrow, heading, reviewedDate, seasons, moreLink } = Astro.props as WhenToGoBlock
+
+// Adapted from sunny-fresh-honest's inSeasonNow signature CANDIDATE. The two
+// properties that make that block honest are kept: the seasonal register, and
+// a VISIBLE review date (a seasonal list that hides its age is worse than no
+// list, per the language's guardrail). The guidance itself is the client's
+// own published best-time-to-visit advice, nothing invented.
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <Eyebrow text={eyebrow} />
+        {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+      </div>
+      {/* The visible date is data, not chrome. Do not drop it at any width. */}
+      <p class="text-xs text-brand-text-muted italic">{reviewedDate}</p>
+    </div>
+
+    {variant === 'full' && (
+      <ul class="mt-10 space-y-0 divide-y divide-brand-rule-light">
+        {seasons.map((season, i) => (
+          <li class="reveal grid gap-2 py-6 sm:grid-cols-[1fr_auto] sm:gap-8 md:grid-cols-[220px_1fr_auto]" style={`--i:${i}`}>
+            <p class="font-heading text-xl font-bold text-brand-primary">{season.period}</p>
+            <p class="text-brand-text-muted md:max-w-prose">{season.note}</p>
+            <p class="justify-self-start sm:justify-self-end">
+              <span class="inline-block rounded-full bg-brand-accent-tint px-4 py-1.5 text-xs font-bold text-brand-secondary whitespace-nowrap">{season.bestFor}</span>
+            </p>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {variant === 'strip' && (
+      <>
+        <ul class="mt-8 grid gap-4 sm:grid-cols-3">
+          {seasons.map((season, i) => (
+            <li class="reveal rounded-brand-md bg-brand-surface shadow-brand-card p-5" style={`--i:${i}`}>
+              <p class="font-heading text-lg font-bold text-brand-primary">{season.period}</p>
+              <p class="mt-1 text-sm font-bold text-brand-accent-strong">{season.bestFor}</p>
+            </li>
+          ))}
+        </ul>
+        {moreLink && (
+          <p class="mt-8">
+            <a href={moreLink.url} class="text-sm font-bold text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{moreLink.label}</a>
+          </p>
+        )}
+      </>
+    )}
+  </div>
+</section>

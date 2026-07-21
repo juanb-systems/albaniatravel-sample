@@ -1,0 +1,33 @@
+{
+  "businessName": "Albania Travel",
+  "tagline": "Private Albania tours, planned in Australia",
+  "logo": "albania-travel-mark.svg",
+  "brand": {
+    "primaryColor": "#2E5B3E",
+    "secondaryColor": "#1E2A21",
+    "accentColor": "#A85A1B",
+    "neutralColor": "#F4EDDC",
+    "headingFont": "Alegreya",
+    "bodyFont": "Nunito"
+  },
+  "contact": {
+    "phone": "0432 848 573",
+    "phoneLabel": "Geoff",
+    "emergencyPhone": "0433 944 603",
+    "emergencyLabel": "James",
+    "email": "geoff@albania-travel.com.au",
+    "address": "",
+    "serviceArea": "Australia-wide by phone and email; tours run in Albania and its neighbours",
+    "hours": [],
+    "people": [
+      { "name": "Geoff", "phone": "0432 848 573", "email": "geoff@albania-travel.com.au" },
+      { "name": "James", "phone": "0433 944 603", "email": "james@albania-travel.com.au" }
+    ]
+  },
+  "partnership": {
+    "line": "Albania Travel is the Australian planning side of a partnership with Wander Albania, the local operator in Tirana who runs every tour.",
+    "operator": "Wander Albania",
+    "operatorLocation": "Tirana, Albania"
+  },
+  "socials": []
+}

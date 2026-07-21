@@ -1,0 +1,33 @@
+{
+  "intro": "The founding idea is simple: fewer hands between you and Albania, and every hand named. This is the whole chain.",
+  "links": [
+    {
+      "name": "You",
+      "location": "Anywhere in Australia",
+      "role": "Ring or email whenever the idea takes hold",
+      "note": "There is no call centre and no booking portal. The first step is a conversation about what kind of trip you want.",
+      "order": 1
+    },
+    {
+      "name": "Geoff and James",
+      "location": "Australia",
+      "role": "Albania Travel ambassadors, the planning side",
+      "note": "They shape the itinerary with you on Australian time, before anything is booked, and stay reachable on their own mobiles throughout.",
+      "order": 2
+    },
+    {
+      "name": "Wander Albania",
+      "location": "Tirana, Albania",
+      "role": "The local operator who prices and runs every tour",
+      "note": "Your booking is made with their office directly, at local rates. That direct link is the reason the prices look the way they do.",
+      "order": 3
+    },
+    {
+      "name": "Your driver and guide",
+      "location": "On the road with you",
+      "role": "Local, English-speaking, and the people the reviews rave about",
+      "note": "Travellers' published reviews name Ermal, Ylli and Ladi by name. On a private tour the guide is most of the experience, and these are the ones the reviews keep thanking.",
+      "order": 4
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string
+  variant?: 'solid' | 'outline' | 'solid-invert' | 'outline-invert'
+  class?: string
+}
+
+const { href, variant = 'solid', class: className = '' } = Astro.props
+
+// sunny-fresh-honest: buttons are solid accent with generous rounding, so
+// these are fully round pills. Hover feedback is never colour alone (the
+// lift is the second signal), and :active matters most on touch, where no
+// hover exists to confirm the tap landed. Timing from the motion tokens only.
+//
+// Contrast, measured (brand-direction.json): white on accent 5.07:1;
+// text-invert on accent 4.57:1; white on primary 7.83:1. The invert variants
+// are for the green ground, where raw accent text is forbidden (2.94:1).
+const base = 'inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-bold transition-all duration-(--motion-fast) ease-brand hover:-translate-y-0.5 active:translate-y-0'
+const variants = {
+  solid: 'bg-brand-accent text-white hover:bg-brand-accent-strong',
+  outline: 'border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white',
+  'solid-invert': 'bg-brand-accent text-white hover:bg-brand-accent-strong',
+  'outline-invert': 'border-2 border-brand-text-invert text-brand-text-invert hover:bg-brand-surface hover:text-brand-primary hover:border-brand-surface',
+}
+---
+
+<a href={href} class={`${base} ${variants[variant]} ${className}`}>
+  <slot />
+</a>

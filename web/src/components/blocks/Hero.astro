@@ -1,0 +1,127 @@
+---
+import type { HeroBlock } from '../../lib/types'
+import { mediaUrl } from '../../lib/content'
+import Button from '../ui/Button.astro'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { eyebrow, heading, subheading, image, variant = 'type-only', primaryButton, secondaryButton } = Astro.props as HeroBlock
+
+// Responsive candidates (Stage 7): every large-rendering image ships a 900w
+// derivative alongside the full-size original. Widths come from
+// image-metadata.json via the Media object, so the srcset never lies.
+const srcsetFor = (m: { url: string; width?: number }) =>
+  m.width && m.width > 1000
+    ? `${mediaUrl(m.url)} ${m.width}w, ${mediaUrl(m.url.replace(/\.jpg$/, '.w900.jpg'))} 900w`
+    : undefined
+
+// Six pages, six treatments, all defined here so no two pages open alike
+// (site-structure.json withinSiteCheck):
+//
+// arched-daylight  Home. The language's signature: an arched daylight image
+//                  beside the proposition, a solid tint block offset behind
+//                  it, and the page's single permitted Caveat annotation
+//                  (decorative, aria-hidden, no unique information).
+// image-full       Places. The only full-bleed photographic hero: this page
+//                  IS the photography. Gradient scrim strongest where the
+//                  text sits.
+// split-founding   How it works. The founding sentence verbatim as headline,
+//                  set at reading size because it is a sentence, not a slogan.
+// compact-type     Tours. Type-led band on pale sage; the routes below carry
+//                  the imagery.
+// compact-warm     Contact. Short apricot-tint band, then straight to the form.
+// type-only        Planning. Centred, quiet.
+//
+// The hero uses the CSS-only load entrance (.enter), never .reveal: it is
+// already in the viewport, and the entrance is the one motion every visitor
+// is guaranteed to see.
+---
+
+{variant === 'arched-daylight' && image ? (
+  <section class="relative isolate overflow-hidden mx-auto max-w-6xl px-6 py-14 sm:py-20 lg:py-24 grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+    <div>
+      <Eyebrow text={eyebrow} class="enter" />
+      <h1 transition:name="page-heading" class="enter enter-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-secondary text-balance">{heading}</h1>
+      {subheading && <p class="enter enter-3 mt-5 sm:mt-6 text-base sm:text-lg text-brand-text-muted max-w-xl">{subheading}</p>}
+      <div class="enter enter-4 mt-8 lg:mt-10 flex flex-wrap gap-3 sm:gap-4">
+        {primaryButton?.label && <Button href={primaryButton.url}>{primaryButton.label}</Button>}
+        {secondaryButton?.label && <Button href={secondaryButton.url} variant="outline">{secondaryButton.label}</Button>}
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute inset-0 translate-x-4 translate-y-5 sm:translate-x-6 sm:translate-y-7 arch bg-brand-accent-tint" aria-hidden="true"></div>
+      <img
+        src={mediaUrl(image.url)}
+        alt={image.alt}
+        class="relative w-full arch object-cover aspect-[4/5] sm:aspect-[3/4] shadow-brand-card enter-arch"
+        srcset={srcsetFor(image)}
+        sizes="(min-width: 768px) 50vw, 100vw"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <p class="absolute -bottom-2 right-2 rotate-[-4deg] font-accent text-2xl text-brand-accent-strong enter enter-4" aria-hidden="true">shaped around you</p>
+    </div>
+  </section>
+) : variant === 'image-full' && image ? (
+  <section class="relative isolate overflow-hidden">
+    <img
+      src={mediaUrl(image.url)}
+      alt={image.alt}
+      class="absolute inset-0 h-full w-full object-cover"
+      srcset={srcsetFor(image)}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/45 to-brand-secondary/15" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pt-36 sm:pt-48 lg:pt-64 pb-14 sm:pb-20">
+      <Eyebrow text={eyebrow} invert class="enter" />
+      <h1 transition:name="page-heading" class="enter enter-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-text-invert max-w-2xl text-balance">{heading}</h1>
+      {subheading && <p class="enter enter-3 mt-4 sm:mt-5 text-base sm:text-lg text-brand-text-invert/90 max-w-2xl">{subheading}</p>}
+    </div>
+  </section>
+) : variant === 'split-founding' && image ? (
+  <section class="relative isolate overflow-hidden mx-auto max-w-6xl px-6 py-14 sm:py-20 lg:py-24 grid md:grid-cols-[3fr_2fr] gap-10 md:gap-12 lg:gap-16 items-center">
+    <div>
+      <Eyebrow text={eyebrow} class="enter" />
+      <h1 transition:name="page-heading" class="enter enter-2 font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-balance">&ldquo;{heading}&rdquo;</h1>
+      {subheading && <p class="enter enter-3 mt-5 text-base sm:text-lg text-brand-text-muted max-w-xl">{subheading}</p>}
+    </div>
+    <div class="relative">
+      <div class="absolute inset-0 -translate-x-4 translate-y-5 sm:-translate-x-6 sm:translate-y-7 arch bg-brand-primary-soft" aria-hidden="true"></div>
+      <img
+        src={mediaUrl(image.url)}
+        alt={image.alt}
+        class="relative w-full arch object-cover aspect-[3/4] shadow-brand-card enter-arch"
+        srcset={srcsetFor(image)}
+        sizes="(min-width: 768px) 40vw, 100vw"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </div>
+  </section>
+) : variant === 'compact-type' ? (
+  <section class="bg-brand-primary-soft">
+    <div class="mx-auto max-w-6xl px-6 py-14 sm:py-16 lg:py-20">
+      <Eyebrow text={eyebrow} class="enter" />
+      <h1 transition:name="page-heading" class="enter enter-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-secondary max-w-3xl text-balance">{heading}</h1>
+      {subheading && <p class="enter enter-3 mt-4 sm:mt-5 text-base sm:text-lg text-brand-text-muted max-w-2xl">{subheading}</p>}
+    </div>
+  </section>
+) : variant === 'compact-warm' ? (
+  <section class="bg-brand-accent-tint">
+    <div class="mx-auto max-w-6xl px-6 py-12 sm:py-14 lg:py-16">
+      <Eyebrow text={eyebrow} class="enter" />
+      <h1 transition:name="page-heading" class="enter enter-2 font-heading text-3xl sm:text-4xl font-bold text-brand-secondary max-w-3xl text-balance">{heading}</h1>
+      {subheading && <p class="enter enter-3 mt-4 text-base sm:text-lg text-brand-secondary/80 max-w-2xl">{subheading}</p>}
+    </div>
+  </section>
+) : (
+  <section class="mx-auto max-w-3xl px-6 py-14 sm:py-20 lg:py-24 text-center">
+    <Eyebrow text={eyebrow} class="enter justify-center" />
+    <h1 transition:name="page-heading" class="enter enter-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-secondary text-balance">{heading}</h1>
+    {subheading && <p class="enter enter-3 mt-5 text-base sm:text-lg text-brand-text-muted">{subheading}</p>}
+  </section>
+)}

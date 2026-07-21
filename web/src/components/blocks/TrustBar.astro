@@ -1,0 +1,34 @@
+---
+import type { TrustBarBlock } from '../../lib/types'
+
+const { stats } = Astro.props as TrustBarBlock
+---
+
+{/* A band, not a section: it sits between two full sections as a divider with
+    content in it, so its vertical rhythm is deliberately shallower than the
+    py-14 md:py-24 lg:py-32 the real sections use, and it steps on the same
+    two-tier pattern rather than sitting at one fixed height. */}
+<section class="reveal bg-brand-neutral py-10 md:py-14 lg:py-16 border-y border-black/5">
+  <div class="mx-auto max-w-6xl px-6 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+    {/* Deliberately NOT staggered per item, unlike the card grids: this band
+        is a single compact statement read in one glance, and cascading four
+        short labels across it draws more attention to the animation than to
+        what it says. The whole band reveals as one. */}
+    {stats?.map((stat) => (
+      /* The separating rules are positional, not index-based, which is what
+         lets them survive the change in column count. Previously they were
+         `md:border-l` on every item after the first, so below 768px the bar
+         lost its separators entirely and read as four floating fragments in
+         a box: structure deleted at a small size with nothing in its place.
+
+         Now: in the 2-up layout the right-hand cell of each row carries the
+         rule (`even:border-l`), and in the 4-up layout every cell except the
+         first does (`lg:border-l lg:first:border-l-0`). Same device, correct
+         at both widths. */
+      <div class="border-black/10 even:border-l even:pl-4 sm:even:pl-6 lg:border-l lg:first:border-l-0 lg:pl-8 lg:first:pl-0">
+        <p class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-primary">{stat.value}</p>
+        <p class="mt-2 text-sm text-brand-secondary/70">{stat.label}</p>
+      </div>
+    ))}
+  </div>
+</section>

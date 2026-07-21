@@ -1,0 +1,41 @@
+---
+import type { TestimonialsCarouselBlock } from '../../lib/types'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { eyebrow, heading, testimonials } = Astro.props as TestimonialsCarouselBlock
+---
+
+<section class="reveal bg-brand-secondary py-14 md:py-24 lg:py-32 text-white">
+  <div class="mx-auto max-w-6xl px-6">
+    {/* Dark section (bg-brand-secondary): override to the base accent, not
+        accent-strong, accent-strong is tuned for light backgrounds and
+        fails contrast here. See Eyebrow.astro's own comment. */}
+    <Eyebrow text={eyebrow} class="justify-center flex !text-brand-accent" />
+    {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-center text-balance">{heading}</h2>}
+    <div class="mt-10 lg:mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {testimonials?.map((t, i) => (
+        <figure class="reveal relative overflow-hidden rounded-brand-lg bg-white/5 border border-white/10 p-6 sm:p-8" style={`--i:${i}`}>
+          {/* A large serif quote glyph in the heading font reads as a
+              deliberate editorial touch, not a plain card any template
+              could produce; kept low-opacity so it never competes with
+              the actual quote text. */}
+          <span class="pointer-events-none absolute -top-4 right-4 font-heading text-8xl leading-none text-white/10" aria-hidden="true">&rdquo;</span>
+          {t.rating && (
+            <div class="flex gap-1 text-brand-accent" aria-label={`${t.rating} out of 5 stars`}>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg width="14" height="14" viewBox="0 0 20 20" fill={i < t.rating! ? 'currentColor' : 'none'} stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.2 1 5.9L10 15l-5.2 2.8 1-5.9-4.3-4.2 5.9-.8L10 1.5z" stroke-linejoin="round" />
+                </svg>
+              ))}
+            </div>
+          )}
+          <blockquote class="relative mt-4 text-white/90">&ldquo;{t.quote}&rdquo;</blockquote>
+          <figcaption class="mt-6 text-sm">
+            <span class="font-semibold">{t.authorName}</span>
+            {t.authorRole && <span class="text-white/60">, {t.authorRole}</span>}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

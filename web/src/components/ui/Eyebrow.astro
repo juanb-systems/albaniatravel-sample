@@ -1,0 +1,29 @@
+---
+interface Props {
+  text?: string
+  invert?: boolean
+  class?: string
+}
+
+const { text, invert = false, class: className = '' } = Astro.props
+---
+
+{/*
+  Albania Travel's eyebrow. Sentence case, not uppercase: sunny-fresh-honest
+  never shouts. The little dotted arc with the plane dot is the brand motif
+  (the flight path from the client's own logo mark), authored for this client
+  only, never in template/ (Hard Rule 12).
+
+  Colour: accent-strong on light grounds (6.45:1 on surface). On the green
+  ground pass invert, which switches to accent-tint (11.89:1 on secondary,
+  comfortable on primary).
+*/}
+{text && (
+  <p class={`mb-3 flex items-center gap-2 text-sm font-bold ${invert ? 'text-brand-accent-tint' : 'text-brand-accent-strong'} ${className}`}>
+    <svg width="34" height="12" viewBox="0 0 34 12" fill="none" aria-hidden="true" class="shrink-0">
+      <path d="M1 10 C 9 10, 14 3, 24 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="0.1 4.5" />
+      <path d="M25 0.5 L 33.5 3.2 L 26.5 7.5 L 26.3 3.9 Z" fill="currentColor" />
+    </svg>
+    <span>{text}</span>
+  </p>
+)}

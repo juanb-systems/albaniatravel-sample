@@ -1,0 +1,385 @@
+{
+  "//": "Stage 3 output for Albania Travel. Block vocabulary derived from the client FIRST (Hard Rule 0/10), then pages composed. Checked against state/build-ledger.json per Hard Rule 6. No em dashes anywhere in this file.",
+
+  "client": "Albania Travel",
+  "buyer": "An experienced Australian traveller, usually a couple or a small private group, who has done the obvious European destinations. They have four questions, in this order: is Albania actually worth nine days (they may never have considered it); what would the trip really be like and what does it honestly cost; can I trust an outfit I have never heard of with a trip this size; and what are the practicalities. The buying decision ends in a phone call with a named person, not a checkout, so every page's job is to make that call feel natural.",
+
+  "blockPlan": {
+    "//": "What does THIS business need to communicate that the kit cannot express? Three things: a journey through time and places (not a grid of products), a country most Australians cannot picture (not a feature list), and a chain of named people that IS the product (not an about-us narrative). Those three drive the new vocabulary.",
+
+    "carriedFromKit": [
+      {
+        "block": "hero",
+        "why": "Every page except Contact opens with a statement. Six distinct treatments so no two pages open alike, and two of them carry no photograph because the imagery works harder further down."
+      },
+      {
+        "block": "imageWithText",
+        "why": "Three instances only, each carrying something that must be prose: what customising a shape actually means (Tours), how you physically get to Albania (Planning), and the Wander Albania partnership story told in the client's own published terms (How it works)."
+      },
+      {
+        "block": "faq",
+        "why": "Used exactly once, on Planning, where it is genuinely the client's strongest practical content: real published answers on money, safety, visas, driving, culture. Grouped by topic in the data because a flat list of twenty-plus answers is unscannable."
+      }
+    ],
+
+    "droppedFromKit": [
+      {
+        "block": "servicesGrid",
+        "why": "Dropped. A tour is a journey through days and places; a card grid flattens it into a product photo and a blurb, which is exactly the catalogue register the brief rejects. Replaced by routeRibbon, which is a different data shape (an ordered route with day clusters), not a restyle."
+      },
+      {
+        "block": "processSteps",
+        "why": "Dropped. The booking process here is a conversation with Geoff or James, and dressing a phone call up as a numbered pipeline would make the site's most human fact read like a corporate workflow. The who-does-what question the steps would have answered is answered better by provenanceList, where it is people rather than stages."
+      },
+      {
+        "block": "trustBar",
+        "why": "Dropped with no replacement. The client's real numbers are prices and durations, and they belong inside routeRibbon and whatsIncluded where they mean something. A row of large numerals is the register Hard Rule 4 exists to kill, and this client publishes no counts, no years in business and no ratings to fill one honestly."
+      },
+      {
+        "block": "testimonialsCarousel",
+        "why": "The carousel form is dropped, not the testimonials. Five real detailed reviews exist and they matter enormously to this buyer, who is deciding whether to trust an unknown company with a major trip. A rotating widget hides four of five at any moment. Replaced by travellerWords, which sets the quotes fixed and readable."
+      },
+      {
+        "block": "aboutSection",
+        "why": "Dropped, along with any About page. The client publishes one founding sentence, two first names and a partner operator. That is enough for a provenance chain and not enough for a narrative, and writing more would be invention. The founding sentence itself opens the How it works page, where it is the argument rather than a story."
+      },
+      {
+        "block": "teamGrid",
+        "why": "No bios, no surnames, no roles beyond what two portrait photos and two phone numbers imply. Geoff and James appear in provenanceList and the contact details, where what is published about them is exactly what is shown. A two-card team grid built from first names would be a stub pretending to be a page."
+      },
+      {
+        "block": "contactSection",
+        "why": "Replaced by enquiryForm. The client's own live form already asks the right planning questions (party size, children, preferred contact method); a generic name-and-message form would throw that away."
+      },
+      {
+        "block": "ctaBanner",
+        "why": "Replaced by personCta. The kit banner is a headline and an anonymous button. This site's call to action is two named people with personal mobiles, which is the single most differentiating fact the business publishes. A CTA that hides the people behind a button would be discarding the product."
+      },
+      {
+        "block": "chalkboardMenu / specTable / venueIndex / fitoutProgram / scopeSchedule / venueVoice / clientRoster / programEnquiry",
+        "why": "Belong to other languages and other clients' evidence. Reaching for any of them would be reuse for its own sake."
+      }
+    ],
+
+    "newBlocksRequired": [
+      {
+        "block": "routeRibbon",
+        "status": "BUILT this build",
+        "signature": true,
+        "why": "The site's signature piece. A private tour's true shape is an ordered route through places with an unhurried day rhythm, and no kit block can say that. Each tour renders as a dotted route line (the brand motif, taken from the client's own logo mark) with day-cluster stops along it, the honest price basis beside it, and the customisation note that stops it reading as a fixed package. The dotted line is not decoration: it is the data, a journey drawn as their own mark draws one.",
+        "fields": [
+          "name (string, the client's own tour name)",
+          "slug (string)",
+          "style (string, the client's own register, e.g. 'Leisurely cultural private tour')",
+          "days (number) and nights (number), client-published",
+          "priceFromEUR (number, client-published, always rendered as 'from EUR x per person')",
+          "summary (string)",
+          "routeStops (array of { days (string, e.g. 'Days 1 to 2'), place (string), note (string, what happens there) })",
+          "entryOption (string or null, e.g. the Corfu ferry start the client publishes for Discovery)",
+          "countries (string array, only for Balkans Explorer, client-published)"
+        ],
+        "explicitlyNotFields": [
+          "departure dates: the client publishes none; tours are private and start when the traveller starts",
+          "ratings or review counts: none published",
+          "group size limits: not published; 'private' is the published fact"
+        ],
+        "variants": {
+          "featured": "Home. All three shapes condensed: name, duration, price basis, one-line summary, a short route line with 4 stops.",
+          "full": "Tours page. The complete route with every published stop cluster and note, entry options, and the customisation framing.",
+          "strip": "Contact page. Name, duration and price basis in one typographic row each, no route line, reminding the sender which shape they are asking about."
+        },
+        "readsFrom": "content/tours.json (NEW collection, see collections below)"
+      },
+
+      {
+        "block": "regionAtlas",
+        "status": "BUILT this build",
+        "signature": true,
+        "why": "The client's destination writing is their deepest asset: thirty-plus places described with real specifics, currently buried in one endless page. This buyer cannot picture Albania, so the evidence has to be places with names, organised the way travellers think. Grouped by region register (Coast, Mountains, Living history, Cities and lakes), each place an arched image card (the language's recurring shape) with the client's own descriptive line. An atlas invites browsing; a gallery invites scrolling past.",
+        "fields": [
+          "name (string)",
+          "region (string, one of the taxonomy below, drives grouping)",
+          "blurb (string, condensed from the client's own published description, no new claims)",
+          "image (filename or null, resolved from assets/image-metadata.json)",
+          "order (number)"
+        ],
+        "regionTaxonomy": [
+          "The coast",
+          "The mountains",
+          "Living history",
+          "Cities and lakes"
+        ],
+        "variants": {
+          "sampler": "Home. Six to eight places across all four regions, so the first screen of evidence shows range.",
+          "by-region": "Places page. The full curated set grouped under region headings, which are the scan anchors."
+        },
+        "readsFrom": "content/places.json (NEW collection) plus assets/image-metadata.json"
+      },
+
+      {
+        "block": "provenanceList",
+        "status": "BUILT this build",
+        "signature": true,
+        "languageSignature": "This is sunny-fresh-honest's own CANDIDATE signature block ('Where It Comes From': named suppliers with their location, because a generic we-source-locally paragraph is the approximation the block exists to prevent), built per Hard Rule 10 and adapted to this client without strain: here the named supply chain IS the product.",
+        "why": "The founding sentence is about middlemen, so the site must show the chain rather than assert its absence. Named links, each with a location and a role: you; Geoff and James in Australia (planning, personal mobiles); Wander Albania in Tirana (the operator who runs every tour); your driver and guide on the road (Ermal and Ylli are named in the client's own published testimonials). Four links, all named, nothing anonymous. This is the honesty pitch made visible and it is the block a travel-agency template could never ship.",
+        "fields": [
+          "intro (string, one line of framing)",
+          "links (array of { name, location, role, note (optional, only what the client's own site substantiates) })"
+        ],
+        "variants": {
+          "chain": "Home. The four links drawn along a single dotted route line, names and locations only.",
+          "full": "How it works page. The chain plus each link's role note, and the founding sentence framing above it."
+        },
+        "readsFrom": "content/provenance.json (NEW small collection: consumed by two pages, so it stays normalised)"
+      },
+
+      {
+        "block": "whenToGo",
+        "status": "BUILT this build",
+        "languageSignature": "Adapted from sunny-fresh-honest's inSeasonNow CANDIDATE (a dated list of what is in season, with the update date visible). A produce list would be fabricated content for a travel intermediary, so the block keeps the signature's two honest properties (seasonal register, visible date) and carries what the client actually publishes: their own best-time-to-visit guidance from the FAQ. The visible 'guidance reviewed' date keeps the language's rule that a seasonal claim must show its age.",
+        "why": "When to go is one of the buyer's first practical questions and the client publishes a real answer (May to mid-July, then September to October, to escape the summer heat). Rendered as season bands with what each period is best for, only from published guidance.",
+        "fields": [
+          "reviewedDate (string, visible in the rendered block)",
+          "seasons (array of { period (string, e.g. 'May to mid-July'), note (string, client-published guidance), bestFor (string) })"
+        ],
+        "variants": {
+          "full": "Planning page. All bands with notes.",
+          "strip": "Places page. One line per band, closing the atlas with 'and this is when', pointing to Planning."
+        },
+        "readsFrom": "content/seasons.json (NEW small collection, two consumers)"
+      },
+
+      {
+        "block": "whatsIncluded",
+        "status": "BUILT this build",
+        "why": "The value argument has to be concrete or it is just another 'great value' claim. The client publishes a real inclusions list (minimum 3-star accommodation, half-board meals, private vehicle, insurance, fuel, tolls, parking, airport transfers, entrance fees) and a real upgrades list. Two plain columns, 'every tour includes' and 'if you want more', no icons, no cards. It is the honest inverse of a pricing table: nothing to compare, just what is true of all three shapes.",
+        "fields": [
+          "included (string array, client-published)",
+          "upgrades (string array, client-published)",
+          "note (string, the customisation framing)"
+        ],
+        "variants": {
+          "full": "Tours page, directly under the three routes."
+        },
+        "readsFrom": "inline in the block (one consumer, one list)"
+      },
+
+      {
+        "block": "travellerWords",
+        "status": "BUILT this build",
+        "why": "Five real detailed reviews exist and this buyer reads them closely: they are the only evidence from people who already took the risk. Fixed and readable, never rotating. Set as generous pull quotes with the attribution level the client publishes, no stars, no invented trip labels.",
+        "fields": [
+          "quote (string, verbatim from the client's published testimonial, may be shortened only by omission with ellipsis, never rephrased)",
+          "attribution (string, exactly as published)"
+        ],
+        "variants": {
+          "single": "Home. One quote, full width.",
+          "stacked": "How it works page. All five, stacked and ruled, closing the trust argument."
+        },
+        "readsFrom": "content/testimonials.json (existing shape; rating stays null, the client publishes no star ratings)"
+      },
+
+      {
+        "block": "personCta",
+        "status": "BUILT this build",
+        "why": "The call to action is two named people, which no anonymous banner can say. Both names, both personal mobiles, both emails, plus the link to the enquiry form for people who prefer writing. The language's guardrail (the booking path obvious on every page) is satisfied by this block plus the header's contact affordance.",
+        "fields": [
+          "headline (string)",
+          "note (string)",
+          "people (array of { name, phone, email }, from site-settings)",
+          "formLink (boolean, whether to show the enquiry form link)"
+        ],
+        "variants": {
+          "banner": "Home, Tours, Places, How it works. The closing band on the green ground."
+        },
+        "readsFrom": "content/site-settings.json for the people; inline for the headline"
+      },
+
+      {
+        "block": "enquiryForm",
+        "status": "BUILT this build",
+        "why": "Mirrors the client's own live form fields (full name, adults, children, phone, email, preferred contact method, additional information) plus which tour shape the enquiry is about, because that is the first thing Geoff or James would ask. Static build: the form posts nowhere yet and says so honestly; wiring it to a handler is a handoff task. Direct contact details sit beside it with equal weight, because the phone is not a fallback here, it is the product.",
+        "fields": [
+          "heading, intro",
+          "formFields: fullName, adults, children, phone, email, preferredContact (phone or email), tourShape (optional select mirroring the three shapes plus 'not sure yet'), notes",
+          "directContact: both people with phone and email, from site-settings",
+          "responseNote (string, honest framing of who replies)"
+        ],
+        "variants": {
+          "full": "Contact page."
+        },
+        "readsFrom": "content/site-settings.json for the people; inline for field labels"
+      }
+    ]
+  },
+
+  "differsFrom": {
+    "nj-electrical": "hero+venueIndex+clientRoster+venueVoice+scopeSchedule+fitoutProgram+cta (evidence in position two on Home; Contact has no hero)",
+    "mojo-steel": "hero+imageWithText+servicesGrid+projectIndex+processSteps+cta",
+    "kestrel-electrical": "hero+specTable+servicesGrid+processSteps+cta",
+    "ember-and-rye": "hero+trustBar+servicesGrid+imageWithText+testimonials+cta; menu page on chalkboardMenu",
+    "howThisDiffers": "First travel build in the ledger, but the structural difference is not the vertical. No prior build organises its evidence geographically (regionAtlas), draws its product as a route (routeRibbon), or names its supply chain as people (provenanceList). The page set contains no About, no Team, no Testimonials page, no Capabilities and no Work page: the six pages are the buyer's four questions plus Home and Contact. Home places the destination evidence second and the product third, the reverse of every services-led build; nj-electrical also led with evidence but its evidence was its own portfolio, where this client's evidence is the country itself, which is why the atlas and not the product opens the argument. The CTA is two named humans on every page that has one, which no build in the ledger has done. Planning ends on the FAQ with no CTA, the same answers-and-stops move as nj's Scope page but carrying practicalities rather than procurement scope. This is also the first build to construct one of its language's own CANDIDATE signature blocks (provenanceList) rather than inventing all signatures from scratch, which is what the language library is for."
+  },
+
+  "pageSet": ["home", "tours", "places", "planning", "how-it-works", "contact"],
+
+  "pageSetRationale": "Six pages because the buyer has six distinct needs, not because six is the default. Home carries the whole proposition in one screen. Tours answers 'what would the trip be like and what does it cost'. Places answers 'is Albania actually worth it' with the client's thirty-plus described destinations given structure at last. Planning answers the practical questions with the client's real FAQ content plus their published getting-there and when-to-go guidance. How it works answers 'can I trust you' with the founding sentence, the named chain, the partnership story and all five real reviews. Contact starts the conversation with the client's own form fields. Deliberate omissions, each a decision: NO About page (one published sentence and two first names cannot fill one honestly; the sentence works harder as How it works' opening). NO Team page (no bios published, none invented). NO Testimonials page (five quotes work harder closing the trust argument on How it works than isolated on a page this buyer may never visit). NO per-tour detail pages (three tours sit under the detail-page threshold and share one inclusions list; three thin pages would dilute the comparison a single Tours page makes natural). NO blog (not requested; the destination library does that job better).",
+
+  "navigation": {
+    "header": ["Tours", "Places", "Planning", "How it works", "Contact"],
+    "headerNote": "Home is reached by the logo mark. Five items, phrased as the buyer's own questions rather than site furniture. The header also carries a small 'Call Geoff or James' affordance on desktop and tap-to-call on mobile, because the guardrail is that the booking path (a person) stays reachable everywhere.",
+    "footer": ["all six pages", "both people with phone and email", "the Wander Albania partnership line", "no physical address (none is published)"]
+  },
+
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "navLabel": null,
+      "purpose": "One screen: Albania is worth it, the tours are private and honestly priced, and the next step is a conversation with a named person.",
+      "blocks": [
+        "hero:arched-daylight",
+        "regionAtlas:sampler",
+        "routeRibbon:featured",
+        "provenanceList:chain",
+        "travellerWords:single",
+        "personCta:banner"
+      ],
+      "compositionNote": "The country is the evidence, so it comes second, before the product. The chain comes fourth so the price honesty lands after the shapes and prices have been seen. One quote, not five: Home closes the loop and hands trust-building to How it works.",
+      "imageConstraint": "hero:arched-daylight needs a genuinely sunlit landscape-orientation destination image with room for the arch crop. Final selection is Hard Rule 7's call against image-metadata.json after the Stage B pass, not this file's."
+    },
+    {
+      "slug": "tours",
+      "title": "Private tours",
+      "navLabel": "Tours",
+      "purpose": "The three shapes, drawn as routes, with the honest price basis and everything that is always included. 'Customisable' made concrete instead of asserted.",
+      "blocks": [
+        "hero:compact-type",
+        "routeRibbon:full",
+        "whatsIncluded:full",
+        "imageWithText:right",
+        "personCta:banner"
+      ],
+      "compositionNote": "The routes come before the inclusions because the shape of the days is the product and the inclusions are the reassurance. The imageWithText carries what customising a shape means (start from a shape, change the pace, swap the stops, enter via Corfu), which must be prose, not a bullet list.",
+      "dataNote": "Prices render only as 'from EUR 1,220 per person' style, exactly the client's published basis. Never converted to AUD: a conversion would be an invented figure that goes stale."
+    },
+    {
+      "slug": "places",
+      "title": "Places",
+      "navLabel": "Places",
+      "purpose": "The evidence page. The client's destination writing, curated and grouped by the way travellers think about a country.",
+      "blocks": [
+        "hero:image-full",
+        "regionAtlas:by-region",
+        "whenToGo:strip",
+        "personCta:banner"
+      ],
+      "compositionNote": "The only full-bleed photographic hero on the site: this page IS the photography. The whenToGo strip closes the atlas by answering the question the atlas raises, and points at Planning for the rest.",
+      "dataNote": "Every blurb condenses the client's own published description of that place. No place gets a claim their site does not make. Places without a usable harvested image render as typographic entries rather than stock substitutes until the stock fallback is exercised and credited per image."
+    },
+    {
+      "slug": "planning",
+      "title": "Planning",
+      "navLabel": "Planning",
+      "purpose": "The practical page: when to go, how to get there, and the client's real FAQ answers on money, safety, driving and culture.",
+      "blocks": [
+        "hero:type-only",
+        "whenToGo:full",
+        "imageWithText:left",
+        "faq:grouped"
+      ],
+      "compositionNote": "No CTA. This page answers practicalities and stops, the way a good FAQ does; a sales banner under 'is the tap water safe' would strike the one false note the brand cannot afford. The header and footer still carry the contact path (guardrail).",
+      "dataNote": "Every FAQ answer condenses the client's own published answer. Where their answer includes a dated figure (their fuel price is stated 'as of November 2024'), the date is kept visible, same honesty rule as whenToGo's reviewed date."
+    },
+    {
+      "slug": "how-it-works",
+      "title": "How it works",
+      "navLabel": "How it works",
+      "purpose": "The trust page. The founding sentence, the named chain, the partnership, and all five real reviews.",
+      "blocks": [
+        "hero:split-founding",
+        "provenanceList:full",
+        "imageWithText:right",
+        "travellerWords:stacked",
+        "personCta:banner"
+      ],
+      "compositionNote": "Opens on the founding sentence as the headline because it is the best copy the client has ever written. The chain immediately makes it concrete. The imageWithText carries the Wander Albania partnership in the client's own published terms. The five reviews close the argument, and the personCta arrives only after the trust case is complete.",
+      "dataNote": "Geoff and James appear exactly as published: first names, portraits, phones, emails. No surnames, no bios, no invented history."
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "navLabel": "Contact",
+      "purpose": "Start the conversation, with the client's own form fields, and both people's direct details given equal weight to the form.",
+      "blocks": [
+        "hero:compact-warm",
+        "enquiryForm:full",
+        "routeRibbon:strip"
+      ],
+      "compositionNote": "A short warm hero, then straight into the form. The routeRibbon strip closes the page as a names-durations-prices reminder of what to ask about, no images. No personCta: the whole page is the CTA.",
+      "dataNote": "The static form posts nowhere yet and says so honestly in the responseNote; wiring a handler is a Stage 9 handoff task, recorded in the QA report as a known open item."
+    }
+  ],
+
+  "withinSiteCheck": {
+    "noRepeatedBlockOrder": "Confirmed. Home is 6 blocks, evidence-second. Tours runs routeRibbon then whatsIncluded then imageWithText. Places runs regionAtlas then whenToGo. Planning runs whenToGo then imageWithText then faq and stops without a CTA. How it works runs provenanceList then imageWithText then travellerWords. Contact runs enquiryForm then routeRibbon:strip. No two pages share a composition.",
+    "heroVariantsAllDistinct": "arched-daylight, compact-type, image-full, type-only, split-founding, compact-warm. Six pages, six different openings.",
+    "imageWithTextAlternation": "Three instances, sitewide order right (Tours), left (Planning), right (How it works), alternating sitewide per the layout rhythm rule.",
+    "ctaNotOnEveryPage": "personCta on four of six. Planning answers and stops; Contact is itself the CTA."
+  },
+
+  "collections": {
+    "tours": {
+      "status": "NEW for this build, content/tours.json",
+      "shape": "{ name, slug, style, days, nights, priceFromEUR, summary, routeStops[{days, place, note}], entryOption, countries[], order }",
+      "why": "Three tours consumed by three routeRibbon variants across three pages. Normalised so the strip, featured and full variants never drift apart."
+    },
+    "places": {
+      "status": "NEW for this build, content/places.json",
+      "shape": "{ name, region, blurb, image, order }",
+      "why": "The curated destination set, consumed by both regionAtlas variants. Curation note: the client describes thirty-plus places; this collection carries the strongest sixteen to twenty so the atlas stays browsable, and curation is an editorial cut, not a content change."
+    },
+    "seasons": {
+      "status": "NEW for this build, content/seasons.json",
+      "shape": "{ reviewedDate, seasons[{ period, note, bestFor, order }] }",
+      "why": "Two consumers (Planning full, Places strip). The reviewedDate is data, not chrome: the language requires seasonal guidance to show its age."
+    },
+    "provenance": {
+      "status": "NEW for this build, content/provenance.json",
+      "shape": "{ intro, links[{ name, location, role, note, order }] }",
+      "why": "Two consumers (Home chain, How it works full)."
+    },
+    "testimonials": {
+      "status": "existing shape, used as-is",
+      "shape": "{ quote, authorName, authorRole, rating }",
+      "why": "Five real published reviews, verbatim. rating stays null: the client publishes no star ratings and inventing them is content invention."
+    },
+    "services": {
+      "status": "stays empty",
+      "why": "This client's product is tours, which have their own shape. Forcing tours into the services shape would cost the route data that makes routeRibbon possible."
+    },
+    "team-members": {
+      "status": "stays empty",
+      "why": "No bios published. Geoff and James live in site-settings contacts and provenance.json, where what is shown equals what is published."
+    }
+  },
+
+  "contentGuardrails": {
+    "//": "Stage 5 must hold these. Structural invention is expected; content invention is not (Hard Rule 0).",
+    "numbers": "The only business figures that may appear: from EUR 1,220 per person (Highlights and Discovery), from EUR 2,740 per person (Balkans Explorer), 9 days 8 nights, 14 days 13 nights, and the published inclusions. Destination facts (the 120 km Riviera, Berat's 2,400 years, Lake Ohrid's 288 m depth and so on) may appear only where the client's own pages state them. No traveller counts, no years in business, no satisfaction percentages, no group-size limits, no AUD conversions.",
+    "people": "Geoff and James: first names, published portraits, phones and emails only. Ermal and Ylli may be named as guides because the client's published testimonials name them. Wander Albania is named as the operator because the client names it. No surnames, no bios, no invented roles.",
+    "testimonials": "Verbatim from the client's published text, attribution exactly as published, shortening only by omission with visible ellipsis. Five exist. Do not write a sixth.",
+    "claims": "Albania claims stay inside what the client publishes (uncrowded, good value, the secret is getting out, best time May to mid-July and September to October). Soft third-party claims the client repeats (Gjipe 'recently voted one of the best beaches in the world') keep the client's own hedged phrasing or are dropped.",
+    "tone": "Australian English. Warm, specific, unhurried. No urgency mechanics, no scarcity claims, no exclamation-mark enthusiasm. The one permitted urgency is the client's own sentence about the secret getting out."
+  },
+
+  "assetNotesForStages4And6": {
+    "harvestFirst": "The client's live site returns HTTP 200 (verified 2026-07-21). Logo already harvested (two files, both 200, in assets/raw/). Their media library mixes genuine destination photography, stock (Unsplash-named and stock-agency-numbered files), and AI-generated files (Gemini_Generated_Image names). The harvest must record which is which per file in IMAGE-CREDITS.md, and AI-generated files are recorded but never reused: they contradict the brand's honesty and Hard Rule 14's spirit.",
+    "portraits": "Geoff and James's portrait photos should be harvested for provenanceList and Contact. Identifiable faces, already public on the client's own site; note consent confirmation before launch.",
+    "stockFallback": "A travel site needs more strong imagery than one small operator's library may hold. Where genuine harvested coverage runs out for a named place, the intake's image-source ladder applies: curated royalty-free stock of the actual named place, credited per image in IMAGE-CREDITS.md, is the honest fallback. Never stock of a generic 'European coastline' standing in for a named beach.",
+    "arch": "The language's recurring crop is the arch (rounded-top). Lead images need headroom for that crop; tight top-cropped compositions fight it.",
+    "textOverImage": "The Places hero is the only text-over-photograph moment. It needs a real measured scrim, not an opacity guess."
+  },
+
+  "structureSignature": "hero+regionAtlas+routeRibbon+provenanceList+travellerWords+personCta (NO servicesGrid, NO processSteps, NO trustBar, NO teamGrid, NO aboutSection, NO carousel, NO ctaBanner anywhere; destination evidence in position two on Home, product third; Planning ends on FAQ with no CTA; every CTA is two named people with personal mobiles)"
+}

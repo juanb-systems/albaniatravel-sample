@@ -1,0 +1,47 @@
+---
+import type { PageBlock } from '../lib/types'
+import Hero from './blocks/Hero.astro'
+import ImageWithText from './blocks/ImageWithText.astro'
+import FAQ from './blocks/FAQ.astro'
+import RouteRibbon from './blocks/RouteRibbon.astro'
+import RegionAtlas from './blocks/RegionAtlas.astro'
+import ProvenanceList from './blocks/ProvenanceList.astro'
+import WhenToGo from './blocks/WhenToGo.astro'
+import WhatsIncluded from './blocks/WhatsIncluded.astro'
+import TravellerWords from './blocks/TravellerWords.astro'
+import PersonCta from './blocks/PersonCta.astro'
+import EnquiryForm from './blocks/EnquiryForm.astro'
+
+interface Props {
+  blocks: PageBlock[]
+}
+
+const { blocks } = Astro.props
+
+// Albania Travel's vocabulary (site-structure.json blockPlan): three kit
+// blocks carried (hero, imageWithText, faq) and eight built for this client.
+// The kit blocks this build DROPPED (servicesGrid, processSteps, trustBar,
+// testimonialsCarousel, aboutSection, teamGrid, contactSection, ctaBanner)
+// are deliberately not wired here: each drop is argued in site-structure.json,
+// and an unmapped blockType rendering nothing silently is exactly how a
+// dropped block would sneak back in unnoticed. Their component files remain
+// on disk untouched for Stage 9's CMS schema decision.
+const componentMap: Record<string, (props: Record<string, unknown>) => unknown> = {
+  hero: Hero,
+  imageWithText: ImageWithText,
+  faq: FAQ,
+  routeRibbon: RouteRibbon,
+  regionAtlas: RegionAtlas,
+  provenanceList: ProvenanceList,
+  whenToGo: WhenToGo,
+  whatsIncluded: WhatsIncluded,
+  travellerWords: TravellerWords,
+  personCta: PersonCta,
+  enquiryForm: EnquiryForm,
+}
+---
+
+{blocks?.map((block) => {
+  const Component = componentMap[block.blockType]
+  return Component ? <Component {...block} /> : null
+})}

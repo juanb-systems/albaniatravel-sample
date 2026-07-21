@@ -1,0 +1,47 @@
+---
+import type { ProcessStepsBlock } from '../../lib/types'
+
+const { heading, steps } = Astro.props as ProcessStepsBlock
+---
+
+<section class="reveal mx-auto max-w-6xl px-6 py-14 md:py-24 lg:py-32">
+  {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-center text-balance">{heading}</h2>}
+  {/* No intermediate 2-up here, deliberately, and this is the one grid in the
+      kit that does not step through sm:grid-cols-2. A process is read as a
+      sequence; a 2x2 grid puts step 3 underneath step 1 and turns one path
+      into two short ones, which is a worse composition than either the single
+      column or the full row. So: a vertical sequence up to lg, a horizontal
+      one from lg. The responsive work is in the connector and the rhythm
+      rather than the column count. */}
+  <ol class="relative mt-10 lg:mt-16 grid gap-8 lg:gap-10 lg:grid-cols-4">
+    {/* THE CONNECTOR EXISTS AT EVERY WIDTH. It is what makes four items read
+        as one process with stages rather than four unrelated notes, so it is
+        structure, not decoration, and hiding it on a phone with nothing in
+        its place would be deleting meaning at a small size (Hard Rule 13).
+        That is exactly the bug the Mojo Steel build shipped.
+
+        Two orientations, one job. Below lg the line runs vertically down the
+        left through the dots; from lg it runs horizontally across the top of
+        the row. Both are inset so the line starts and ends at the first and
+        last node instead of overshooting into empty space.
+
+        Sequence reads by position along the line, so the nodes are plain
+        accent dots rather than numbered badges (the client dislikes
+        decorative numbers). */}
+    {/* left-3 is the centre of a w-6 node (the li's pl-10 puts the node's
+        left edge at 0), and -translate-x-1/2 centres the 2px rule on that
+        line rather than hanging it off the right of it. */}
+    <div class="lg:hidden absolute top-3 bottom-3 left-3 -translate-x-1/2 w-0.5 -z-10 bg-brand-primary/15" aria-hidden="true"></div>
+    <div class="hidden lg:block absolute top-3 left-[12.5%] right-[12.5%] h-0.5 -z-10 bg-brand-primary/15" aria-hidden="true"></div>
+    {steps?.map((step, i) => (
+      /* Left-aligned at every width. The old centred-on-mobile treatment
+         pulled each dot to the middle of its own row, which is precisely
+         where a connecting line cannot join them up. */
+      <li class="reveal relative pl-10 text-left lg:pl-0" style={`--i:${i}`}>
+        <span class="absolute left-0 top-0 z-10 block h-6 w-6 rounded-full bg-brand-primary ring-4 ring-brand-neutral lg:static lg:mb-4" aria-hidden="true"></span>
+        <p class="font-semibold text-brand-secondary">{step.title}</p>
+        {step.description && <p class="mt-2 text-sm text-brand-secondary/70">{step.description}</p>}
+      </li>
+    ))}
+  </ol>
+</section>

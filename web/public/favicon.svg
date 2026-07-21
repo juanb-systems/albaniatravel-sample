@@ -1,0 +1,16 @@
+<!--
+  Albania Travel favicon: the plane-and-flight-path mark from the client's own
+  logo (see assets/raw/albania-travel-mark.svg for provenance), re-inked into
+  the brand palette on the warm off-white surface. Replaces the template
+  favicon entirely; the stale template favicon.ico has been deleted, not
+  overridden, because browsers request /favicon.ico unprompted and it would
+  win over this file in the tab.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#FBF8F1" />
+  <path d="M8 46 C 20 48, 28 40, 36 32 C 41 27, 46 23.5, 52 21"
+        stroke="#2E5B3E" stroke-width="3.4" stroke-linecap="round"
+        stroke-dasharray="0.1 8" fill="none" />
+  <circle cx="36" cy="32" r="2.8" fill="#A85A1B" />
+  <path d="M42 10 L 58 15.5 L 44.5 23 L 44 16.8 Z" fill="#2E5B3E" />
+</svg>

@@ -1,0 +1,46 @@
+---
+import type { TeamGridBlock } from '../../lib/types'
+import { mediaUrl } from '../../lib/content'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { eyebrow, heading, subheading, members } = Astro.props as TeamGridBlock
+---
+
+<section class="reveal mx-auto max-w-6xl px-6 py-14 md:py-24 lg:py-32">
+  <div class="max-w-2xl">
+    <Eyebrow text={eyebrow} />
+    <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-balance">{heading}</h2>
+    {subheading && <p class="mt-4 text-brand-secondary/70">{subheading}</p>}
+  </div>
+  <div class="mt-10 lg:mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {members?.map((member, i) => (
+      /* Reveal wrapper is separate from the card for the same reason as
+         ServicesGrid: `.reveal` owns the element's transition at entrance
+         speed and the card owns its own at interaction speed, so they cannot
+         share an element without the hover lift inheriting the slow one. */
+      <div class="reveal h-full" style={`--i:${i}`}>
+      <div class="relative h-full overflow-hidden rounded-brand-lg border border-black/10 bg-white p-6 sm:p-8 text-center shadow-brand-card transition-transform duration-(--motion-fast) ease-brand hover:-translate-y-1">
+        {/* Static, not hover-triggered: this card has no link/click action,
+            so a hover-only accent would never actually be seen. A colored
+            ring directly on the photo (not a low-opacity block behind it)
+            is what actually reads against a light card on a light page,
+            the previous translucent offset block was too close in value
+            to both the card and the placeholder photo to register. */}
+        <span class="absolute inset-x-0 top-0 h-1.5 bg-brand-accent-strong" aria-hidden="true"></span>
+        {member.photo && (
+          <img
+            src={mediaUrl(member.photo.url)}
+            alt={member.photo.alt}
+            class="mx-auto h-32 w-32 sm:h-40 sm:w-40 rounded-full object-cover ring-4 ring-brand-accent-strong/40 ring-offset-4 ring-offset-white"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+        <p class="mt-5 font-heading text-lg font-semibold text-brand-secondary">{member.name}</p>
+        <p class="text-sm text-brand-accent-strong font-medium">{member.role}</p>
+        {member.bio && <p class="mt-2 text-sm text-brand-secondary/70">{member.bio}</p>}
+      </div>
+      </div>
+    ))}
+  </div>
+</section>

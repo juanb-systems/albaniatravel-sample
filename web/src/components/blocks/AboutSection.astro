@@ -1,0 +1,35 @@
+---
+import type { AboutSectionBlock } from '../../lib/types'
+import { mediaUrl } from '../../lib/content'
+import { renderRichText } from '../../lib/richtext'
+
+const { heading, body, image, imagePosition } = Astro.props as AboutSectionBlock
+const bodyHtml = renderRichText(body)
+---
+
+<section class="reveal mx-auto max-w-6xl px-6 py-14 md:py-24 lg:py-32 grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+  {image && (
+    <div class={`relative ${imagePosition === 'left' ? 'md:order-1' : 'md:order-2'}`}>
+      {/* Offset accent block peeking out behind the photo: a plain floating
+          image reads as a stock template slot, this small art-directed
+          depth cue reads as considered. Offset direction mirrors imagePosition
+          so it never overlaps the text column. */}
+      {/* Offset shrinks on small screens: a 20px offset against a 358px-wide
+          image is proportionally twice the gesture it is at 560px, and it
+          starts to look like a misaligned element rather than a depth cue. */}
+      <div class={`absolute -z-10 inset-0 ${imagePosition === 'left' ? '-translate-x-3 md:-translate-x-5' : 'translate-x-3 md:translate-x-5'} translate-y-3 md:translate-y-5 rounded-brand-lg bg-brand-accent-strong/35`} aria-hidden="true"></div>
+      <img
+        src={mediaUrl(image.url)}
+        alt={image.alt}
+        class="w-full h-auto rounded-brand-lg shadow-brand-card object-cover aspect-[4/3] ring-1 ring-black/5"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  )}
+  <div class={imagePosition === 'left' ? 'md:order-2' : 'md:order-1'}>
+    <span class="block h-1 w-12 rounded-full bg-brand-accent-strong mb-4" aria-hidden="true"></span>
+    <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-balance">{heading}</h2>
+    <div class="prose prose-neutral mt-6 text-brand-secondary/80" set:html={bodyHtml} />
+  </div>
+</section>

@@ -1,0 +1,932 @@
+{
+  "fetchedAt": "2026-07-21T10:26:31.682Z",
+  "pages": [
+    {
+      "url": "https://albania-travel.com.au/",
+      "status": 200,
+      "bytes": 234692
+    },
+    {
+      "url": "https://albania-travel.com.au/why-albania/",
+      "status": 200,
+      "bytes": 124375
+    },
+    {
+      "url": "https://albania-travel.com.au/itineraries-tours/",
+      "status": 200,
+      "bytes": 148949
+    },
+    {
+      "url": "https://albania-travel.com.au/places-to-visit-in-albania/",
+      "status": 200,
+      "bytes": 136882
+    },
+    {
+      "url": "https://albania-travel.com.au/faqs/",
+      "status": 200,
+      "bytes": 116069
+    },
+    {
+      "url": "https://albania-travel.com.au/contact/",
+      "status": 200,
+      "bytes": 63873
+    },
+    {
+      "url": "https://albania-travel.com.au/product/albania-highlights-9-day-leisurely-cultural-tour/",
+      "status": 200,
+      "bytes": 164133
+    },
+    {
+      "url": "https://albania-travel.com.au/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+      "status": 200,
+      "bytes": 164840
+    },
+    {
+      "url": "https://albania-travel.com.au/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/",
+      "status": 200,
+      "bytes": 187263
+    }
+  ],
+  "images": [
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2022/01/Group-11.png",
+      "foundOn": [
+        "/",
+        "/why-albania/",
+        "/itineraries-tours/",
+        "/places-to-visit-in-albania/",
+        "/faqs/",
+        "/contact/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Group-11.png",
+      "status": 200,
+      "bytes": 1597
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/dc76d1198e65d4dfb42c7b8163f39c00-1024x1024-1.webp",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "dc76d1198e65d4dfb42c7b8163f39c00-1024x1024-1.webp",
+      "status": 200,
+      "bytes": 119090
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Valbona-Valley.jpg",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Valbona-Valley.jpg",
+      "status": 200,
+      "bytes": 2832334
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/3ba25ab16198e6b98536fa6fb869cee6.png",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "3ba25ab16198e6b98536fa6fb869cee6.png",
+      "status": 200,
+      "bytes": 882703
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/9.jpg",
+      "foundOn": [
+        "/",
+        "/why-albania/",
+        "/itineraries-tours/"
+      ],
+      "savedAs": "9.jpg",
+      "status": 200,
+      "bytes": 282953
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Gemini_Generated_Image_7p11w57p11w57p11-2.png",
+      "foundOn": [
+        "/",
+        "/why-albania/",
+        "/itineraries-tours/"
+      ],
+      "savedAs": "Gemini_Generated_Image_7p11w57p11w57p11-2.png",
+      "status": 200,
+      "bytes": 182703
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/fae4c7b440a63e58a8eaace643a2451d-1.png",
+      "foundOn": [
+        "/",
+        "/why-albania/"
+      ],
+      "savedAs": "fae4c7b440a63e58a8eaace643a2451d-1.png",
+      "status": 200,
+      "bytes": 1051048
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2026/04/Albania-Hiking-01.png",
+      "foundOn": [
+        "/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Albania-Hiking-01.png",
+      "status": 200,
+      "bytes": 2920443
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2026/01/adventure-albania-veL7oockHc0-unsplash.jpg",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "adventure-albania-veL7oockHc0-unsplash.jpg",
+      "status": 200,
+      "bytes": 91962
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2025/05/212970938_m.jpg",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "212970938_m.jpg",
+      "status": 200,
+      "bytes": 835210
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2025/05/211288460_m.jpg",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "211288460_m.jpg",
+      "status": 200,
+      "bytes": 449949
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2025/05/nicolas-meunier-LFJd2KnfRRA-unsplash.jpg",
+      "foundOn": [
+        "/",
+        "/itineraries-tours/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "nicolas-meunier-LFJd2KnfRRA-unsplash.jpg",
+      "status": 200,
+      "bytes": 620742
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Group-11-1.png",
+      "foundOn": [
+        "/",
+        "/why-albania/",
+        "/itineraries-tours/",
+        "/places-to-visit-in-albania/",
+        "/faqs/",
+        "/contact/",
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/",
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Group-11-1.png",
+      "status": 200,
+      "bytes": 1876
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/a.png",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "a.png",
+      "status": 200,
+      "bytes": 131107
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/albania_physical_map.png",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "albania_physical_map.png",
+      "status": 200,
+      "bytes": 334643
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/3.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "3.jpg",
+      "status": 200,
+      "bytes": 266588
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/4.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "4.jpg",
+      "status": 200,
+      "bytes": 444959
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/329c5d703b08cb164286f52d4c859335-1.png",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "329c5d703b08cb164286f52d4c859335-1.png",
+      "status": 200,
+      "bytes": 678078
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/ac.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "ac.jpg",
+      "status": 200,
+      "bytes": 265095
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/jakob-owens-vIA62568oFs-unsplash.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "jakob-owens-vIA62568oFs-unsplash.jpg",
+      "status": 200,
+      "bytes": 137189
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/11.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "11.jpg",
+      "status": 200,
+      "bytes": 357250
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/12.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "12.jpg",
+      "status": 200,
+      "bytes": 382416
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/13.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "13.jpg",
+      "status": 200,
+      "bytes": 624457
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/14.jpg",
+      "foundOn": [
+        "/why-albania/"
+      ],
+      "savedAs": "14.jpg",
+      "status": 200,
+      "bytes": 396178
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/IMG_7286.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "IMG_7286.webp",
+      "status": 200,
+      "bytes": 298770
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Albanian-Riviera​.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Albanian-Riviera​.jpg",
+      "status": 200,
+      "bytes": 813986
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Apollonia.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Apollonia.webp",
+      "status": 200,
+      "bytes": 162964
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Berat-Albania-100554.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Berat-Albania-100554.webp",
+      "status": 200,
+      "bytes": 276102
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/blue-eye.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "blue-eye.jpg",
+      "status": 200,
+      "bytes": 136979
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Bovilla.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Bovilla.jpg",
+      "status": 200,
+      "bytes": 153997
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/butrint-1-scaled-1.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "butrint-1-scaled-1.webp",
+      "status": 200,
+      "bytes": 517560
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/carwiz-rent-a-car-albania-dhermi.png",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "carwiz-rent-a-car-albania-dhermi.png",
+      "status": 200,
+      "bytes": 568135
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/gjipe-beach-albania.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "gjipe-beach-albania.jpg",
+      "status": 200,
+      "bytes": 397528
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Hidden-gems-and-off-the-beaten-path-experiences-in-Gjirokaster.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Hidden-gems-and-off-the-beaten-path-experiences-in-Gjirokaster.jpg",
+      "status": 200,
+      "bytes": 278139
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/himare-old-town.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "himare-old-town.webp",
+      "status": 200,
+      "bytes": 243470
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/lake-koman.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "lake-koman.jpg",
+      "status": 200,
+      "bytes": 289930
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Korca_02.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Korca_02.jpg",
+      "status": 200,
+      "bytes": 340046
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Ksamil-beaches.-Four-islands-1024x633-1.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Ksamil-beaches.-Four-islands-1024x633-1.webp",
+      "status": 200,
+      "bytes": 116804
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/0a12d2f627b3c282a5843a385fdbfe0b.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "0a12d2f627b3c282a5843a385fdbfe0b.jpg",
+      "status": 200,
+      "bytes": 290618
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/158266924.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "158266924.jpg",
+      "status": 200,
+      "bytes": 199665
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/pogradec-ohrid-lake.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "pogradec-ohrid-lake.webp",
+      "status": 200,
+      "bytes": 200284
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/osumi-canyon.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "osumi-canyon.webp",
+      "status": 200,
+      "bytes": 211420
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Pellumbasi-Cave.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Pellumbasi-Cave.jpg",
+      "status": 200,
+      "bytes": 98701
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Petrela-Castle.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Petrela-Castle.jpg",
+      "status": 200,
+      "bytes": 272770
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Prespa-Lake.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Prespa-Lake.jpg",
+      "status": 200,
+      "bytes": 298519
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Rozafa-Castle.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Rozafa-Castle.jpg",
+      "status": 200,
+      "bytes": 154155
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/rugova-canyon.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "rugova-canyon.jpg",
+      "status": 200,
+      "bytes": 106980
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/CIty_of_Saranda_Albania_2016.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "CIty_of_Saranda_Albania_2016.jpg",
+      "status": 200,
+      "bytes": 986882
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Shkoder-Alb.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Shkoder-Alb.webp",
+      "status": 200,
+      "bytes": 108170
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/dragons-teeth-valley-incredibly-beautiful-aerial-view-landscape-with-orange-clouds-russia_396174-630.avif",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "dragons-teeth-valley-incredibly-beautiful-aerial-view-landscape-with-orange-clouds-russia_396174-630.avif",
+      "status": 200,
+      "bytes": 70058
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/8325817666_b6fe90a32a_b.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "8325817666_b6fe90a32a_b.jpg",
+      "status": 200,
+      "bytes": 166690
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/getlstd-property-photo.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "getlstd-property-photo.jpg",
+      "status": 200,
+      "bytes": 108328
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/Valbona-Valley-National-Park-Albania.webp",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "Valbona-Valley-National-Park-Albania.webp",
+      "status": 200,
+      "bytes": 257262
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/voskopoja.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "voskopoja.jpg",
+      "status": 200,
+      "bytes": 350852
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/BestThingstoDoinTiranaAlbania.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "BestThingstoDoinTiranaAlbania.jpg",
+      "status": 200,
+      "bytes": 608579
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/12/634d0b67ff0ea4f94be879a1d8d26447.jpg",
+      "foundOn": [
+        "/places-to-visit-in-albania/"
+      ],
+      "savedAs": "634d0b67ff0ea4f94be879a1d8d26447.jpg",
+      "status": 200,
+      "bytes": 416328
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/South-towards-Kruja.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "South-towards-Kruja.jpg",
+      "status": 200,
+      "bytes": 1958952
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/South-towards-Kruja-scaled.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "South-towards-Kruja-scaled.jpg",
+      "status": 200,
+      "bytes": 924174
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Lake-Komani-and-Valbona-Valley.-1-1.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Lake-Komani-and-Valbona-Valley.-1-1.jpg",
+      "status": 200,
+      "bytes": 2739508
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Lake-Komani-and-Valbona-Valley.-1-1-scaled.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Lake-Komani-and-Valbona-Valley.-1-1-scaled.jpg",
+      "status": 200,
+      "bytes": 707226
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Boat-tour-ΓCo-Sazan-and-Karaburun-1.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Boat-tour-ΓCo-Sazan-and-Karaburun-1.jpg",
+      "status": 200,
+      "bytes": 1173476
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Boat-tour-ΓCo-Sazan-and-Karaburun-1-scaled.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Boat-tour-ΓCo-Sazan-and-Karaburun-1-scaled.jpg",
+      "status": 200,
+      "bytes": 541197
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/9-Days.png",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "9-Days.png",
+      "status": 200,
+      "bytes": 1773733
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Berat-2.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/",
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Berat-2.jpg",
+      "status": 200,
+      "bytes": 3711514
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Ardenica-Apollonia-Vlora-1.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Ardenica-Apollonia-Vlora-1.jpg",
+      "status": 200,
+      "bytes": 3367529
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Albanian-Riviera-1.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Albanian-Riviera-1.jpg",
+      "status": 200,
+      "bytes": 1922984
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Blue-Eye-Girokastra-and-Sirande.-1-1.jpg",
+      "foundOn": [
+        "/product/albania-highlights-9-day-leisurely-cultural-tour/"
+      ],
+      "savedAs": "Blue-Eye-Girokastra-and-Sirande.-1-1.jpg",
+      "status": 200,
+      "bytes": 2572630
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Valbona-Valley-scaled.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Valbona-Valley-scaled.jpg",
+      "status": 200,
+      "bytes": 1269274
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Tirana-Highlights.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Tirana-Highlights.jpg",
+      "status": 200,
+      "bytes": 982725
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Tirana-Highlights-scaled.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Tirana-Highlights-scaled.jpg",
+      "status": 200,
+      "bytes": 737650
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Berat.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Berat.jpg",
+      "status": 200,
+      "bytes": 3711514
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Berat-scaled.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Berat-scaled.jpg",
+      "status": 200,
+      "bytes": 978849
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Boat-tour-ΓCo-Sazan-and-Karaburun.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Boat-tour-ΓCo-Sazan-and-Karaburun.jpg",
+      "status": 200,
+      "bytes": 1173476
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Boat-tour-ΓCo-Sazan-and-Karaburun-scaled.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Boat-tour-ΓCo-Sazan-and-Karaburun-scaled.jpg",
+      "status": 200,
+      "bytes": 541197
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2025/03/Example-Tour-2-Map-1_page-0001.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Example-Tour-2-Map-1_page-0001.jpg",
+      "status": 200,
+      "bytes": 228618
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Theth-Valley.jpg",
+      "foundOn": [
+        "/product/albania-discovery-with-extended-stays-9-day-unhurried-tour-with-daily-excursions-to-local-sights-and-features-private-tour-copy/"
+      ],
+      "savedAs": "Theth-Valley.jpg",
+      "status": 200,
+      "bytes": 743362
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Vjosa-Valley-and-Permet.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Vjosa-Valley-and-Permet.jpg",
+      "status": 200,
+      "bytes": 4205056
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Vjosa-Valley-and-Permet-scaled.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Vjosa-Valley-and-Permet-scaled.jpg",
+      "status": 200,
+      "bytes": 1087672
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Tirana.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Tirana.jpg",
+      "status": 200,
+      "bytes": 850080
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Tirana-scaled.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Tirana-scaled.jpg",
+      "status": 200,
+      "bytes": 619140
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Skopje.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Skopje.jpg",
+      "status": 200,
+      "bytes": 2194434
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Skopje-scaled.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Skopje-scaled.jpg",
+      "status": 200,
+      "bytes": 961526
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/14-days.png",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "14-days.png",
+      "status": 200,
+      "bytes": 1819746
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Lake-Komani-and-Valbona-Valley.-.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Lake-Komani-and-Valbona-Valley.-.jpg",
+      "status": 200,
+      "bytes": 2739508
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Decan-Monastery-and-Prizren.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Decan-Monastery-and-Prizren.jpg",
+      "status": 200,
+      "bytes": 1958952
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Lake-Ohrid-and-Ohrid-Town.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Lake-Ohrid-and-Ohrid-Town.jpg",
+      "status": 200,
+      "bytes": 2974029
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Korca.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Korca.jpg",
+      "status": 200,
+      "bytes": 2112071
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Blue-Eye-Girokastra-and-Sirande.-.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Blue-Eye-Girokastra-and-Sirande.-.jpg",
+      "status": 200,
+      "bytes": 2572630
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Corfu-Town.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Corfu-Town.jpg",
+      "status": 200,
+      "bytes": 803604
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Albanian-Riviera.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Albanian-Riviera.jpg",
+      "status": 200,
+      "bytes": 1922984
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Berat-1.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Berat-1.jpg",
+      "status": 200,
+      "bytes": 3711514
+    },
+    {
+      "originalUrl": "https://albania-travel.com.au/wp-content/uploads/2024/11/Durres-and-Tirana.jpg",
+      "foundOn": [
+        "/product/balkans-explorer-14-day-albania-kosovo-northern-macedonia-corfu-private-tour/"
+      ],
+      "savedAs": "Durres-and-Tirana.jpg",
+      "status": 200,
+      "bytes": 982725
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+---
+import type { WhatsIncludedBlock } from '../../lib/types'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { background, eyebrow, heading, included, upgrades, note } = Astro.props as WhatsIncludedBlock
+
+// The value argument made concrete: the client's published inclusions and
+// options, two plain columns, no icons, no cards, no comparison table.
+// Everything here is client-published (intake pricesPublished /
+// inclusionsPublished); nothing is invented (Hard Rule 4).
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+    <div class="max-w-2xl">
+      <Eyebrow text={eyebrow} />
+      {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+    </div>
+
+    <div class="mt-10 grid gap-10 md:grid-cols-2 md:gap-14">
+      <div class="reveal" style="--i:0">
+        <h3 class="font-heading text-xl font-bold text-brand-primary">Always in the price</h3>
+        <ul class="mt-5 space-y-3">
+          {included.map((item) => (
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-primary" aria-hidden="true"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="reveal" style="--i:1">
+        <h3 class="font-heading text-xl font-bold text-brand-primary">Choose your way</h3>
+        <ul class="mt-5 space-y-3">
+          {upgrades.map((item) => (
+            <li class="flex gap-3">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-accent" aria-hidden="true"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {note && <p class="mt-10 max-w-3xl border-t border-brand-rule-light pt-6 text-sm text-brand-text-muted">{note}</p>}
+  </div>
+</section>

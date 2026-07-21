@@ -1,0 +1,70 @@
+---
+import type { ProvenanceListBlock } from '../../lib/types'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { variant, background, eyebrow, heading, intro, links, moreLink } = Astro.props as ProvenanceListBlock
+
+// sunny-fresh-honest's own signature block (the language file lists
+// provenanceList as CANDIDATE: named suppliers with their location, because
+// a generic "we source locally" paragraph is the approximation the block
+// exists to prevent). Built per Hard Rule 10, and adapted honestly: for this
+// client the named supply chain IS the product. You, Geoff and James in
+// Australia, Wander Albania in Tirana, your driver and guide on the road.
+//
+// Desktop draws the four links along a horizontal dotted flight path with a
+// plane at the start (the brand motif, from the client's own logo). On a
+// phone the SAME connector becomes a vertical dotted spine: the line is what
+// makes it read as a chain, so it is never deleted at a small size, it is
+// rotated (Hard Rule 13; the Mojo ProcessSteps lesson).
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+    {(eyebrow || heading || intro) && (
+      <div class="max-w-2xl">
+        <Eyebrow text={eyebrow} />
+        {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+        {intro && <p class="mt-4 text-brand-text-muted">{intro}</p>}
+      </div>
+    )}
+
+    {/* Desktop: horizontal chain. The dotted rule sits behind the node dots;
+        each dot gets a ring in the section background so the line terminates
+        cleanly at the node edge. */}
+    <ol class="hidden md:grid mt-14 grid-cols-4 gap-8 relative">
+      <span class="pointer-events-none absolute left-0 right-0 top-[5px] border-t-[3px] border-dotted border-brand-primary/40" aria-hidden="true"></span>
+      <svg class="pointer-events-none absolute -top-[7px] right-0 h-6 w-6 text-brand-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M2 13 L22 3 L15 21 L11.5 14 Z" />
+      </svg>
+      {links.map((link) => (
+        <li class="relative pt-8">
+          <span class={`absolute left-0 top-0 h-3.5 w-3.5 rounded-full bg-brand-primary ring-4 ${background === 'primarySoft' ? 'ring-brand-primary-soft' : background === 'neutral' ? 'ring-brand-neutral' : 'ring-brand-surface'}`} aria-hidden="true"></span>
+          <p class="font-heading text-lg font-bold text-brand-secondary">{link.name}</p>
+          <p class="mt-0.5 text-sm font-bold text-brand-accent-strong">{link.location}</p>
+          <p class="mt-1.5 text-sm text-brand-text-muted">{link.role}</p>
+          {variant === 'full' && link.note && <p class="mt-3 text-sm text-brand-text-muted border-l-2 border-brand-rule-light pl-3">{link.note}</p>}
+        </li>
+      ))}
+    </ol>
+
+    {/* Mobile: the same chain, vertical. Same data, same connector, rotated. */}
+    <ol class="md:hidden mt-10 border-l-[3px] border-dotted border-brand-primary/40 pl-6 space-y-8">
+      {links.map((link) => (
+        <li class="relative">
+          <span class={`absolute -left-[33px] top-1 h-3.5 w-3.5 rounded-full bg-brand-primary ring-4 ${background === 'primarySoft' ? 'ring-brand-primary-soft' : background === 'neutral' ? 'ring-brand-neutral' : 'ring-brand-surface'}`} aria-hidden="true"></span>
+          <p class="font-heading text-lg font-bold text-brand-secondary">{link.name}</p>
+          <p class="mt-0.5 text-sm font-bold text-brand-accent-strong">{link.location}</p>
+          <p class="mt-1.5 text-sm text-brand-text-muted">{link.role}</p>
+          {variant === 'full' && link.note && <p class="mt-2 text-sm text-brand-text-muted">{link.note}</p>}
+        </li>
+      ))}
+    </ol>
+
+    {moreLink && (
+      <p class="mt-10">
+        <a href={moreLink.url} class="text-sm font-bold text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{moreLink.label}</a>
+      </p>
+    )}
+  </div>
+</section>

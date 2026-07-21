@@ -1,0 +1,629 @@
+{
+  "dupes": [
+    {
+      "kept": "Albanian-Riviera.jpg",
+      "dropped": [
+        "Albanian-Riviera-1.jpg"
+      ]
+    },
+    {
+      "kept": "Berat.jpg",
+      "dropped": [
+        "Berat-1.jpg",
+        "Berat-2.jpg"
+      ]
+    },
+    {
+      "kept": "Blue-Eye-Girokastra-and-Sirande.-.jpg",
+      "dropped": [
+        "Blue-Eye-Girokastra-and-Sirande.-1-1.jpg"
+      ]
+    },
+    {
+      "kept": "Boat-tour-ΓCo-Sazan-and-Karaburun-scaled.jpg",
+      "dropped": [
+        "Boat-tour-ΓCo-Sazan-and-Karaburun-1-scaled.jpg"
+      ]
+    },
+    {
+      "kept": "Boat-tour-ΓCo-Sazan-and-Karaburun.jpg",
+      "dropped": [
+        "Boat-tour-ΓCo-Sazan-and-Karaburun-1.jpg"
+      ]
+    },
+    {
+      "kept": "South-towards-Kruja.jpg",
+      "dropped": [
+        "Decan-Monastery-and-Prizren.jpg"
+      ]
+    },
+    {
+      "kept": "Durres-and-Tirana.jpg",
+      "dropped": [
+        "Tirana-Highlights.jpg"
+      ]
+    },
+    {
+      "kept": "Lake-Komani-and-Valbona-Valley.-.jpg",
+      "dropped": [
+        "Lake-Komani-and-Valbona-Valley.-1-1.jpg"
+      ]
+    },
+    {
+      "kept": "Berat.jpg",
+      "dropped": [
+        "Berat-scaled.jpg (scaled sibling)"
+      ]
+    },
+    {
+      "kept": "Boat-tour-ΓCo-Sazan-and-Karaburun.jpg",
+      "dropped": [
+        "Boat-tour-ΓCo-Sazan-and-Karaburun-scaled.jpg (scaled sibling)"
+      ]
+    },
+    {
+      "kept": "Skopje.jpg",
+      "dropped": [
+        "Skopje-scaled.jpg (scaled sibling)"
+      ]
+    },
+    {
+      "kept": "South-towards-Kruja.jpg",
+      "dropped": [
+        "South-towards-Kruja-scaled.jpg (scaled sibling)"
+      ]
+    },
+    {
+      "kept": "Tirana.jpg",
+      "dropped": [
+        "Tirana-scaled.jpg (scaled sibling)"
+      ]
+    },
+    {
+      "kept": "Valbona-Valley.jpg",
+      "dropped": [
+        "Valbona-Valley-scaled.jpg (scaled sibling)"
+      ]
+    },
+    {
+      "kept": "Vjosa-Valley-and-Permet.jpg",
+      "dropped": [
+        "Vjosa-Valley-and-Permet-scaled.jpg (scaled sibling)"
+      ]
+    }
+  ],
+  "manifest": [
+    {
+      "raw": "0a12d2f627b3c282a5843a385fdbfe0b.jpg",
+      "source": "0a12d2f627b3c282a5843a385fdbfe0b.jpg",
+      "srcWidth": 1600,
+      "srcHeight": 902,
+      "provenanceGuess": "hashed-name-unknown"
+    },
+    {
+      "raw": "11.jpg",
+      "source": "11.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 1050,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "12.jpg",
+      "source": "12.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 2100,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "13.jpg",
+      "source": "13.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 1867,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "14-days.jpg",
+      "source": "14-days.png",
+      "srcWidth": 3111,
+      "srcHeight": 4401,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "14.jpg",
+      "source": "14.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 2100,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "158266924.jpg",
+      "source": "158266924.jpg",
+      "srcWidth": 1024,
+      "srcHeight": 576,
+      "provenanceGuess": "stock-agency-numbered"
+    },
+    {
+      "raw": "211288460-m.jpg",
+      "source": "211288460_m.jpg",
+      "srcWidth": 2250,
+      "srcHeight": 1500,
+      "provenanceGuess": "stock-agency-numbered"
+    },
+    {
+      "raw": "212970938-m.jpg",
+      "source": "212970938_m.jpg",
+      "srcWidth": 2250,
+      "srcHeight": 1500,
+      "provenanceGuess": "stock-agency-numbered"
+    },
+    {
+      "raw": "3.jpg",
+      "source": "3.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 1400,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "329c5d703b08cb164286f52d4c859335-1.jpg",
+      "source": "329c5d703b08cb164286f52d4c859335-1.png",
+      "srcWidth": 1400,
+      "srcHeight": 1050,
+      "provenanceGuess": "hashed-name-unknown"
+    },
+    {
+      "raw": "3ba25ab16198e6b98536fa6fb869cee6.jpg",
+      "source": "3ba25ab16198e6b98536fa6fb869cee6.png",
+      "srcWidth": 1400,
+      "srcHeight": 1400,
+      "provenanceGuess": "hashed-name-unknown"
+    },
+    {
+      "raw": "4.jpg",
+      "source": "4.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 1865,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "634d0b67ff0ea4f94be879a1d8d26447.jpg",
+      "source": "634d0b67ff0ea4f94be879a1d8d26447.jpg",
+      "srcWidth": 1600,
+      "srcHeight": 1060,
+      "provenanceGuess": "hashed-name-unknown"
+    },
+    {
+      "raw": "8325817666-b6fe90a32a-b.jpg",
+      "source": "8325817666_b6fe90a32a_b.jpg",
+      "srcWidth": 1024,
+      "srcHeight": 681,
+      "provenanceGuess": "stock-agency-numbered"
+    },
+    {
+      "raw": "9-days.jpg",
+      "source": "9-Days.png",
+      "srcWidth": 3111,
+      "srcHeight": 4401,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "9.jpg",
+      "source": "9.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 2013,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "albania-hiking-01.jpg",
+      "source": "Albania-Hiking-01.png",
+      "srcWidth": 1611,
+      "srcHeight": 976,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "albanian-riviera.jpg",
+      "source": "Albanian-Riviera.jpg",
+      "srcWidth": 5472,
+      "srcHeight": 3648,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "albanian-riviera.jpg",
+      "source": "Albanian-Riviera​.jpg",
+      "srcWidth": 1893,
+      "srcHeight": 1500,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "apollonia.jpg",
+      "source": "Apollonia.webp",
+      "srcWidth": 1200,
+      "srcHeight": 801,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "ardenica-apollonia-vlora-1.jpg",
+      "source": "Ardenica-Apollonia-Vlora-1.jpg",
+      "srcWidth": 6000,
+      "srcHeight": 4000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "berat-albania-100554.jpg",
+      "source": "Berat-Albania-100554.webp",
+      "srcWidth": 1200,
+      "srcHeight": 804,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "berat.jpg",
+      "source": "Berat.jpg",
+      "srcWidth": 6000,
+      "srcHeight": 4000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "bestthingstodointiranaalbania.jpg",
+      "source": "BestThingstoDoinTiranaAlbania.jpg",
+      "srcWidth": 2500,
+      "srcHeight": 1404,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "blue-eye-girokastra-and-sirande.jpg",
+      "source": "Blue-Eye-Girokastra-and-Sirande.-.jpg",
+      "srcWidth": 4000,
+      "srcHeight": 3000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "boat-tour-co-sazan-and-karaburun.jpg",
+      "source": "Boat-tour-ΓCo-Sazan-and-Karaburun.jpg",
+      "srcWidth": 3939,
+      "srcHeight": 2215,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "bovilla.jpg",
+      "source": "Bovilla.jpg",
+      "srcWidth": 1280,
+      "srcHeight": 720,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "city-of-saranda-albania-2016.jpg",
+      "source": "CIty_of_Saranda_Albania_2016.jpg",
+      "srcWidth": 2476,
+      "srcHeight": 1500,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "corfu-town.jpg",
+      "source": "Corfu-Town.jpg",
+      "srcWidth": 3500,
+      "srcHeight": 2008,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "durres-and-tirana.jpg",
+      "source": "Durres-and-Tirana.jpg",
+      "srcWidth": 3088,
+      "srcHeight": 2048,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "example-tour-2-map-1-page-0001.jpg",
+      "source": "Example-Tour-2-Map-1_page-0001.jpg",
+      "srcWidth": 1240,
+      "srcHeight": 1755,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "gemini-generated-image-7p11w57p11w57p11-2.jpg",
+      "source": "Gemini_Generated_Image_7p11w57p11w57p11-2.png",
+      "srcWidth": 289,
+      "srcHeight": 354,
+      "provenanceGuess": "ai-generated"
+    },
+    {
+      "raw": "group-11-1.jpg",
+      "source": "Group-11-1.png",
+      "srcWidth": 284,
+      "srcHeight": 42,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "group-11.jpg",
+      "source": "Group-11.png",
+      "srcWidth": 223,
+      "srcHeight": 37,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "hidden-gems-and-off-the-beaten-path-experiences-in-gjirokast.jpg",
+      "source": "Hidden-gems-and-off-the-beaten-path-experiences-in-Gjirokaster.jpg",
+      "srcWidth": 1344,
+      "srcHeight": 768,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "img-7286.jpg",
+      "source": "IMG_7286.webp",
+      "srcWidth": 1800,
+      "srcHeight": 1200,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "korca.jpg",
+      "source": "Korca.jpg",
+      "srcWidth": 4000,
+      "srcHeight": 3000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "korca-02.jpg",
+      "source": "Korca_02.jpg",
+      "srcWidth": 1200,
+      "srcHeight": 800,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "ksamil-beaches-four-islands-1024x633-1.jpg",
+      "source": "Ksamil-beaches.-Four-islands-1024x633-1.webp",
+      "srcWidth": 1024,
+      "srcHeight": 633,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "lake-komani-and-valbona-valley.jpg",
+      "source": "Lake-Komani-and-Valbona-Valley.-.jpg",
+      "srcWidth": 5175,
+      "srcHeight": 2721,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "lake-komani-and-valbona-valley-1-1-scaled.jpg",
+      "source": "Lake-Komani-and-Valbona-Valley.-1-1-scaled.jpg",
+      "srcWidth": 2560,
+      "srcHeight": 1346,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "lake-ohrid-and-ohrid-town.jpg",
+      "source": "Lake-Ohrid-and-Ohrid-Town.jpg",
+      "srcWidth": 6000,
+      "srcHeight": 4000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "pellumbasi-cave.jpg",
+      "source": "Pellumbasi-Cave.jpg",
+      "srcWidth": 673,
+      "srcHeight": 446,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "petrela-castle.jpg",
+      "source": "Petrela-Castle.jpg",
+      "srcWidth": 1200,
+      "srcHeight": 888,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "prespa-lake.jpg",
+      "source": "Prespa-Lake.jpg",
+      "srcWidth": 1200,
+      "srcHeight": 800,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "rozafa-castle.jpg",
+      "source": "Rozafa-Castle.jpg",
+      "srcWidth": 900,
+      "srcHeight": 600,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "shkoder-alb.jpg",
+      "source": "Shkoder-Alb.webp",
+      "srcWidth": 800,
+      "srcHeight": 533,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "skopje.jpg",
+      "source": "Skopje.jpg",
+      "srcWidth": 4215,
+      "srcHeight": 3651,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "south-towards-kruja.jpg",
+      "source": "South-towards-Kruja.jpg",
+      "srcWidth": 4000,
+      "srcHeight": 2250,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "theth-valley.jpg",
+      "source": "Theth-Valley.jpg",
+      "srcWidth": 2946,
+      "srcHeight": 2210,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "tirana-highlights-scaled.jpg",
+      "source": "Tirana-Highlights-scaled.jpg",
+      "srcWidth": 2560,
+      "srcHeight": 1698,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "tirana.jpg",
+      "source": "Tirana.jpg",
+      "srcWidth": 3088,
+      "srcHeight": 2048,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "valbona-valley-national-park-albania.jpg",
+      "source": "Valbona-Valley-National-Park-Albania.webp",
+      "srcWidth": 1920,
+      "srcHeight": 1272,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "valbona-valley.jpg",
+      "source": "Valbona-Valley.jpg",
+      "srcWidth": 4000,
+      "srcHeight": 3000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "vjosa-valley-and-permet.jpg",
+      "source": "Vjosa-Valley-and-Permet.jpg",
+      "srcWidth": 6000,
+      "srcHeight": 4000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "a.jpg",
+      "source": "a.png",
+      "srcWidth": 460,
+      "srcHeight": 482,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "ac.jpg",
+      "source": "ac.jpg",
+      "srcWidth": 1400,
+      "srcHeight": 933,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "adventure-albania-vel7oockhc0-unsplash.jpg",
+      "source": "adventure-albania-veL7oockHc0-unsplash.jpg",
+      "srcWidth": 640,
+      "srcHeight": 475,
+      "provenanceGuess": "stock-unsplash"
+    },
+    {
+      "raw": "albania-physical-map.jpg",
+      "source": "albania_physical_map.png",
+      "srcWidth": 1555,
+      "srcHeight": 2200,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "blue-eye.jpg",
+      "source": "blue-eye.jpg",
+      "srcWidth": 669,
+      "srcHeight": 446,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "butrint-1-scaled-1.jpg",
+      "source": "butrint-1-scaled-1.webp",
+      "srcWidth": 1920,
+      "srcHeight": 1282,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "carwiz-rent-a-car-albania-dhermi.jpg",
+      "source": "carwiz-rent-a-car-albania-dhermi.png",
+      "srcWidth": 755,
+      "srcHeight": 512,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "dc76d1198e65d4dfb42c7b8163f39c00-1024x1024-1.jpg",
+      "source": "dc76d1198e65d4dfb42c7b8163f39c00-1024x1024-1.webp",
+      "srcWidth": 1024,
+      "srcHeight": 1024,
+      "provenanceGuess": "hashed-name-unknown"
+    },
+    {
+      "raw": "dragons-teeth-valley-incredibly-beautiful-aerial-view-landsc.jpg",
+      "source": "dragons-teeth-valley-incredibly-beautiful-aerial-view-landscape-with-orange-clouds-russia_396174-630.avif",
+      "srcWidth": 626,
+      "srcHeight": 352,
+      "provenanceGuess": "stock-agency-numbered"
+    },
+    {
+      "raw": "fae4c7b440a63e58a8eaace643a2451d-1.jpg",
+      "source": "fae4c7b440a63e58a8eaace643a2451d-1.png",
+      "srcWidth": 1400,
+      "srcHeight": 1400,
+      "provenanceGuess": "hashed-name-unknown"
+    },
+    {
+      "raw": "getlstd-property-photo.jpg",
+      "source": "getlstd-property-photo.jpg",
+      "srcWidth": 1200,
+      "srcHeight": 720,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "gjipe-beach-albania.jpg",
+      "source": "gjipe-beach-albania.jpg",
+      "srcWidth": 1600,
+      "srcHeight": 1000,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "himare-old-town.jpg",
+      "source": "himare-old-town.webp",
+      "srcWidth": 1200,
+      "srcHeight": 800,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "jakob-owens-via62568ofs-unsplash.jpg",
+      "source": "jakob-owens-vIA62568oFs-unsplash.jpg",
+      "srcWidth": 640,
+      "srcHeight": 960,
+      "provenanceGuess": "stock-unsplash"
+    },
+    {
+      "raw": "lake-koman.jpg",
+      "source": "lake-koman.jpg",
+      "srcWidth": 1200,
+      "srcHeight": 800,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "nicolas-meunier-lfjd2knfrra-unsplash.jpg",
+      "source": "nicolas-meunier-LFJd2KnfRRA-unsplash.jpg",
+      "srcWidth": 1920,
+      "srcHeight": 1280,
+      "provenanceGuess": "stock-unsplash"
+    },
+    {
+      "raw": "osumi-canyon.jpg",
+      "source": "osumi-canyon.webp",
+      "srcWidth": 1200,
+      "srcHeight": 800,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "pogradec-ohrid-lake.jpg",
+      "source": "pogradec-ohrid-lake.webp",
+      "srcWidth": 1920,
+      "srcHeight": 1097,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "rugova-canyon.jpg",
+      "source": "rugova-canyon.jpg",
+      "srcWidth": 900,
+      "srcHeight": 500,
+      "provenanceGuess": "client-published"
+    },
+    {
+      "raw": "voskopoja.jpg",
+      "source": "voskopoja.jpg",
+      "srcWidth": 1280,
+      "srcHeight": 720,
+      "provenanceGuess": "client-published"
+    }
+  ]
+}

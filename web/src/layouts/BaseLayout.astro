@@ -1,0 +1,124 @@
+---
+import '../styles/global.css'
+import { ClientRouter } from 'astro:transitions'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { getSiteSettings, getNavigation } from '../lib/content'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+const siteSettings = await getSiteSettings()
+const navigation = await getNavigation()
+
+// Fonts are driven by SiteSettings.brand (in turn sourced from
+// brand-direction.json, see references/brand-direction.md) rather than
+// hardcoded, so re-skinning a project's typography is a content change,
+// not a template edit.
+const headingFont = siteSettings.brand.headingFont || 'Alegreya'
+const bodyFont = siteSettings.brand.bodyFont || 'Nunito'
+// Caveat is the language's single permitted handwritten accent (one label per
+// page at most, never load-bearing); weight 600 only. Body loads 700 because
+// sunny-fresh-honest leans on bold labels throughout.
+const fontsHref = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(headingFont)}:wght@600;700&family=${encodeURIComponent(bodyFont)}:wght@400;600;700&family=Caveat:wght@600&display=swap`
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | {siteSettings.businessName}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href={fontsHref} />
+    <ClientRouter />
+    {/* If JS never runs, the IntersectionObserver below never fires and
+        .reveal sections would stay at opacity:0 forever: force them visible
+        as a no-JS fallback. */}
+    <noscript>
+      <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
+  </head>
+  <body>
+    <Header siteSettings={siteSettings} navigation={navigation} transition:persist />
+    <main>
+      <slot />
+    </main>
+    <Footer siteSettings={siteSettings} navigation={navigation} />
+    {/* Mobile gets what desktop doesn't (Stage 7, motion-spec.json): a sticky
+        tap-to-call bar, because this site's booking path is a person and on a
+        phone the shortest path to a person is one thumb press. Hidden from
+        md: up, where the header carries the call affordance. The spacer keeps
+        the bar from covering the footer's last rows. */}
+    {siteSettings.contact?.people?.length && (
+      <>
+        <div class="h-16 md:hidden" aria-hidden="true"></div>
+        <div class="fixed inset-x-0 bottom-0 z-40 md:hidden border-t border-brand-rule-light bg-brand-surface/95 backdrop-blur px-3 py-2 flex gap-2">
+          {siteSettings.contact.people.map((p) => (
+            <a
+              href={`tel:${p.phone.replace(/\s+/g, '')}`}
+              class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary px-4 py-3 text-sm font-bold text-brand-text-invert active:translate-y-px transition-transform duration-(--motion-fast) ease-brand"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Call {p.name}
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+    <script>
+      // Re-runs on astro:page-load (fires on first load and after every
+      // ClientRouter navigation, since transitions swap the DOM rather than
+      // reloading the page) so sections revealed on a prior page don't leave
+      // stale observers and newly-swapped-in sections still get one.
+      function initReveal() {
+        const sections = document.querySelectorAll<HTMLElement>('.reveal:not(.reveal-visible)')
+        if (!sections.length) return
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          sections.forEach((el) => el.classList.add('reveal-visible'))
+          return
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible')
+                observer.unobserve(entry.target)
+              }
+            }
+          },
+          // threshold MUST be 0, and this is not a style preference.
+          //
+          // IntersectionObserver's threshold is a fraction of the TARGET, not of
+          // the viewport. A section taller than roughly 6.7x the viewport can
+          // therefore never reach 0.15 no matter how far it is scrolled, so it
+          // stays at opacity:0 for ever and the content is simply invisible.
+          //
+          // This shipped at 0.15 and broke real pages. On NJ Electrical the
+          // by-sector venue index measures 7674px at 390px wide against an 844px
+          // viewport, a maximum possible ratio of 0.11, so the single most
+          // important block on the site was permanently blank on a phone. Two
+          // separate builds hit it independently and each patched only its own
+          // copy, which is why it is fixed here at the source.
+          //
+          // The negative bottom rootMargin is what actually delays the reveal
+          // until the section is properly on screen, and it does that
+          // independently of how tall the element is. That is the correct lever.
+          { threshold: 0, rootMargin: '0px 0px -10% 0px' },
+        )
+        sections.forEach((el) => observer.observe(el))
+      }
+
+      initReveal()
+      document.addEventListener('astro:page-load', initReveal)
+    </script>
+  </body>
+</html>

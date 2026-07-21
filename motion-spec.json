@@ -1,0 +1,287 @@
+{
+  "designLanguage": "sunny-fresh-honest",
+  "languageMotionQuote": "Gentle and natural. Soft scroll-reveals, a slow settle on images, a small lift on cards. Nothing mechanical or fast. Durations: fast 180ms, base 360ms, slow 640ms. Easing: cubic-bezier(0.25, 0.8, 0.35, 1). Quick to leave, slow to arrive, no bounce at the end. Reveal: mask-grow. Arched images reveal by their rounded-top mask growing from 92% to full height while the image fades; text does a plain 10px fade-up alongside. Stagger: 90ms, capped at 6. Signature motion move: arch-open, used once per section on the lead image, so the page reads as doors opening onto daylight. Continuous motion: one is permitted (a slow hero crossfade of two genuine photos of the same space); never a marquee, never parallax.",
+  "languageMobileQuote": "Daylight and abundance have to survive at 390px. The arch keeps its proportion on a phone rather than flattening. Type scale: display 2.75rem to 1.875rem, headings 1.75rem to 1.375rem, body 17px. Section rhythm py-16 md:py-24 lg:py-28. Do not drop the visible reviewed date on the seasonal list. Mobile-native affordance: long honest lists stay long.",
+  "tokens": {
+    "fast": "180ms",
+    "base": "360ms",
+    "slow": "640ms",
+    "stagger": "90ms",
+    "staggerCap": 6,
+    "ease": "cubic-bezier(0.25, 0.8, 0.35, 1)",
+    "easeExit": "cubic-bezier(0.4, 0, 1, 1)",
+    "distance": "10px",
+    "derivation": "Every figure is the language's own stated value, not an adaptation: 180/360/640ms, the 0.25/0.8/0.35/1 curve, 90ms stagger capped at 6, and the 10px text travel from the reveal spec (the template's neutral 16px was replaced, because the language asks for a plain 10px fade-up). Ledger anti-drift check: nj-electrical shipped 120/220/420 on 0.4/0/0.2/1 and mojo-steel 200/450/850 on 0.2/0.6/0.2/1; this build shares no duration and no curve with either.",
+    "location": "web/src/styles/tokens.css :root, exposed to Tailwind via the @theme block; components bind with duration-(--motion-*) and ease-brand, never a literal"
+  },
+  "layers": {
+    "entrance": {
+      "applies": [
+        "hero eyebrow",
+        "hero h1",
+        "hero subheading",
+        "hero buttons or annotation"
+      ],
+      "effect": "enter-rise cascade at 90ms steps (eyebrow, h1, subheading, buttons), full sequence 640ms + 3x90ms = 910ms to the last element, primary CTA lands at 180ms delay, inside the 500ms budget. On the two arched heroes (Home, How it works) the lead image runs arch-open as a pure CSS load entrance (@keyframes arch-open), no observer."
+    },
+    "reveal": {
+      "variant": "mask-grow for the one lead arched image per section (.arch-reveal: clip-path inset 8%-to-0 with the arch radius while opacity settles 0.35-to-1); every other element does the language's plain 10px fade-up via .reveal",
+      "stagger": true,
+      "staggerCap": 6,
+      "blocks": [
+        "regionAtlas cards",
+        "routeRibbon cards and route stops",
+        "provenanceList (section-level)",
+        "whenToGo rows and strip cards",
+        "whatsIncluded columns",
+        "travellerWords stacked entries",
+        "routeRibbon strip rows"
+      ]
+    },
+    "interaction": {
+      "hover": "Buttons lift -0.5px translate plus fill deepen (accent to accent-strong, primary to primary-light); text links underline-wipe with colour shift; strip rows tint to surface; FAQ summaries tint to primary-soft. Never colour alone.",
+      "focusVisible": "Global 2px accent-strong outline with 2px offset on a, button, summary, input, select, textarea (global.css).",
+      "active": "Buttons and the call bar translate back down 1px on press (the touch confirmation), timed at --motion-fast."
+    },
+    "route": {
+      "transitionNames": [
+        "page-heading (the h1 in every hero variant, so headings morph between routes rather than cross-fading)"
+      ],
+      "persist": [
+        "Header (transition:persist), so the nav and call affordance do not blink between pages"
+      ]
+    }
+  },
+  "signatureMotion": {
+    "name": "arch-open",
+    "what": "The rounded-top mask of a section's lead arched image grows from 92% to full height over the slow duration while the image settles from 0.35 to full opacity.",
+    "why": "The language's own signature: the page reads as doors opening onto daylight, and the arch is already the brand's recurring crop shape, so the motion animates the thing that IS the design.",
+    "where": [
+      "Home hero image (load entrance form)",
+      "How it works hero image (load entrance form)",
+      "each ImageWithText image (scroll form)",
+      "the lead card of each regionAtlas grid (scroll form)"
+    ]
+  },
+  "continuous": {
+    "used": false,
+    "what": null,
+    "why": "The language permits exactly one continuous move: a slow crossfade between two genuine daylight photographs of the same space. The harvest contains no two genuine frames of the same place, so the option is declined rather than faked with two different places."
+  },
+  "reducedMotion": "One prefers-reduced-motion block in global.css zeroes the reveal, the stagger delays, all enter-* keyframes, and the authored arch-open/arch-reveal clip-paths (mask fully open, opacity 1, no delay). Verified by emulating reduced motion in the browser and looking at every page, not by reading the CSS. The noscript fallback forces .reveal visible when JS never runs.",
+  "responsive": {
+    "breakpointsUsed": [
+      "base (authored for 390px)",
+      "sm",
+      "md",
+      "lg",
+      "xl"
+    ],
+    "blocks": [
+      {
+        "block": "hero",
+        "variants": [
+          {
+            "variant": "arched-daylight (home)",
+            "mobileComposition": "Text block first, arch image below at 4:5 (taller crop than desktop's 3:4 so the arch keeps its proportion, per the language), buttons wrap to full-width rows.",
+            "droppedOnMobile": [],
+            "intermediate": "Single column to md:grid-cols-2; image aspect relaxes 4:5 to 3:4 at sm.",
+            "mobileOnly": "Sticky bottom call bar (site-wide, see layout note); tap targets on both hero buttons exceed 44px."
+          },
+          {
+            "variant": "compact-type (tours)",
+            "mobileComposition": "Type-only band, display steps 3xl to 5xl across sm/lg.",
+            "droppedOnMobile": [],
+            "intermediate": "Padding steps py-14 sm:py-16 lg:py-20.",
+            "mobileOnly": "Nothing block-specific; the call bar carries the action."
+          },
+          {
+            "variant": "image-full (places)",
+            "mobileComposition": "Full-bleed image with the gradient scrim and bottom-anchored type; top padding drops from lg:pt-64 to pt-36 so the image is not three screens tall on a phone.",
+            "droppedOnMobile": [],
+            "intermediate": "pt-36 sm:pt-48 lg:pt-64.",
+            "mobileOnly": "Scrim is strongest at the text anchor at every width; text never sits on unscrimmed image."
+          },
+          {
+            "variant": "type-only (planning)",
+            "mobileComposition": "Centred type at 3xl, stepping to 5xl.",
+            "droppedOnMobile": [],
+            "intermediate": "sm and lg display steps.",
+            "mobileOnly": "Nothing block-specific."
+          },
+          {
+            "variant": "split-founding (how-it-works)",
+            "mobileComposition": "The founding sentence stacks above the arched photograph; sentence set at 2xl so a 30-word verbatim heading stays readable.",
+            "droppedOnMobile": [],
+            "intermediate": "md:grid-cols-[3fr_2fr]; heading steps 2xl/3xl/4xl.",
+            "mobileOnly": "Nothing block-specific."
+          },
+          {
+            "variant": "compact-warm (contact)",
+            "mobileComposition": "Short tint band, then the form; keeps the page's real content above the fold on a phone.",
+            "droppedOnMobile": [],
+            "intermediate": "py-12 sm:py-14 lg:py-16.",
+            "mobileOnly": "Nothing block-specific; the whole page is contact affordances."
+          }
+        ],
+        "mobileComposition": "Per variant, see variants[]",
+        "droppedOnMobile": [],
+        "intermediate": "Per variant, see variants[]",
+        "mobileOnly": "Per variant, see variants[]"
+      },
+      {
+        "block": "routeRibbon",
+        "variants": [
+          {
+            "variant": "featured",
+            "mobileComposition": "Cards stack full-width; each card keeps its dotted route spine and first four stops. The spine is the meaning and is never hidden.",
+            "droppedOnMobile": [],
+            "intermediate": "sm:grid-cols-2 before lg:grid-cols-3.",
+            "mobileOnly": "Whole-card content ordering puts price directly under the tour name for thumb-scroll comparison."
+          },
+          {
+            "variant": "full",
+            "mobileComposition": "Route column first, tier card after, single column. The dotted spine and stop dots persist at every width (Hard Rule 13: the connector is what makes it a route).",
+            "droppedOnMobile": [
+              {
+                "what": "the two-column route/tiers split",
+                "replacedBy": "tiers card follows the route as a full-width card"
+              }
+            ],
+            "intermediate": "lg:grid-cols-[2fr_1fr]; below lg the aside sheds its top offset.",
+            "mobileOnly": "Anchor targets (scroll-mt-24) keep in-page #slug jumps clear of the sticky header."
+          },
+          {
+            "variant": "strip",
+            "mobileComposition": "Rows wrap: name and style on one line group, duration and price wrapping under, whole row remains one tap target to the full route.",
+            "droppedOnMobile": [],
+            "intermediate": "Row meta pulls right (ml-auto) once width allows.",
+            "mobileOnly": "Full-row link area comfortably clears 44px."
+          }
+        ],
+        "mobileComposition": "Per variant, see variants[]",
+        "droppedOnMobile": [
+          {
+            "what": "the two-column route/tiers split",
+            "replacedBy": "tiers card follows the route as a full-width card"
+          }
+        ],
+        "intermediate": "Per variant, see variants[]",
+        "mobileOnly": "Per variant, see variants[]"
+      },
+      {
+        "block": "whenToGo",
+        "variants": [
+          {
+            "variant": "full",
+            "mobileComposition": "Each season is a stacked group: period, note, best-for pill. The visible reviewed date stays in the header at every width (the language forbids hiding it).",
+            "droppedOnMobile": [],
+            "intermediate": "sm:two-column, md:three-column row grid.",
+            "mobileOnly": "Nothing hidden."
+          },
+          {
+            "variant": "strip",
+            "mobileComposition": "Three season cards stack; reviewed date remains visible in the block header.",
+            "droppedOnMobile": [],
+            "intermediate": "sm:grid-cols-3.",
+            "mobileOnly": "Nothing hidden."
+          }
+        ],
+        "mobileComposition": "Per variant, see variants[]",
+        "droppedOnMobile": [],
+        "intermediate": "Per variant, see variants[]",
+        "mobileOnly": "Per variant, see variants[]"
+      },
+      {
+        "block": "regionAtlas",
+        "mobileComposition": "Sampler stays 2-up at 390px (the arch keeps its proportion instead of one huge stacked arch per screen, per the language's Mobile section); by-region goes single column with full blurbs, because the blurbs are the content.",
+        "droppedOnMobile": [],
+        "intermediate": "Sampler 2-up to lg:4-up; by-region 1-up, sm:2-up, lg:3-up: the 640-1024 band gets a real 2-up step.",
+        "mobileOnly": "Nothing hidden; imageless places (Porto Palermo) render the same typographic arch tile at every width."
+      },
+      {
+        "block": "provenanceList",
+        "mobileComposition": "The horizontal dotted flight path with the plane becomes a vertical dotted spine with the same node dots: the connector is rotated, never deleted (the Mojo ProcessSteps lesson).",
+        "droppedOnMobile": [
+          {
+            "what": "the plane glyph at the end of the horizontal line",
+            "replacedBy": "the vertical spine itself; the plane is decoration, and this is recorded as a decision"
+          }
+        ],
+        "intermediate": "The horizontal 4-col chain appears at md; below md the vertical form serves both phone and small tablet.",
+        "mobileOnly": "Nothing block-specific."
+      },
+      {
+        "block": "whatsIncluded",
+        "mobileComposition": "The two lists stack, included first, because the reassurance outranks the options.",
+        "droppedOnMobile": [],
+        "intermediate": "md:grid-cols-2.",
+        "mobileOnly": "Nothing hidden."
+      },
+      {
+        "block": "imageWithText",
+        "mobileComposition": "Image above text at 4:5 arch; offset tint block shrinks its displacement (translate-3 vs md:translate-5) so it stays a depth cue rather than an overhang.",
+        "droppedOnMobile": [],
+        "intermediate": "md:grid-cols-2 with order swap per instance.",
+        "mobileOnly": "Nothing hidden."
+      },
+      {
+        "block": "travellerWords",
+        "mobileComposition": "Single: one generous centred quote. Stacked: attribution sits above its quote (the md two-column attribution rail collapses), each review separated by a rule.",
+        "droppedOnMobile": [],
+        "intermediate": "md:grid-cols-[200px_1fr] for the stacked variant.",
+        "mobileOnly": "Nothing hidden; quotes stay full-length (long honest content stays long, per the language)."
+      },
+      {
+        "block": "personCta",
+        "mobileComposition": "Heading and note, then the two person cards stacked full-width; both numbers are tap-to-call.",
+        "droppedOnMobile": [],
+        "intermediate": "Cards go sm:grid-cols-2, back to 1-up beside the text at lg, 2-up again at xl.",
+        "mobileOnly": "Tap-to-call on every number (desktop shows the same links, but on mobile they are the point)."
+      },
+      {
+        "block": "enquiryForm",
+        "mobileComposition": "Form fields stack single column (name full width, counts pairing only from sm); the direct-contact card follows the form rather than sitting beside it.",
+        "droppedOnMobile": [],
+        "intermediate": "sm:grid-cols-2 field pairs; lg:grid-cols-[3fr_2fr] page split.",
+        "mobileOnly": "All inputs are 48px tall; radio rows padded to clear 44px; tel and mailto links in the aside are direct actions."
+      },
+      {
+        "block": "faq",
+        "mobileComposition": "Grouped accordions at full width; summary rows py-4 clear 44px; the wide-screen indent (px-2 sm:px-4) is returned to the question text at 390px.",
+        "droppedOnMobile": [],
+        "intermediate": "Measure capped at max-w-4xl; no column split at any width because parallel accordions punish scanning.",
+        "mobileOnly": "Native details/summary means the browser's own keyboard and screen-reader semantics everywhere."
+      },
+      {
+        "block": "header/footer/call-bar (layout)",
+        "mobileComposition": "Header: nav and call button relocate into the details panel (relocated, not deleted), with both people tap-to-call. Footer: three columns stack, people first after the identity block. Mobile additionally gets the sticky bottom call bar with both people, plus a spacer so it never covers the footer.",
+        "droppedOnMobile": [
+          {
+            "what": "desktop inline nav and header call button",
+            "replacedBy": "the details menu panel carrying the same links plus BOTH phone numbers"
+          }
+        ],
+        "intermediate": "sm:grid-cols-2 then lg:grid-cols-3 in the footer.",
+        "mobileOnly": "The sticky call bar: the single clearest answer to 'what does mobile get that desktop does not' for a business whose product is a phone call."
+      }
+    ],
+    "hiddenOnMobileAudit": [
+      {
+        "file": "web/src/components/Header.astro",
+        "what": "desktop inline nav and the Call Geoff button are hidden md:flex / hidden md:inline-flex",
+        "replacedBy": "the details mobile panel carries the same nav links plus BOTH people as tap-to-call rows; nothing is deleted, it is relocated"
+      },
+      {
+        "file": "web/src/components/blocks/ProvenanceList.astro",
+        "what": "the horizontal dotted chain with the plane glyph is hidden below md",
+        "replacedBy": "the same chain rendered as a vertical dotted spine with identical node dots and content; the plane glyph is pure decoration at 390px and its omission is a recorded decision"
+      },
+      {
+        "file": "web/src/components/blocks/ProcessSteps.astro",
+        "what": "template kit file with a hidden md:block connector; NOT WIRED into BlockRenderer and rendered on no page of this build (processSteps was dropped in site-structure.json)",
+        "replacedBy": "nothing needed: dead file kept on disk only for the Stage 9 CMS schema decision"
+      }
+    ]
+  }
+}

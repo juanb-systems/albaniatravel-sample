@@ -1,0 +1,140 @@
+{
+  "businessName": "Albania Travel",
+  "industry": "Travel and tourism: Australian planning and booking side of private customised tours of Albania, operated by Wander Albania",
+  "designLanguage": {
+    "selected": "sunny-fresh-honest",
+    "runnerUp": "warm-inviting-handmade",
+    "reason": "Selected on the sliders and feel-words, not the industry. Client sliders (inferred from their own published copy, flagged for confirmation) are Playful-Serious 2, Traditional-Modern 3, Minimal-Bold 3, Corporate-Approachable 5, Luxury-Everyday 4. warm-inviting-handmade is the exact slider match (2/3/3/5/4, distance 0) and sunny-fresh-honest is one step away (2/3/3/5/5, distance 1); every other language is at distance 4 or worse. quick-bright-cheerful (distance 4) is excluded by its own NOT list, which names 'unhurried', one of this client's three feel-words. airy-still-unhurried owns that word but sits at distance 7 and its register is sparse Nordic silence, the opposite of this client's abundant destination content. The tie broke to sunny-fresh-honest on three grounds. First, feel-words: it answers to 'sunny, fresh, honest, unfussy, abundant', and honesty is literally the client's founding sentence (established to minimise the number of third parties extracting payments from Australians); 'genuine' and 'undiscovered' map to honest and unfussy far more directly than to warm-inviting-handmade's 'tactile, characterful'. Second, register: warm-inviting-handmade is explicitly timber-and-amber indoors, a room you sit down in, where this client sells daylight, coastline and mountain valleys; sunny-fresh-honest is explicitly 'outside'. Third, the ledger: warm-inviting-handmade shipped on ember-and-rye while sunny-fresh-honest has never been used in eight builds, and its signature provenance block maps one-to-one onto this client's actual product, a named no-middlemen supply chain (you, Geoff and James in Australia, Wander Albania in Tirana, your driver and guide). The language's produce-and-courtyard imagery translates to destination photography without strain: foliage green is the client's own copy ('meadows, pastures and lakes in vivid greens') and the seasonal register becomes when-to-go guidance the client already publishes.",
+    "signatureMove": "Arched daylight photography with the honest numbers beside it. Rounded-top (arched) crops on lead imagery, a warm serif heading in sentence case, and the client's real published figures (tour prices in euros, durations, inclusions) set plainly beside the pictures. No gloss, no filters, nothing invented.",
+    "groundStrategy": "Genuinely light throughout, per the language (light mode only, no dark or moody sections). Warm off-white surface as the base canvas; soft cream and pale-sage tinted bands as the section separators; one deep foliage-green ground reserved for the CTA band and footer, which stays garden-green rather than near-black so the page never turns moody."
+  },
+  "personality": {
+    "playfulSerious": 2,
+    "traditionalModern": 3,
+    "minimalBold": 3,
+    "corporateApproachable": 5,
+    "luxuryEveryday": 4,
+    "feelWords": ["unhurried", "genuine", "undiscovered"],
+    "note": "Inferred from the client's own published copy (their tours are named Leisurely and Unhurried; their pitch is price honesty; their Albania framing is 'the hidden treasure in Europe waiting to be found'). Confirm with Geoff or James before launch."
+  },
+  "colors": {
+    "primaryColor": "#2E5B3E",
+    "secondaryColor": "#1E2A21",
+    "accentColor": "#A85A1B",
+    "neutralColor": "#F4EDDC",
+    "gradientUsed": false,
+    "gradientJustification": null,
+    "extended": {
+      "surface": "#FBF8F1",
+      "primarySoft": "#E3EDE0",
+      "primaryLight": "#3F7A55",
+      "accentStrong": "#8A4A15",
+      "accentTint": "#F6E3C8",
+      "text": "#232E24",
+      "textMuted": "#5A675A",
+      "textInvert": "#F6F3E9",
+      "textInvertMuted": "#C3D0BE",
+      "borderLight": "#75816E",
+      "ruleLight": "#DCD2BA"
+    },
+    "contrast": {
+      "method": "WCAG 2.x relative luminance, computed against the actual background each colour is used on. Body text target 4.5:1, non-text and UI boundary target 3:1. All figures below were measured with a script on 2026-07-21, not estimated.",
+      "measured": {
+        "text on surface": 13.31,
+        "text on neutral": 12.09,
+        "text on primarySoft": 11.73,
+        "text on accentTint": 11.25,
+        "textMuted on surface": 5.62,
+        "textMuted on neutral": 5.11,
+        "textMuted on primarySoft": 4.96,
+        "primary on surface": 7.38,
+        "primary on neutral": 6.71,
+        "primary on primarySoft": 6.51,
+        "accentStrong on surface": 6.45,
+        "accentStrong on neutral": 5.86,
+        "accentStrong on primarySoft": 5.68,
+        "textInvert on primary": 7.05,
+        "textInvert on secondary": 13.43,
+        "textInvert on accent": 4.57,
+        "textInvertMuted on primary": 4.88,
+        "surface on accent": 4.78,
+        "surface on primary": 7.38,
+        "surface on accentStrong": 6.45,
+        "accent on secondary": 2.94,
+        "accentTint on secondary": 11.89,
+        "borderLight on surface": 3.87,
+        "borderLight on neutral": 3.51,
+        "ruleLight on surface": 1.42
+      },
+      "constraints": [
+        "accentColor #A85A1B is a fill colour, not a text colour. As text on the light grounds it measures 4.24:1 (below target); use accentStrong #8A4A15 (6.45:1 on surface) for any accent-coloured text on light. On the primary or secondary dark grounds raw accent measures 2.94:1 and is forbidden in every role; use accentTint #F6E3C8 (11.89:1) there instead.",
+        "Text on the accent button fill is textInvert at 4.57:1 or surface at 4.78:1; both clear AA for the button label sizes in use.",
+        "ruleLight is a decorative divider only (1.42:1). Anything that defines an interactive control uses borderLight, which clears 3:1 on surface and neutral.",
+        "The mid-tone greens on cream trap the language file warns about was measured directly: primary #2E5B3E clears comfortably (6.5 to 7.4) on all three light grounds, so green headings and green links are safe everywhere on light."
+      ]
+    }
+  },
+  "typography": {
+    "headingFont": {
+      "family": "Alegreya",
+      "source": "google-fonts",
+      "weights": [600, 700],
+      "note": "The language asks for a warm humanist serif or soft slab, sentence case, never shouting. Alegreya is a warm humanist serif with a slightly calligraphic, Mediterranean character that suits a country sold on daylight and history, and it holds up at long-read sizes for the destination writing. Not used as a heading face by any build in the ledger (Fraunces, Archivo, Bitter, Cormorant Garamond, Lora, IBM Plex Sans, Bodoni Moda, Sora)."
+    },
+    "bodyFont": {
+      "family": "Nunito",
+      "source": "google-fonts",
+      "weights": [400, 600, 700],
+      "note": "One of the three candidate body faces for sunny-fresh-honest (Nunito, Quicksand, Hanken Grotesk), per Hard Rule 4. Quicksand was rejected as too geometric-childlike for multi-paragraph destination reading; Hanken Grotesk is the least rounded of the three and reads cooler than this brand should. Nunito's fully rounded terminals are the sunny register the language names. Ledger check: the last two builds' body faces are Geist (nj-electrical) and Cabin (mojo-steel), no conflict. Nunito is a different face from Nunito Sans (anthony-pearce-trichology, five builds back): Nunito has fully rounded terminals and a warmer, softer voice, Nunito Sans is the straight-terminal neutral companion family, and anthony-pearce is outside the two-build window regardless."
+    },
+    "accentFont": {
+      "family": "Caveat",
+      "source": "google-fonts",
+      "weights": [600],
+      "note": "The language permits a single handwritten accent for one recurring label, used at most once per page and never for information anyone needs to read. Reserved for the small 'from Geoff and James' sign-off style labels. Always accompanied by real text; never load-bearing."
+    },
+    "scale": {
+      "ratio": 1.25,
+      "baseRem": 1.0625,
+      "bodyLineHeight": 1.65,
+      "displayRem": { "base": 1.875, "lg": 2.75 },
+      "headingRem": { "base": 1.375, "lg": 1.75 },
+      "note": "Per sunny-fresh-honest's Mobile section: display 2.75rem down to 1.875rem, headings 1.75rem down to 1.375rem, body 17px (1.0625rem). Moderate 1.25 ratio, sentence case throughout."
+    }
+  },
+  "spacing": {
+    "unitPx": 4,
+    "scalePx": [4, 8, 12, 16, 24, 32, 48, 64, 96, 112],
+    "sectionPaddingRem": { "sm": 4, "md": 6, "lg": 7 },
+    "note": "sunny-fresh-honest's section rhythm is py-16 md:py-24 lg:py-28, which is 4rem / 6rem / 7rem. Open and relaxed but abundant rather than vast: the destination content is long and should feel full."
+  },
+  "componentStyle": {
+    "language": "soft-rounded-with-shadow",
+    "radiusRem": { "sm": 0.75, "md": 1.25, "lg": 1.5 },
+    "shadow": "0 12px 32px -16px rgb(30 42 33 / 0.18)",
+    "note": "The language mandates soft-rounded, low shadow: 12-24px radius, very soft shadows or none, light borders, buttons solid accent with generous rounding, card images bleeding to the card edge. The recurring crop shape is the arch (rounded-top images), implemented as a top-radius treatment on lead imagery."
+  },
+  "motif": {
+    "name": "flight-path",
+    "token": "--motif-flight-path",
+    "note": "A fine dotted meandering line with a small plane, taken directly from the client's own logo mark (harvested 2026-07-21, HTTP 200, see assets/IMAGE-CREDITS.md). Re-inked from the original turquoise into the brand's foliage green and used as the route line in the tour day-rhythm block, as the connector under section eyebrows, and in the header lockup. Authored for this client only and applied in Stage 6 components. Never added to template/ (Hard Rule 12)."
+  },
+  "logo": {
+    "outcome": "keep-the-mark-redraw-and-reink",
+    "sourceFiles": [
+      "assets/raw/logo-header-Group-11.png",
+      "assets/raw/logo-footer-Group-11-1.png"
+    ],
+    "outputFiles": [
+      "web/public/logo.svg",
+      "web/public/favicon.svg"
+    ],
+    "sourceMarkColors": { "plane": "turquoise (approx #17D8C8)", "wordmark": "navy (approx #1A1E6E)" },
+    "note": "The client's mark (a small plane trailing a dotted flight path, all-caps navy wordmark) was harvested before anything was generated, per Hard Rule 14. The mark concept is kept: it is genuinely ownable and becomes the brand motif. It is redrawn as crisp SVG because the source is a 1.6KB PNG too small for retina headers, and re-inked into the brand palette (foliage green plane and path, ink wordmark re-set in Alegreya) because the original turquoise-on-navy fights the language's daylight palette and sits one build after nj-electrical's teal accent. The original files are preserved untouched in assets/raw/. This is a refresh of their existing identity, not a replacement, and it needs client sign-off before launch."
+  },
+  "layoutRhythm": {
+    "alternateImageSide": true,
+    "sectionBackgroundCycle": ["surface", "neutral", "primarySoft", "primary"],
+    "note": "The base body background is the surface token (warm off-white), so the cream and pale-sage bands only appear where a section explicitly asks for them and always read as deliberate (the Jubilee failure in brand-direction.md section 5). The deep foliage-green primary ground appears exactly twice per page at most: the pre-footer CTA band and the footer. No near-black band anywhere: the language forbids moody sections."
+  }
+}

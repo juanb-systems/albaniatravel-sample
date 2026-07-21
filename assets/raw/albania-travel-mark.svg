@@ -1,0 +1,21 @@
+<!--
+  Albania Travel mark, redrawn 2026-07-21.
+
+  Provenance: the client's own logo (harvested 2026-07-21, HTTP 200, originals
+  preserved in assets/brand/: a small plane trailing a dotted flight path,
+  originally turquoise, with a navy all-caps wordmark). This redraw keeps the
+  mark's concept, plane plus dotted flight path, re-inked into the brand's
+  foliage green (#2E5B3E) with one apricot waypoint dot (#A85A1B), because the
+  original 1.6KB PNG is too small for a retina header and its turquoise
+  belongs to the old palette. The wordmark is re-set live in Alegreya beside
+  this mark in Header.astro ("keep the mark, re-set the wordmark",
+  brand-direction.md). A refresh of the client's identity, not a replacement:
+  needs client sign-off before launch.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" fill="none">
+  <path d="M4 40 C 22 42, 34 34, 46 24 C 54 17.5, 62 13, 72 10.5"
+        stroke="#2E5B3E" stroke-width="3.2" stroke-linecap="round"
+        stroke-dasharray="0.1 8.5" />
+  <circle cx="46" cy="24" r="2.6" fill="#A85A1B" />
+  <path d="M74 2 L 93 8.5 L 77 17.5 L 76.3 10.2 Z" fill="#2E5B3E" />
+</svg>

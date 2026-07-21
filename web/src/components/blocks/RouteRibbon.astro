@@ -1,0 +1,134 @@
+---
+import type { RouteRibbonBlock } from '../../lib/types'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+import Button from '../ui/Button.astro'
+
+const { variant, background, eyebrow, heading, intro, tours } = Astro.props as RouteRibbonBlock
+
+// The site's signature block. A private tour's true shape is an ordered route
+// through places with a day rhythm, so each tour renders as a dotted route
+// line (the brand motif, from the client's own logo) with day-cluster stops
+// along it. Prices render only as the client's published basis: "from EUR x
+// per person". No departure dates, no ratings, no group-size limits: the
+// client publishes none (Hard Rule 4).
+//
+// The dotted spine is a CSS dotted border, not an image, so it survives any
+// height. On every variant the connector exists at every width: the mobile
+// treatment keeps the same left spine (Hard Rule 13: never delete meaning at
+// a small size; four disconnected stops stop reading as a route).
+
+const euro = (n: number) => `€${n.toLocaleString('en-AU')}`
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+    {(eyebrow || heading || intro) && (
+      <div class="max-w-2xl">
+        <Eyebrow text={eyebrow} />
+        {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+        {intro && <p class="mt-4 text-brand-text-muted">{intro}</p>}
+      </div>
+    )}
+
+    {variant === 'featured' && (
+      <div class="mt-10 md:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {tours.map((tour, i) => (
+          <article class="reveal flex flex-col rounded-brand-md bg-brand-surface shadow-brand-card p-6 sm:p-7" style={`--i:${i}`}>
+            <p class="text-sm font-bold text-brand-accent-strong">{tour.style}</p>
+            <h3 class="mt-1 font-heading text-xl sm:text-2xl font-bold text-brand-secondary">{tour.name}</h3>
+            <p class="mt-1 text-sm text-brand-text-muted">{tour.days} days, {tour.nights} nights &middot; from {euro(tour.priceFromEUR)} per person</p>
+            <p class="mt-3 text-sm text-brand-text-muted">{tour.summary}</p>
+            <ul class="mt-5 border-l-[3px] border-dotted border-brand-primary/40 pl-5 space-y-2.5">
+              {tour.routeStops.slice(0, 4).map((stop) => (
+                <li class="relative">
+                  <span class="absolute -left-[26px] top-1.5 h-2.5 w-2.5 rounded-full bg-brand-primary" aria-hidden="true"></span>
+                  <span class="text-sm"><strong class="text-brand-secondary">{stop.place}</strong> <span class="text-brand-text-muted">&middot; {stop.days}</span></span>
+                </li>
+              ))}
+              {tour.routeStops.length > 4 && (
+                <li class="text-sm text-brand-text-muted italic">and on, for {tour.routeStops.length - 4} more legs</li>
+              )}
+            </ul>
+            <a
+              href={`/tours#${tour.slug}`}
+              class="mt-auto pt-5 text-sm font-bold text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand"
+            >
+              See the full route
+            </a>
+          </article>
+        ))}
+      </div>
+    )}
+
+    {variant === 'full' && (
+      <div class="mt-4 space-y-16 md:space-y-20">
+        {tours.map((tour) => (
+          <article id={tour.slug} class="reveal scroll-mt-24">
+            <div class="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-14">
+              <div>
+                <p class="text-sm font-bold text-brand-accent-strong">{tour.style}</p>
+                <h3 class="mt-1 font-heading text-2xl sm:text-3xl font-bold text-brand-secondary">{tour.name}</h3>
+                <p class="mt-2 text-brand-text-muted">{tour.days} days, {tour.nights} nights &middot; from {euro(tour.priceFromEUR)} per person, twin share</p>
+                {tour.countries.length > 1 && (
+                  <p class="mt-2 flex flex-wrap gap-2">
+                    {tour.countries.map((c) => (
+                      <span class="rounded-full bg-brand-primary-soft px-3 py-1 text-xs font-bold text-brand-primary">{c}</span>
+                    ))}
+                  </p>
+                )}
+                <p class="mt-4 max-w-prose">{tour.summary}</p>
+                {tour.entryOption && (
+                  <p class="mt-3 max-w-prose rounded-brand-sm bg-brand-accent-tint px-4 py-3 text-sm text-brand-secondary">{tour.entryOption}</p>
+                )}
+
+                <ul class="mt-8 border-l-[3px] border-dotted border-brand-primary/40 pl-6 space-y-6">
+                  {tour.routeStops.map((stop, i) => (
+                    <li class="relative reveal" style={`--i:${i}`}>
+                      <span class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-brand-primary ring-4 ring-brand-surface" aria-hidden="true"></span>
+                      <p class="text-sm font-bold text-brand-accent-strong">{stop.days}</p>
+                      <p class="font-heading text-lg font-bold text-brand-secondary">{stop.place}</p>
+                      <p class="mt-1 text-sm text-brand-text-muted max-w-prose">{stop.note}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <aside class="lg:pt-16">
+                <div class="rounded-brand-md bg-brand-surface shadow-brand-card p-6">
+                  <h4 class="font-heading text-lg font-bold text-brand-secondary">Three ways to take it</h4>
+                  <ul class="mt-4 space-y-4">
+                    {tour.priceTiers.map((tier) => (
+                      <li class="border-b border-brand-rule-light pb-4 last:border-0 last:pb-0">
+                        <p class="flex items-baseline justify-between gap-3">
+                          <span class="text-sm font-bold text-brand-secondary">{tier.label}</span>
+                          <span class="shrink-0 font-heading text-lg font-bold text-brand-primary">from {euro(tier.fromEUR)}</span>
+                        </p>
+                        <p class="mt-1 text-xs text-brand-text-muted">{tier.covers}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <p class="mt-4 text-xs text-brand-text-muted">Per person, twin share. Single supplements apply.</p>
+                </div>
+              </aside>
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
+
+    {variant === 'strip' && (
+      <ul class="mt-8 divide-y divide-brand-rule-light">
+        {tours.map((tour, i) => (
+          <li class="reveal" style={`--i:${i}`}>
+            <a href={`/tours#${tour.slug}`} class="group flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4 hover:bg-brand-surface transition-colors duration-(--motion-fast) ease-brand rounded-brand-sm px-2 -mx-2">
+              <span class="font-heading text-lg font-bold text-brand-secondary group-hover:text-brand-primary transition-colors duration-(--motion-fast) ease-brand">{tour.name}</span>
+              <span class="text-sm text-brand-text-muted">{tour.style}</span>
+              <span class="ml-auto text-sm font-bold text-brand-accent-strong">{tour.days} days &middot; from {euro(tour.priceFromEUR)} pp</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</section>

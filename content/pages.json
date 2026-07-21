@@ -1,0 +1,299 @@
+[
+  {
+    "title": "Home",
+    "slug": "home",
+    "showInNav": false,
+    "layout": [
+      {
+        "blockType": "hero",
+        "variant": "arched-daylight",
+        "eyebrow": "Private tours, planned in Australia",
+        "heading": "Albania, while it still feels like a secret",
+        "subheading": "Private, unhurried tours of Europe's most underrated country: shaped with two Australians who know it, run by the local operator they partner with, and priced without the middlemen.",
+        "image": "komani-lake-reflections.jpg",
+        "primaryButton": { "label": "See the three tour shapes", "url": "/tours" },
+        "secondaryButton": { "label": "Talk to Geoff or James", "url": "/contact" }
+      },
+      {
+        "blockType": "regionAtlas",
+        "variant": "sampler",
+        "background": "surface",
+        "eyebrow": "The evidence",
+        "heading": "Worth flying across the world for",
+        "intro": "Most Australians cannot picture Albania yet. That is rather the point. A sample, from the client's own destination library:",
+        "places": ["Gjipe", "Theth", "Berat", "Lake Komani", "Ksamil", "Gjirokastra", "Valbona", "Tirana"],
+        "moreLink": { "label": "See all the places", "url": "/places" }
+      },
+      {
+        "blockType": "routeRibbon",
+        "variant": "featured",
+        "background": "neutral",
+        "eyebrow": "The tours",
+        "heading": "Three shapes to start from",
+        "intro": "Every tour is private and every itinerary is yours to change. These are the three starting shapes, with honest from-prices at the local operator's rates."
+      },
+      {
+        "blockType": "provenanceList",
+        "variant": "chain",
+        "background": "primarySoft",
+        "eyebrow": "How it stays honest",
+        "heading": "Every hand in the chain, named",
+        "moreLink": { "label": "How it works", "url": "/how-it-works" }
+      },
+      {
+        "blockType": "travellerWords",
+        "variant": "single",
+        "background": "surface",
+        "testimonials": ["Frances, Ross & Margaret"]
+      },
+      {
+        "blockType": "personCta",
+        "variant": "banner",
+        "heading": "Start with a conversation",
+        "note": "No booking engine and no obligation. Tell Geoff or James what kind of trip you are imagining and they will tell you what it looks like on the ground.",
+        "formLink": true
+      }
+    ]
+  },
+  {
+    "title": "Private tours",
+    "slug": "tours",
+    "showInNav": true,
+    "layout": [
+      {
+        "blockType": "hero",
+        "variant": "compact-type",
+        "eyebrow": "Three private shapes",
+        "heading": "Tours priced the honest way",
+        "subheading": "Start from a shape, then make it yours: the pace, the stops, the hotel grade, self-drive or a driver-guide beside you. Prices are per person, twin share, at the local operator's rates."
+      },
+      {
+        "blockType": "routeRibbon",
+        "variant": "full",
+        "background": "surface"
+      },
+      {
+        "blockType": "whatsIncluded",
+        "variant": "full",
+        "background": "neutral",
+        "eyebrow": "The fine print, up front",
+        "heading": "What every tour includes",
+        "included": [
+          "Accommodation every night, minimum 3-star, at the grade you choose",
+          "Half-board meals as described day by day",
+          "A private vehicle and vehicle insurance",
+          "An itinerary planned around your actual arrival and departure"
+        ],
+        "upgrades": [
+          "Self-drive keeps the from-price lowest",
+          "An English-speaking driver-guide adds fuel, tolls, parking and entry fees to the package",
+          "4 and 5-star hotels where the route allows; some villages are 3-star only",
+          "Groups of more than four may be eligible for discounted rates"
+        ],
+        "note": "Prices are per person for double room occupancy; a single-room supplement applies and varies with the hotel. Final pricing matches your choices and availability at booking time, made directly with Wander Albania's office in Tirana."
+      },
+      {
+        "blockType": "imageWithText",
+        "layout": "image-right",
+        "background": "surface",
+        "eyebrow": "Customising",
+        "heading": "Customisable means customisable",
+        "image": "ottoman-town-houses.jpg",
+        "body": "The three shapes are working examples, priced and proven, and none of them is fixed. Travellers change the number of days, the overnight stops, the standard of hotel, the transport and the sights day by day. Sleep inside Berat castle for two nights instead of one. Swap a city day for the thermal springs at Permet. Add mountain treks, or subtract them.\n\nThe Discovery shape can even start outside Albania: fly to Corfu and cross to Sarande by ferry in about forty minutes.\n\nThe planning conversation with Geoff or James is where the shape becomes your itinerary, before anything is booked and before anything is paid."
+      },
+      {
+        "blockType": "personCta",
+        "variant": "banner",
+        "heading": "Not sure which shape fits?",
+        "note": "Describe your dates, your pace and who is coming. Geoff and James have shaped all three around mobility needs, slow travellers and groups of six.",
+        "formLink": true
+      }
+    ]
+  },
+  {
+    "title": "Places",
+    "slug": "places",
+    "showInNav": true,
+    "layout": [
+      {
+        "blockType": "hero",
+        "variant": "image-full",
+        "eyebrow": "The places",
+        "heading": "Is Albania actually worth nine days?",
+        "subheading": "An atlas of the coast, the mountains and the living history the tours are built around. Every description condenses the client's own destination writing.",
+        "image": "valbona-valley.jpg"
+      },
+      {
+        "blockType": "regionAtlas",
+        "variant": "by-region",
+        "background": "surface",
+        "regionIntros": {
+          "The coast": "The Albanian Riviera runs 120 kilometres along the Ionian, from lively Sarande to beaches with nobody on them.",
+          "The mountains": "The Accursed Mountains in the north, wild rivers in the south, and lakes and canyons folded between.",
+          "Living history": "Two UNESCO cities you can sleep inside, Greek and Roman ruins in open country, and bazaars still trading.",
+          "Cities and lakes": "The capital's museums and cafe streets, the university towns, and two of Europe's oldest lakes."
+        }
+      },
+      {
+        "blockType": "whenToGo",
+        "variant": "strip",
+        "background": "neutral",
+        "heading": "And when to go",
+        "moreLink": { "label": "The practical answers", "url": "/planning" }
+      },
+      {
+        "blockType": "personCta",
+        "variant": "banner",
+        "heading": "Pick three places you like",
+        "note": "That is genuinely enough to start. Geoff and James will shape the days between them.",
+        "formLink": true
+      }
+    ]
+  },
+  {
+    "title": "Planning",
+    "slug": "planning",
+    "showInNav": true,
+    "layout": [
+      {
+        "blockType": "hero",
+        "variant": "type-only",
+        "eyebrow": "The practical part",
+        "heading": "Answers to the questions you were about to ask",
+        "subheading": "When to go, how to get there, and the client's own published answers on money, safety and the rest. Kept plain on purpose."
+      },
+      {
+        "blockType": "whenToGo",
+        "variant": "full",
+        "background": "surface",
+        "eyebrow": "Timing",
+        "heading": "When to go"
+      },
+      {
+        "blockType": "imageWithText",
+        "layout": "image-left",
+        "background": "primarySoft",
+        "eyebrow": "Getting there",
+        "heading": "Two good ways in",
+        "image": "corfu-town.jpg",
+        "body": "Fly into Tirana's Mother Teresa Airport, where your driver meets you and the itinerary starts the same morning. Sarande and the Riviera are three to four hours south by road, so tours starting in the south usually run their first night in the capital or the north.\n\nOr come the pretty way: fly to Corfu and cross to Sarande by ferry in about forty minutes. The Discovery shape is built to start either side, and the Balkans Explorer spends a full day on Corfu anyway.\n\nAustralians need no visa for stays under 90 days in Albania, Greece, Kosovo, Montenegro or North Macedonia. Your passport needs six months' validity from the start of your return leg."
+      },
+      {
+        "blockType": "faq",
+        "background": "surface",
+        "eyebrow": "The client's own answers",
+        "heading": "Practical questions, answered plainly",
+        "groups": [
+          {
+            "title": "Money",
+            "items": [
+              { "question": "What currency should we carry?", "answer": "Albania uses the LEK, a closed currency you are unlikely to obtain in Australia. Euros are accepted at most establishments, and ATMs are available in most towns. Credit and debit cards work at hotels, supermarkets, restaurants and petrol stations; taxis typically want cash." },
+              { "question": "Is it really cheaper than home?", "answer": "Food and drink are generally cheaper than in Australia. Fuel is the exception, at roughly AU $3.03 a litre as of November 2024, which is one reason the driver-guide tier bundles it." },
+              { "question": "Do we tip?", "answer": "Tipping is not expected, but appreciated." }
+            ]
+          },
+          {
+            "title": "Health and safety",
+            "items": [
+              { "question": "Is Albania safe for travellers?", "answer": "Comparable to other European countries. Motorways are safe; mountain roads want the caution mountain roads always want. Drug laws are strict and penalties can be severe." },
+              { "question": "What about doctors and hospitals?", "answer": "Modern facilities exist in the built-up areas, and travel insurance is essential. One reviewed trip involved a traveller falling ill; the guide arranged private hospital treatment and transport to rejoin the group." },
+              { "question": "Any jabs?", "answer": "The client's published guidance recommends tetanus, hepatitis A and B, rubella and tick-borne encephalitis vaccinations. Confirm with your GP." },
+              { "question": "Can we drink the tap water?", "answer": "It is safe, but bottled water is recommended." }
+            ]
+          },
+          {
+            "title": "Culture and language",
+            "items": [
+              { "question": "Will anyone speak English?", "answer": "The language is Albanian and many people speak English, especially anywhere touristed. Locals are generally very friendly and helpful toward visitors." },
+              { "question": "What should we know culturally?", "answer": "Albania is a secular country where a relaxed Islam, Christianity and no religion at all coexist comfortably. LGBTQ+ travel is legal, though the client notes public attitudes remain conservative." },
+              { "question": "What is raki?", "answer": "The national drink, offered everywhere and entirely optional. Alcohol is legal and widely available." }
+            ]
+          },
+          {
+            "title": "The small practical things",
+            "items": [
+              { "question": "Power plugs?", "answer": "230 volts, 50Hz, type C and F sockets: pack a European adaptor." },
+              { "question": "How good is the walking?", "answer": "Excellent, on both signed and unmarked routes, and the trekking in the north is highly rewarding. The tours fold day walks in wherever you want them." },
+              { "question": "Can we camp wild?", "answer": "Prohibited by law but not strictly enforced, per the client's own guidance. The tours use hotels and guest houses throughout." }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "How it works",
+    "slug": "how-it-works",
+    "showInNav": true,
+    "layout": [
+      {
+        "blockType": "hero",
+        "variant": "split-founding",
+        "eyebrow": "Why this exists",
+        "heading": "Albania Travel was established to minimise the number of third parties extracting payments from Australians booking to travel to Albania.",
+        "subheading": "That sentence is the client's own, and it is the whole business model. Here is what it means in practice.",
+        "image": "travellers-saranda-harbour.jpg"
+      },
+      {
+        "blockType": "provenanceList",
+        "variant": "full",
+        "background": "surface",
+        "eyebrow": "The chain",
+        "heading": "Who you deal with, start to finish"
+      },
+      {
+        "blockType": "imageWithText",
+        "layout": "image-right",
+        "background": "neutral",
+        "eyebrow": "The partnership",
+        "heading": "Planned in Australia, run from Tirana",
+        "image": "geoff-portrait.jpg",
+        "body": "Geoff and James are the Australian ambassadors: the people who take your call, shape the itinerary and sanity-check the plan against what they know of the country. When the shape is right, they link you with Wander Albania's office in Tirana, where the booking is made directly at local rates.\n\nOn the ground, the tours are run by Wander Albania's own drivers and guides. The published reviews on this site name Ermal, Ylli and Ladi, and they are most of the reason those reviews read the way they do.\n\nThat is the whole arrangement. Two named people here, one named operator there, and your money going to the people actually doing the work."
+      },
+      {
+        "blockType": "travellerWords",
+        "variant": "stacked",
+        "background": "surface",
+        "eyebrow": "In their words",
+        "heading": "Five real reviews, uncut and unrotated",
+        "intro": "Published by the client, shown in full rather than trimmed into a carousel. The guides named are real people."
+      },
+      {
+        "blockType": "personCta",
+        "variant": "banner",
+        "heading": "The next link in the chain is you",
+        "note": "Ring, email, or use the form. You will be talking to Geoff or James, on Australian time.",
+        "formLink": true
+      }
+    ]
+  },
+  {
+    "title": "Contact",
+    "slug": "contact",
+    "showInNav": true,
+    "layout": [
+      {
+        "blockType": "hero",
+        "variant": "compact-warm",
+        "eyebrow": "Say hello",
+        "heading": "Tell us what you are imagining",
+        "subheading": "A rough idea is plenty: your dates, your pace, who is coming. Geoff or James will come back to you personally."
+      },
+      {
+        "blockType": "enquiryForm",
+        "variant": "full",
+        "background": "surface",
+        "heading": "Start the conversation",
+        "intro": "The same questions Geoff or James would ask on the phone, so the reply you get is already useful.",
+        "tourOptions": ["Albania Highlights", "Albania Discovery", "Balkans Explorer", "Not sure yet"],
+        "responseNote": "This form reaches Geoff and James directly. In this preview build it is not yet wired to a mailbox, so the phone numbers and emails beside it are the live path; wiring the form is a handoff task."
+      },
+      {
+        "blockType": "routeRibbon",
+        "variant": "strip",
+        "background": "neutral",
+        "heading": "The three shapes, for reference"
+      }
+    ]
+  }
+]

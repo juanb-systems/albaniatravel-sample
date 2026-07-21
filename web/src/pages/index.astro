@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlockRenderer from '../components/BlockRenderer.astro'
+import { getPageBySlug } from '../lib/content'
+
+const page = await getPageBySlug('home')
+---
+
+<BaseLayout title={page?.seo?.metaTitle || page?.title || 'Home'} description={page?.seo?.metaDescription}>
+  {page ? <BlockRenderer blocks={page.layout} /> : <p class="p-12 text-center">No "home" page found in Payload yet.</p>}
+</BaseLayout>

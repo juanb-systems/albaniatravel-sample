@@ -1,0 +1,56 @@
+---
+import type { TravellerWordsBlock } from '../../lib/types'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { variant, background, eyebrow, heading, intro, testimonials } = Astro.props as TravellerWordsBlock
+
+// Five real published reviews, fixed and readable, never rotating: a carousel
+// hides four of five at any moment, and for a buyer deciding whether to trust
+// an unknown company with a major trip, the reviews are the evidence. Quotes
+// are verbatim (shortened only by omission), attribution exactly as the
+// client publishes it, no star ratings because none are published.
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+    {(eyebrow || heading || intro) && (
+      <div class="max-w-2xl">
+        <Eyebrow text={eyebrow} />
+        {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+        {intro && <p class="mt-4 text-brand-text-muted">{intro}</p>}
+      </div>
+    )}
+
+    {variant === 'single' && testimonials[0] && (
+      <figure class="mx-auto max-w-3xl text-center">
+        <svg class="mx-auto h-8 w-8 text-brand-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" opacity="0.5" />
+        </svg>
+        <blockquote class="mt-5 font-heading text-xl sm:text-2xl leading-relaxed text-brand-secondary">
+          {testimonials[0].quote}
+        </blockquote>
+        <figcaption class="mt-6">
+          <span class="font-bold text-brand-primary">{testimonials[0].authorName}</span>
+          {testimonials[0].authorRole && <span class="text-brand-text-muted"> &middot; {testimonials[0].authorRole}</span>}
+        </figcaption>
+      </figure>
+    )}
+
+    {variant === 'stacked' && (
+      <div class="mt-10 divide-y divide-brand-rule-light">
+        {testimonials.map((t, i) => (
+          <figure class="reveal grid gap-4 py-10 first:pt-0 last:pb-0 md:grid-cols-[200px_1fr] md:gap-10" style={`--i:${i}`}>
+            <figcaption class="md:pt-1">
+              <p class="font-heading text-lg font-bold text-brand-primary">{t.authorName}</p>
+              {t.authorRole && <p class="mt-1 text-sm text-brand-text-muted">{t.authorRole}</p>}
+            </figcaption>
+            <blockquote class="text-base sm:text-lg leading-relaxed text-brand-secondary/90 max-w-prose">
+              {t.quote}
+            </blockquote>
+          </figure>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

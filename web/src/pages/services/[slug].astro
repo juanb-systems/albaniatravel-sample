@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getServices, mediaUrl } from '../../lib/content'
+import { renderRichText } from '../../lib/richtext'
+
+export async function getStaticPaths() {
+  const services = await getServices()
+  return services.map((s) => ({ params: { slug: s.slug }, props: { service: s } }))
+}
+
+const { service } = Astro.props
+const descriptionHtml = renderRichText(service.description)
+---
+
+<BaseLayout title={service.title} description={service.summary}>
+  <section class="mx-auto max-w-4xl px-6 py-14 md:py-20 lg:py-28">
+    {/* This image is the page's own above-the-fold lead, so it is the one
+        image on this route that gets eager loading and high fetch priority.
+        Its height steps as well: a fixed 288px band is a third of a phone
+        viewport and a thin strip on a desktop, which is the wrong crop on
+        both. */}
+    {service.image && (
+      <img
+        src={mediaUrl(service.image.url)}
+        alt={service.image.alt}
+        class="w-full h-56 sm:h-72 lg:h-80 object-cover rounded-brand-lg shadow-brand-card"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    )}
+    {/* The h1 on this route is the same display-size step as a Hero heading:
+        it is the page title, so it steps rather than sitting at one size. */}
+    <h1 class="enter mt-8 lg:mt-10 font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-secondary text-balance">{service.title}</h1>
+    <p class="enter enter-2 mt-4 text-base sm:text-lg text-brand-secondary/70">{service.summary}</p>
+    <div class="prose mt-8 text-brand-secondary/80" set:html={descriptionHtml} />
+  </section>
+</BaseLayout>

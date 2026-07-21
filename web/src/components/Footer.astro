@@ -1,0 +1,45 @@
+---
+import type { SiteSettings, Navigation } from '../lib/types'
+
+interface Props {
+  siteSettings: SiteSettings
+  navigation: Navigation
+}
+
+const { siteSettings, navigation } = Astro.props
+const year = new Date().getFullYear()
+const tel = (phone: string) => `tel:${phone.replace(/\s+/g, '')}`
+
+// The footer ground is the deep foliage green (primary), not a near-black:
+// the language forbids moody sections. No address column because none is
+// published; the two named people ARE the contact details. The partnership
+// line is stated because the client states it, and because it is the
+// mechanism behind the price honesty.
+---
+
+<footer class="bg-brand-primary text-brand-text-invert mt-16 md:mt-20 lg:mt-24">
+  <div class="mx-auto max-w-6xl px-6 py-12 md:py-16 grid gap-10 md:gap-12 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="sm:col-span-2 lg:col-span-1">
+      <p class="font-heading text-xl font-bold">{siteSettings.businessName}</p>
+      {siteSettings.tagline && <p class="mt-2 text-sm text-brand-text-invert-muted">{siteSettings.tagline}</p>}
+      {siteSettings.partnership?.line && <p class="mt-4 text-sm text-brand-text-invert-muted max-w-xs">{siteSettings.partnership.line}</p>}
+    </div>
+    <div class="text-sm">
+      {siteSettings.contact?.people?.map((person) => (
+        <div class="mb-5 last:mb-0">
+          <p class="font-heading text-base font-bold">{person.name}</p>
+          <a href={tel(person.phone)} class="block py-1 text-brand-accent-tint font-bold hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{person.phone}</a>
+          <a href={`mailto:${person.email}`} class="block py-1 text-brand-text-invert-muted hover:text-brand-text-invert hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand break-all">{person.email}</a>
+        </div>
+      ))}
+    </div>
+    <nav class="flex flex-col text-sm">
+      {navigation.footer?.map((link) => (
+        <a href={link.url} class="py-2.5 leading-6 text-brand-text-invert-muted hover:text-brand-text-invert hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{link.label}</a>
+      ))}
+    </nav>
+  </div>
+  <div class="border-t border-brand-text-invert/15 py-6 text-center text-xs text-brand-text-invert-muted">
+    &copy; {year} {siteSettings.businessName}. All rights reserved.
+  </div>
+</footer>

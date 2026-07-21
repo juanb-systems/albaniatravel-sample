@@ -1,0 +1,250 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Base is --color-brand-surface (white), not --color-brand-neutral: the
+   brand direction's sectionBackgroundCycle alternates surface/neutral/secondary
+   bands, but a section with no explicit background class shows the body
+   color through, and the neutral shade is only ~3% darker than white. If the
+   body itself defaults to neutral, every "bare" section (About, Team,
+   Contact, ProcessSteps, FAQ, centered Hero) is visually indistinguishable
+   from the page canvas, and any section explicitly styled bg-brand-neutral
+   (the "tint" ImageWithText option, TrustBar) disappears entirely instead of
+   reading as its own band. White as the base is what actually makes the
+   neutral shade functional as a deliberate alternating tint. */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-surface);
+  color: var(--color-brand-neutral-dark);
+  /* sunny-fresh-honest sets body at 17px with a generous line height */
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+/* Multi-paragraph rich text. The Tailwind typography plugin is NOT installed
+   in this stack (a dead `prose` class has shipped twice before), so paragraph
+   separation for rendered markdown is owned here instead. Apply .flow to any
+   container that renders richtext.ts output. */
+.flow > * + * {
+  margin-top: 1em;
+}
+.flow ul {
+  list-style: disc;
+  padding-left: 1.25em;
+}
+.flow ol {
+  list-style: decimal;
+  padding-left: 1.25em;
+}
+.flow a {
+  color: var(--color-accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* The arch: sunny-fresh-honest's recurring crop shape, a rounded-top image
+   like a doorway or a greenhouse pane. Bottom corners keep the card radius.
+   This is this client's treatment, applied by its own components. */
+.arch {
+  border-radius: 999px 999px var(--radius-md) var(--radius-md);
+}
+
+/* ==========================================================================
+   MOTION LAYER
+   ==========================================================================
+
+   Everything below is MECHANISM, not authored motion. It reads its speeds,
+   curves and distances from the `--motion-*` tokens in tokens.css, and those
+   tokens are rewritten per build in Stage 7 from the design language's
+   `## Motion` section. Nothing here should ever contain a literal duration,
+   easing curve or travel distance: if you find yourself typing `0.6s ease`
+   into this file, the value belongs in tokens.css instead.
+
+   The whole layer is CSS-first and safe with JS disabled. That is not a
+   nicety: WCAG 2.1 does not allow a motion preference to be honoured only
+   when a script happens to load, so every `prefers-reduced-motion` path here
+   is pure CSS and the JS in BaseLayout is only ever an optimisation on top.
+   ========================================================================== */
+
+/* ---- Layer 2: scroll reveal -------------------------------------------
+   Sections opt in with class="reveal". BaseLayout's inline script adds
+   "reveal-visible" via IntersectionObserver the first time each one enters
+   the viewport. The reduced-motion block at the bottom of this file is the
+   actual accessibility guarantee; the JS also skips attaching observers in
+   that case, but only as a minor perf saving, not as the correctness
+   mechanism. */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--motion-distance));
+  transition:
+    opacity var(--motion-slow) var(--motion-ease),
+    transform var(--motion-slow) var(--motion-ease);
+  /* Stagger. Repeated children (grid cards, list rows, gallery tiles) set
+     `style="--i:${i}"` inline and inherit their delay from it, which is why
+     this is one rule instead of N hardcoded `.reveal-delay-3` classes.
+     A parent section that never sets --i falls back to 0 and is unaffected,
+     so the same class does both jobs.
+
+     THE CAP IS THE IMPORTANT PART. The cascade stops incrementing after the
+     6th sibling and everything past that arrives together. Without a cap a
+     12 item grid at 80ms takes almost a full second to finish populating,
+     and a visitor who has already started reading does not perceive that as
+     a considered reveal, they perceive it as the page still loading, or as
+     broken. Six is roughly where a cascade stops reading as rhythm and
+     starts reading as latency. If a build wants a longer run it should
+     shorten --motion-stagger, not raise this number. */
+  transition-delay: calc(min(var(--i, 0), 6) * var(--motion-stagger));
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Layer 1: load entrance (above the fold) ---------------------------
+   Why the hero uses this and NOT `.reveal`:
+
+   `.reveal` is scroll-triggered, and the hero is already in the viewport at
+   first paint. Handing it to an IntersectionObserver means the single most
+   important content on the page waits for the JS bundle to parse and the
+   observer to fire before it is allowed to become visible, which delays
+   above-the-fold paint to buy an animation nobody scrolled to trigger. Worse,
+   if that script fails or is blocked, the hero is the thing sitting at
+   opacity:0 (the noscript fallback in BaseLayout exists precisely because
+   that failure mode is real).
+
+   `.enter` sidesteps all of it: a CSS animation runs on paint, with no
+   observer, no script and no fallback needed. It is also the only motion a
+   visitor is GUARANTEED to see, since it does not depend on them scrolling,
+   which is why its absence is most of what "the site is lacking animations"
+   actually means in practice.
+
+   Apply to the hero's eyebrow / headline / subhead / CTA in sequence using
+   the delay modifiers. Keep the whole sequence under ~1s to the last element,
+   and never delay the primary CTA past ~500ms: a call-to-action that is still
+   fading in when a visitor reaches for it is a conversion cost, not a flourish. */
+@keyframes enter-rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-distance));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.enter {
+  animation: enter-rise var(--motion-slow) var(--motion-ease) both;
+}
+
+/* Delay modifiers rather than an --i custom property, because an entrance
+   sequence is a handful of named elements authored by hand, not an arbitrary
+   length loop. Four steps is the practical ceiling for a hero; if a build
+   needs a fifth, the sequence is too long, not the scale too short. */
+.enter-2 {
+  animation-delay: calc(var(--motion-stagger) * 1);
+}
+.enter-3 {
+  animation-delay: calc(var(--motion-stagger) * 2);
+}
+.enter-4 {
+  animation-delay: calc(var(--motion-stagger) * 3);
+}
+
+/* ---- Albania Travel's authored motion (Stage 7) -------------------------
+   sunny-fresh-honest's reveal is MASK-GROW, not the template fade: "Arched
+   images reveal by their rounded-top mask growing from 92% to full height
+   while the image fades; text does a plain 10px fade-up alongside." The
+   text half is carried by .reveal itself (distance token = 10px); this is
+   the image half. Applied to ONE lead image per section (the language's
+   arch-open signature is once per section), inside a .reveal root.
+
+   These belong to this client (Hard Rule 12/13): the mechanism reads its
+   speeds from the tokens, but the mask-grow idea is the brand's. */
+.reveal .arch-reveal {
+  clip-path: inset(8% 0 0 0 round 999px 999px var(--radius-md) var(--radius-md));
+  opacity: 0.35;
+  transition:
+    clip-path var(--motion-slow) var(--motion-ease),
+    opacity var(--motion-slow) var(--motion-ease);
+  transition-delay: calc(min(var(--i, 0), 6) * var(--motion-stagger));
+}
+.reveal-visible .arch-reveal {
+  clip-path: inset(0 0 0 0 round 999px 999px var(--radius-md) var(--radius-md));
+  opacity: 1;
+}
+
+/* The hero's copy of the same move, as a load entrance: the hero never
+   scroll-reveals, so its lead arch opens on paint with no observer. */
+@keyframes arch-open {
+  from {
+    clip-path: inset(8% 0 0 0 round 999px 999px var(--radius-md) var(--radius-md));
+    opacity: 0.35;
+  }
+  to {
+    clip-path: inset(0 0 0 0 round 999px 999px var(--radius-md) var(--radius-md));
+    opacity: 1;
+  }
+}
+.enter-arch {
+  animation: arch-open var(--motion-slow) var(--motion-ease) both;
+}
+
+/* Interaction feedback, layer 3: a real focus ring on every interactive
+   element, never colour alone. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 2px;
+}
+
+/* ---- The accessibility guarantee --------------------------------------
+   One block, covering every mechanism above. It must stay complete: any
+   @keyframes, transition or transform added to this layer in a later stage
+   gets a line here in the same commit, not "later".
+
+   Note it kills the STAGGER DELAYS as well as the movement. Zeroing the
+   transition but leaving a 480ms delay in place would produce content that
+   simply appears late for no visible reason, which is a worse experience
+   than the animation was. Same for `animation: none` on the entrance: the
+   `both` fill mode means a cancelled animation must not leave the element
+   stuck at its `from` state, and `animation: none` resets that cleanly. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0ms;
+  }
+
+  .enter,
+  .enter-2,
+  .enter-3,
+  .enter-4,
+  .enter-arch {
+    animation: none;
+    animation-delay: 0ms;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* The authored mask-grow reveal and its hero entrance twin: fully open,
+     no clip, no delay, same guarantee as everything above. */
+  .reveal .arch-reveal,
+  .reveal-visible .arch-reveal,
+  .enter-arch {
+    clip-path: inset(0 0 0 0 round 999px 999px var(--radius-md) var(--radius-md));
+    opacity: 1;
+    transition: none;
+    transition-delay: 0ms;
+  }
+}

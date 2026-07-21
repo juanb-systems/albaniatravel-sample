@@ -1,0 +1,114 @@
+---
+import type { RegionAtlasBlock, Place } from '../../lib/types'
+import { mediaUrl } from '../../lib/content'
+import { bgClass } from '../../lib/backgrounds'
+import Eyebrow from '../ui/Eyebrow.astro'
+
+const { variant, background, eyebrow, heading, intro, places, regionIntros, moreLink } = Astro.props as RegionAtlasBlock
+
+// The destination atlas: the client's thirty-plus described places, curated
+// and grouped the way travellers think about a country. Every blurb condenses
+// the client's own published description (contentGuardrails). Places without
+// a usable harvested image render as typographic entries on the sage tint,
+// never as stock substitutes (Hard Rule 7 / 14).
+//
+// The arch crop is the language's recurring shape and it keeps its proportion
+// at 390px rather than flattening (language Mobile section), which is why the
+// sampler stays 2-up on phones instead of stacking to 1-up.
+
+const srcsetFor = (m: { url: string; width?: number }) =>
+  m.width && m.width > 1000
+    ? `${mediaUrl(m.url)} ${m.width}w, ${mediaUrl(m.url.replace(/\.jpg$/, '.w900.jpg'))} 900w`
+    : undefined
+
+const REGION_ORDER = ['The coast', 'The mountains', 'Living history', 'Cities and lakes']
+const regions = REGION_ORDER.map((region) => ({
+  region,
+  places: places.filter((p) => p.region === region),
+})).filter((r) => r.places.length > 0)
+---
+
+<section class={`${bgClass(background)} reveal`}>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+    {(eyebrow || heading || intro) && (
+      <div class="max-w-2xl">
+        <Eyebrow text={eyebrow} />
+        {heading && <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-secondary text-balance">{heading}</h2>}
+        {intro && <p class="mt-4 text-brand-text-muted">{intro}</p>}
+      </div>
+    )}
+
+    {variant === 'sampler' && (
+      <>
+        <div class="mt-10 md:mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          {places.map((place, i) => (
+            <figure class="reveal" style={`--i:${i}`}>
+              {place.image ? (
+                <img
+                  src={mediaUrl(place.image.url)}
+                  alt={place.image.alt}
+                  class={`arch ${i === 0 ? "arch-reveal " : ""}w-full object-cover aspect-[3/4] shadow-brand-card`}
+                  srcset={srcsetFor(place.image)}
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <div class="arch w-full aspect-[3/4] bg-brand-primary-soft flex items-end p-4">
+                  <span class="text-sm text-brand-text-muted">{place.region}</span>
+                </div>
+              )}
+              <figcaption class="mt-3 px-1">
+                <p class="font-heading text-lg font-bold text-brand-secondary leading-snug">{place.name}</p>
+                <p class="mt-0.5 text-xs font-bold text-brand-accent-strong">{place.region}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        {moreLink && (
+          <p class="mt-10 text-center">
+            <a href={moreLink.url} class="text-sm font-bold text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{moreLink.label}</a>
+          </p>
+        )}
+      </>
+    )}
+
+    {variant === 'by-region' && (
+      <div class="mt-4 space-y-16 md:space-y-20">
+        {regions.map(({ region, places: regionPlaces }) => (
+          <div class="reveal">
+            <div class="max-w-2xl">
+              <h3 class="font-heading text-xl sm:text-2xl font-bold text-brand-primary">{region}</h3>
+              {regionIntros?.[region] && <p class="mt-2 text-brand-text-muted">{regionIntros[region]}</p>}
+            </div>
+            <div class="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+              {regionPlaces.map((place: Place, i: number) => (
+                <figure class="reveal" style={`--i:${i}`}>
+                  {place.image ? (
+                    <img
+                      src={mediaUrl(place.image.url)}
+                      alt={place.image.alt}
+                      class={`arch ${i === 0 ? "arch-reveal " : ""}w-full object-cover aspect-[4/5] shadow-brand-card`}
+                      srcset={srcsetFor(place.image)}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div class="arch w-full aspect-[4/5] bg-brand-primary-soft border border-brand-rule-light flex items-center justify-center p-6">
+                      <p class="text-center font-heading text-lg text-brand-primary">No photograph yet, worth the drive anyway</p>
+                    </div>
+                  )}
+                  <figcaption class="mt-4 px-1">
+                    <p class="font-heading text-lg font-bold text-brand-secondary">{place.name}</p>
+                    <p class="mt-1.5 text-sm text-brand-text-muted">{place.blurb}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

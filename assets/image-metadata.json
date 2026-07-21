@@ -1,0 +1,690 @@
+[
+  {
+    "filename": "apollonia-ruins.jpg",
+    "width": 1200,
+    "height": 801,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "400:267",
+    "fileSizeKB": 220,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Monument of Agonothetes at Apollonia: six Corinthian columns and a restored portico in bright daylight, brick-and-stone ruin walls in the foreground, green oaks and a sliver of distant coastal plain behind. Client publishes Apollonia as founded 588 BC.",
+    "confirmedRole": "place-apollonia",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "ardenica-monastery.jpg",
+    "width": 2000,
+    "height": 1333,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "2000:1333",
+    "fileSizeKB": 721,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Two tiers of honey-stone arches at Ardenica Monastery cloister, wrought-iron lanterns, potted plants along the timber gallery rail, cobbled garden path. The arches suit the language's recurring arch crop unusually well.",
+    "confirmedRole": "place-ardenica",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "autumn-mountain-valley.jpg",
+    "width": 1800,
+    "height": 1200,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 443,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Theth valley in autumn: snow-dusted Alps, amber and orange forest, stone church visible mid-valley. CARRIES A THIRD-PARTY WATERMARK (Thethi-guide, bottom right). Not the client's image to reuse.",
+    "confirmedRole": "do-not-use-watermarked",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "berat-old-town.jpg",
+    "width": 2000,
+    "height": 1333,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "2000:1333",
+    "fileSizeKB": 705,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Berat, the town of a thousand windows: tiers of white Ottoman houses stacked up the hillside above the Osum river, pedestrian suspension footbridge with people crossing, minaret at right, pines above.",
+    "confirmedRole": "place-berat",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "blue-eye-spring.jpg",
+    "width": 669,
+    "height": 446,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 137,
+    "suggestedRoles": [
+      "general-content"
+    ],
+    "visualDescription": "The Blue Eye spring: deep sapphire karst pool ringed by vivid green vegetation, small figures of visitors at the top right showing scale. Saturated but photographic.",
+    "confirmedRole": "place-blue-eye",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "bovilla-reservoir.jpg",
+    "width": 1280,
+    "height": 720,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.78,
+    "aspectRatioSimplified": "16:9",
+    "fileSizeKB": 178,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Bovilla reservoir near Tirana: turquoise water winding between green ridges, a lone figure standing on a limestone crag above the lake, switchback track below.",
+    "confirmedRole": "place-bovilla",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "butrint-theatre.jpg",
+    "width": 1920,
+    "height": 1282,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "960:641",
+    "fileSizeKB": 652,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "The ancient theatre at Butrint: curved stone seating rows around a timber-decked stage, arched brick niches of the Roman wall at right, dense woodland behind. UNESCO site the client describes at length.",
+    "confirmedRole": "place-butrint",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "corfu-town.jpg",
+    "width": 2000,
+    "height": 1147,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.74,
+    "aspectRatioSimplified": "2000:1147",
+    "fileSizeKB": 377,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Corfu old town from the sea walls: Venetian palace facades above the fortress wall, vivid blue channel and mainland mountains behind. The Balkans Explorer route and the Discovery ferry entry both pass through Corfu.",
+    "confirmedRole": "place-corfu",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "dhermi-beach.jpg",
+    "width": 755,
+    "height": 512,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.47,
+    "aspectRatioSimplified": "755:512",
+    "fileSizeKB": 77,
+    "suggestedRoles": [
+      "general-content"
+    ],
+    "visualDescription": "A small pebble cove at Dhermi: rock outcrops dividing clear teal shallows, a handful of umbrellas and sunbeds, boats moored offshore. Modest resolution (755px wide), card use only.",
+    "confirmedRole": "place-dhermi",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "geoff-portrait.jpg",
+    "width": 1391,
+    "height": 2000,
+    "orientation": "portrait",
+    "aspectRatioDecimal": 0.7,
+    "aspectRatioSimplified": "1391:2000",
+    "fileSizeKB": 351,
+    "suggestedRoles": [
+      "team-photo"
+    ],
+    "visualDescription": "Geoff, one of the two Albania Travel ambassadors, sitting relaxed on a limestone rock by pale green water in a navy tee and walking boots, smiling at the camera. The client's own published portrait (alt text \"Geoff S.\" on their site).",
+    "confirmedRole": "portrait-geoff",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "gjipe-beach-aerial.jpg",
+    "width": 1600,
+    "height": 1000,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.6,
+    "aspectRatioSimplified": "8:5",
+    "fileSizeKB": 404,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Gjipe beach from the clifftop: a long empty ribbon of white pebbles between wooded limestone cliffs and a turquoise-to-deep-blue gradient sea, no umbrellas, one or two tiny figures. The client quotes it as recently voted one of the best beaches in the world.",
+    "confirmedRole": "place-gjipe",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "gjirokaster-hillside.jpg",
+    "width": 2000,
+    "height": 1500,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.33,
+    "aspectRatioSimplified": "4:3",
+    "fileSizeKB": 885,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "Gjirokaster spilling down its hillside: stone-roofed Ottoman houses in the foreground, white apartment blocks beyond, the wide Drino valley and layered mountains behind. Punchy teal-and-orange grade, at the saturated end of what the language allows.",
+    "confirmedRole": "place-gjirokaster",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "himara-old-town.jpg",
+    "width": 1200,
+    "height": 800,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 272,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "A cobbled laneway in Himara old town under soft overcast light: rough stone walls, a wooden door, wildflowers, an olive tree, and the arched bell tower of a small chapel. Tactile and quiet.",
+    "confirmedRole": "place-himara",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "karaburun-coast.jpg",
+    "width": 2000,
+    "height": 1125,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.78,
+    "aspectRatioSimplified": "16:9",
+    "fileSizeKB": 377,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Open Ionian water from the Karaburun peninsula boat route: deep blue fading to striped turquoise shallows, a scrubby headland with a few houses at right. Calm, empty, big sky.",
+    "confirmedRole": "place-karaburun",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "komani-lake-gorge.jpg",
+    "width": 2000,
+    "height": 1052,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.9,
+    "aspectRatioSimplified": "500:263",
+    "fileSizeKB": 502,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Lake Komani from the water: steep forested gorge walls on both sides, blue sky with white cloud, the lake threading between rock buttresses toward a distant V. Reads as a fjord.",
+    "confirmedRole": "place-komani-alt",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "komani-lake-reflections.jpg",
+    "width": 1200,
+    "height": 800,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 285,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Glassy green Lake Komani holding a perfect reflection of cloud and mountainside, ridges converging at a distant notch. Still, sunlit and unhurried: the brand's feel-words in one frame.",
+    "confirmedRole": "hero-home",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "korca-cathedral.jpg",
+    "width": 1200,
+    "height": 800,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 354,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Korca from above: the domed Resurrection of Christ cathedral with its twin towers, red-roofed houses, tree-lined boulevard with a statue, apartment blocks and green mountains behind.",
+    "confirmedRole": "place-korca",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "kruja-bazaar.jpg",
+    "width": 1400,
+    "height": 933,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "1400:933",
+    "fileSizeKB": 284,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Kruja's old bazaar: cobbled lane of timber-fronted stalls hung with textiles and crafts, a white minaret and the grey crags of Mount Kruja behind, visitors browsing in bright sun. Identifiable tourists in frame (already public on the client's site).",
+    "confirmedRole": "place-kruja-bazaar",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "kruja-fortress-aerial.jpg",
+    "width": 2000,
+    "height": 1125,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.78,
+    "aspectRatioSimplified": "16:9",
+    "fileSizeKB": 684,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Aerial of a walled hilltop fortress with a red-roofed restored building inside and a mosque on the neighbouring hill. The client uses this frame for BOTH the \"south towards Kruja\" stop and the \"Decan Monastery and Prizren\" stop, and it most resembles Prizren fortress; do not caption it with a specific place name without client confirmation.",
+    "confirmedRole": "route-fortress-aerial",
+    "confidence": "low",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "ksamil-beaches-aerial.jpg",
+    "width": 1024,
+    "height": 633,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.62,
+    "aspectRatioSimplified": "1024:633",
+    "fileSizeKB": 154,
+    "suggestedRoles": [
+      "general-content"
+    ],
+    "visualDescription": "Ksamil bay from the air in high season: horseshoe of white sand packed with umbrellas, swimmers in a turquoise lagoon, the wooded islets offshore. Abundant and busy; honest about summer crowds.",
+    "confirmedRole": "place-ksamil",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "mountain-ridge-view.jpg",
+    "width": 1600,
+    "height": 902,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.77,
+    "aspectRatioSimplified": "800:451",
+    "fileSizeKB": 289,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "The Accursed Mountains: jagged grey peaks streaked with late snow above a rolling beech forest canopy. CARRIES THE OPERATOR'S WATERMARK (a wander logo, top right). Usable only with a crop that removes the top-right corner, and credited to Wander Albania.",
+    "confirmedRole": "usable-with-crop-wander-watermark",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "ohrid-lakeside.jpg",
+    "width": 2000,
+    "height": 1333,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "2000:1333",
+    "fileSizeKB": 618,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "The Bay of Bones museum on Lake Ohrid: a reconstructed prehistoric stilt village on a timber platform over clear teal water, autumn trees framing it, mountains across the lake. Photographed on the North Macedonian shore, visited on the Balkans route.",
+    "confirmedRole": "place-ohrid",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "old-bazaar-street.jpg",
+    "width": 1400,
+    "height": 1050,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.33,
+    "aspectRatioSimplified": "4:3",
+    "fileSizeKB": 373,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "Gjirokaster's bazaar crossroads: whitewashed stone mansions, carpet and craft shops with rugs hung outside, EU-star decorations strung overhead, a bride crossing the cobbles mid-frame, mountains at the end of the street. Lively and real.",
+    "confirmedRole": "place-gjirokaster-bazaar",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "osumi-canyon.jpg",
+    "width": 1200,
+    "height": 800,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 275,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Osumi canyon near Berat: layered ochre-and-grey cliff walls dropping to an emerald river over pale boulders, scrub oaks clinging to the ledges. The client calls it the Colorado of Albania.",
+    "confirmedRole": "place-osumi",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "ottoman-town-houses.jpg",
+    "width": 1400,
+    "height": 1867,
+    "orientation": "portrait",
+    "aspectRatioDecimal": 0.75,
+    "aspectRatioSimplified": "1400:1867",
+    "fileSizeKB": 694,
+    "suggestedRoles": [
+      "team-photo"
+    ],
+    "visualDescription": "Berat's Gorica bank in portrait: white-and-stone Ottoman houses with tiled roofs stacked above the renewed riverside promenade, cafe tables below, olive branches in the foreground. Portrait orientation suits a side-by-side text block.",
+    "confirmedRole": "image-with-text-berat",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "petrela-castle.jpg",
+    "width": 1200,
+    "height": 888,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.35,
+    "aspectRatioSimplified": "50:37",
+    "fileSizeKB": 271,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "Petrela castle: a small stone tower on a rocky crag above olive woods, a red-shuttered house on the terrace below, big blue sky with streaked cloud. On the road south from Tirana.",
+    "confirmedRole": "place-petrela",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "pogradec-waterfront.jpg",
+    "width": 1920,
+    "height": 1097,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.75,
+    "aspectRatioSimplified": "1920:1097",
+    "fileSizeKB": 307,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Pogradec waterfront rendered with melted window lines, plastic textures and impossible reflections: reads as an AI-generated or heavily AI-upscaled render, not a photograph. Excluded from use on a brand built on honesty.",
+    "confirmedRole": "do-not-use-ai-suspect",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "prespa-lake.jpg",
+    "width": 1200,
+    "height": 800,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 274,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Lake Prespa: the rocky islet of Maligrad offshore, wind-brushed deep blue water, patchwork farm fields and a small lakeside cemetery in the foreground, layered blue hills beyond.",
+    "confirmedRole": "place-prespa",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "riviera-beach-umbrellas.jpg",
+    "width": 2000,
+    "height": 1333,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "2000:1333",
+    "fileSizeKB": 448,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "An organised Riviera beach (Dhermi/Drymades stretch) in morning sun: rows of straw umbrellas and blue loungers, white pebbles, flat turquoise water and a green headland. Filename on the client's site claimed Gjipe; it is not Gjipe.",
+    "confirmedRole": "place-riviera-organised",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "riviera-gorge-swimmer.jpg",
+    "width": 1893,
+    "height": 1500,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.26,
+    "aspectRatioSimplified": "631:500",
+    "fileSizeKB": 810,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "A swimmer wading into a turquoise pool between sheer canyon walls (Shala river register). CARRIES A THIRD-PARTY WATERMARK (alpventurer, bottom right). Not the client's image to reuse.",
+    "confirmedRole": "do-not-use-watermarked",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "rozafa-castle.jpg",
+    "width": 900,
+    "height": 600,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "3:2",
+    "fileSizeKB": 156,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "Rozafa castle above Shkodra: drone view over the curved stone ramparts with an Albanian flag flying, the green plain, river and distant Alps beyond.",
+    "confirmedRole": "place-rozafa",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "rugova-canyon.jpg",
+    "width": 900,
+    "height": 500,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.8,
+    "aspectRatioSimplified": "9:5",
+    "fileSizeKB": 105,
+    "suggestedRoles": [
+      "general-content"
+    ],
+    "visualDescription": "Rugova canyon in Kosovo: steep green forested slopes rising to a snow-streaked peak, a lichened limestone outcrop in the foreground. Small source file (900px), card use only.",
+    "confirmedRole": "place-rugova",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "saranda-bay.jpg",
+    "width": 2000,
+    "height": 1212,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.65,
+    "aspectRatioSimplified": "500:303",
+    "fileSizeKB": 624,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Saranda's horseshoe bay from the promenade: pebble shore and clear shallows in the foreground, palm-lined walkway, the white town climbing the twin hills behind.",
+    "confirmedRole": "place-saranda",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "shkoder-city.jpg",
+    "width": 800,
+    "height": 533,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "800:533",
+    "fileSizeKB": 120,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "Shkodra from Rozafa hill: red-roofed sprawl of the university town on its plain, the wall of the Albanian Alps rising sheer behind.",
+    "confirmedRole": "place-shkoder",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "skopje-square.jpg",
+    "width": 2000,
+    "height": 1732,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.15,
+    "aspectRatioSimplified": "500:433",
+    "fileSizeKB": 673,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "Skopje's Macedonia Square at night under a storm sky: the equestrian Warrior fountain lit against dramatic clouds. A real Balkans Explorer stop, but a night image in a design language that requires daylight; kept for reference, not composed.",
+    "confirmedRole": "unused-night-conflicts-language",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "theth-valley-church.jpg",
+    "width": 2000,
+    "height": 1500,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.33,
+    "aspectRatioSimplified": "4:3",
+    "fileSizeKB": 493,
+    "suggestedRoles": [
+      "image-with-text"
+    ],
+    "visualDescription": "The stone church of Theth: shingled conical apse roof and bell tower with a cross, a big lime tree beside it, meadow in the foreground and the grey crags of the Accursed Mountains behind, Albanian flag at the fence line.",
+    "confirmedRole": "place-theth",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "tirana-skanderbeg-square.jpg",
+    "width": 2000,
+    "height": 1326,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.51,
+    "aspectRatioSimplified": "1000:663",
+    "fileSizeKB": 424,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Skanderbeg Square, Tirana, on film-toned colour: the vast pale plaza with walkers crossing, the opera house, Et'hem Bej mosque tower, cedars and the patterned TID tower behind.",
+    "confirmedRole": "place-tirana",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "tirana-skyline.jpg",
+    "width": 2000,
+    "height": 1123,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.78,
+    "aspectRatioSimplified": "2000:1123",
+    "fileSizeKB": 395,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Tirana at golden hour from above: the Grand Park treeline, pastel towers, mosaic of rooftops running to the Dajti range. Shot through glass with faint reflections at the upper right; usable below hero size.",
+    "confirmedRole": "place-tirana-alt",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "travellers-saranda-harbour.jpg",
+    "width": 1333,
+    "height": 2000,
+    "orientation": "portrait",
+    "aspectRatioDecimal": 0.67,
+    "aspectRatioSimplified": "1333:2000",
+    "fileSizeKB": 395,
+    "suggestedRoles": [
+      "general-content"
+    ],
+    "visualDescription": "Two grey-haired travellers sitting on the warm stone promenade wall at Saranda, mid-conversation, a moored yacht and the white hillside town soft-focused across flat blue water. Unhurried, genuine, exactly the buyer this site addresses. From the client's own Why Albania page.",
+    "confirmedRole": "travellers-lifestyle",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "valbona-valley.jpg",
+    "width": 1920,
+    "height": 1272,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.51,
+    "aspectRatioSimplified": "80:53",
+    "fileSizeKB": 401,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "Valbona valley from the Valbona pass: the braided white river bed threading a green glacial valley walled by the peaks of the Accursed Mountains, cumulus stacked above.",
+    "confirmedRole": "hero-places",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "vjosa-river-canyon.jpg",
+    "width": 2000,
+    "height": 1333,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.5,
+    "aspectRatioSimplified": "2000:1333",
+    "fileSizeKB": 780,
+    "suggestedRoles": [
+      "hero",
+      "image-with-text"
+    ],
+    "visualDescription": "The turquoise Vjosa near Permet: spring waterfalls streaming down a green bank below a terrace restaurant, rock shelves in the foreground, forested slopes behind. One of Europe's last wild rivers, in the client's words.",
+    "confirmedRole": "place-vjosa",
+    "confidence": "high",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  },
+  {
+    "filename": "voskopoja-village.jpg",
+    "width": 1280,
+    "height": 720,
+    "orientation": "landscape",
+    "aspectRatioDecimal": 1.78,
+    "aspectRatioSimplified": "16:9",
+    "fileSizeKB": 352,
+    "suggestedRoles": [
+      "hero"
+    ],
+    "visualDescription": "Voskopoja from the air in autumn: the walled church of St Nicholas with its arcaded bell tower in the foreground meadow, the village's red roofs and bare hills behind. The client notes the Balkans' first printing press was here.",
+    "confirmedRole": "place-voskopoja",
+    "confidence": "medium",
+    "source": "albania-travel.com.au (client site harvest 2026-07-21, see assets/IMAGE-CREDITS.md)"
+  }
+]

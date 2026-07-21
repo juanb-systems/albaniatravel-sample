@@ -78,7 +78,7 @@ const regions = REGION_ORDER.map((region) => ({
         {regions.map(({ region, places: regionPlaces }) => (
           <div class="reveal">
             <div class="max-w-2xl">
-              <h3 class="font-heading text-xl sm:text-2xl font-bold text-brand-primary">{region}</h3>
+              <h2 class="font-heading text-xl sm:text-2xl font-bold text-brand-primary">{region}</h2>
               {regionIntros?.[region] && <p class="mt-2 text-brand-text-muted">{regionIntros[region]}</p>}
             </div>
             <div class="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">

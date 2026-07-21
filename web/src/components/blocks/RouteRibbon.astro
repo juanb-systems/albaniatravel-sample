@@ -68,7 +68,7 @@ const euro = (n: number) => `€${n.toLocaleString('en-AU')}`
             <div class="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-14">
               <div>
                 <p class="text-sm font-bold text-brand-accent-strong">{tour.style}</p>
-                <h3 class="mt-1 font-heading text-2xl sm:text-3xl font-bold text-brand-secondary">{tour.name}</h3>
+                <h2 class="mt-1 font-heading text-2xl sm:text-3xl font-bold text-brand-secondary">{tour.name}</h2>
                 <p class="mt-2 text-brand-text-muted">{tour.days} days, {tour.nights} nights &middot; from {euro(tour.priceFromEUR)} per person, twin share</p>
                 {tour.countries.length > 1 && (
                   <p class="mt-2 flex flex-wrap gap-2">
@@ -96,7 +96,7 @@ const euro = (n: number) => `€${n.toLocaleString('en-AU')}`
 
               <aside class="lg:pt-16">
                 <div class="rounded-brand-md bg-brand-surface shadow-brand-card p-6">
-                  <h4 class="font-heading text-lg font-bold text-brand-secondary">Three ways to take it</h4>
+                  <h3 class="font-heading text-lg font-bold text-brand-secondary">Three ways to take it</h3>
                   <ul class="mt-4 space-y-4">
                     {tour.priceTiers.map((tier) => (
                       <li class="border-b border-brand-rule-light pb-4 last:border-0 last:pb-0">

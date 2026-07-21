@@ -69,8 +69,10 @@ const tel = (phone: string) => `tel:${phone.replace(/\s+/g, '')}`
       </summary>
       <div class="absolute right-0 top-full mt-3 w-72 rounded-brand-md bg-brand-surface shadow-brand-card border border-brand-rule-light p-5 flex flex-col gap-4">
         <nav class="flex flex-col gap-1 text-sm font-bold">
+          {/* py-3 measured: py-2.5 rendered these rows at 40px, under the
+              44px touch minimum. Measured again at 45px after the change. */}
           {navigation.header?.map((link) => (
-            <a href={link.url} class="py-2.5 text-brand-secondary hover:text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{link.label}</a>
+            <a href={link.url} class="py-3 text-brand-secondary hover:text-brand-accent-strong hover:underline underline-offset-4 transition-colors duration-(--motion-fast) ease-brand">{link.label}</a>
           ))}
         </nav>
         {siteSettings.contact?.people?.length && (

@@ -1,21 +1,21 @@
 {
-  "reviewedDate": "Guidance reviewed July 2026, from the client's own published advice",
+  "reviewedDate": "Guidance reviewed July 2026",
   "seasons": [
     {
       "period": "May to mid-July",
-      "note": "The client's first pick: warm, long days before the peak heat arrives, with the coast and the mountain passes both open.",
+      "note": "Our first pick: warm, long days before the peak heat arrives, with the coast and the mountain passes both open.",
       "bestFor": "The whole country in one trip",
       "order": 1
     },
     {
       "period": "Mid-July and August",
-      "note": "High summer. Hot, crowded on the Riviera, and the traffic can be heavy: their own travellers suggest going earlier or later in the year.",
+      "note": "High summer. Hot, crowded on the Riviera, and the traffic can be heavy: our own travellers suggest going earlier or later in the year.",
       "bestFor": "Beach-first trips, booked early",
       "order": 2
     },
     {
       "period": "September to October",
-      "note": "The client's second pick: the sea still warm, the towns quieter, and the hills at their best for walking.",
+      "note": "Our second pick: the sea still warm, the towns quieter, and the hills at their best for walking.",
       "bestFor": "Unhurried touring and hiking",
       "order": 3
     }

@@ -11,7 +11,7 @@
         "heading": "Albania, while it still feels like a secret",
         "subheading": "Private, unhurried tours of Europe's most underrated country: shaped with two Australians who know it, run by the local operator they partner with, and priced without the middlemen.",
         "image": "komani-lake-reflections.jpg",
-        "primaryButton": { "label": "See the three tour shapes", "url": "/tours" },
+        "primaryButton": { "label": "See the three tours", "url": "/tours" },
         "secondaryButton": { "label": "Talk to Geoff or James", "url": "/contact" }
       },
       {
@@ -20,7 +20,7 @@
         "background": "surface",
         "eyebrow": "The evidence",
         "heading": "Worth flying across the world for",
-        "intro": "Most Australians cannot picture Albania yet. That is rather the point. A sample, from the client's own destination library:",
+        "intro": "Most Australians cannot picture Albania yet. That is rather the point. A sample of the places these tours actually visit:",
         "places": ["Gjipe", "Theth", "Berat", "Lake Komani", "Ksamil", "Gjirokastra", "Valbona", "Tirana"],
         "moreLink": { "label": "See all the places", "url": "/places" }
       },
@@ -30,7 +30,7 @@
         "background": "neutral",
         "eyebrow": "The tours",
         "heading": "Three shapes to start from",
-        "intro": "Every tour is private and every itinerary is yours to change. These are the three starting shapes, with honest from-prices at the local operator's rates."
+        "intro": "Every tour is private and every itinerary is yours to change. These are the three starting shapes, with honest from-prices straight from the operator in Tirana."
       },
       {
         "blockType": "provenanceList",
@@ -120,7 +120,7 @@
         "variant": "image-full",
         "eyebrow": "The places",
         "heading": "Is Albania actually worth nine days?",
-        "subheading": "An atlas of the coast, the mountains and the living history the tours are built around. Every description condenses the client's own destination writing.",
+        "subheading": "An atlas of the coast, the mountains and the living history the tours are built around.",
         "image": "valbona-valley.jpg"
       },
       {
@@ -160,7 +160,7 @@
         "variant": "type-only",
         "eyebrow": "The practical part",
         "heading": "Answers to the questions you were about to ask",
-        "subheading": "When to go, how to get there, and the client's own published answers on money, safety and the rest. Kept plain on purpose."
+        "subheading": "When to go, how to get there, and plain answers on money, safety and visas. Kept short on purpose."
       },
       {
         "blockType": "whenToGo",
@@ -181,7 +181,7 @@
       {
         "blockType": "faq",
         "background": "surface",
-        "eyebrow": "The client's own answers",
+        "eyebrow": "Asked on every trip",
         "heading": "Practical questions, answered plainly",
         "groups": [
           {
@@ -197,7 +197,7 @@
             "items": [
               { "question": "Is Albania safe for travellers?", "answer": "Comparable to other European countries. Motorways are safe; mountain roads want the caution mountain roads always want. Drug laws are strict and penalties can be severe." },
               { "question": "What about doctors and hospitals?", "answer": "Modern facilities exist in the built-up areas, and travel insurance is essential. One reviewed trip involved a traveller falling ill; the guide arranged private hospital treatment and transport to rejoin the group." },
-              { "question": "Any jabs?", "answer": "The client's published guidance recommends tetanus, hepatitis A and B, rubella and tick-borne encephalitis vaccinations. Confirm with your GP." },
+              { "question": "Any jabs?", "answer": "The recommended vaccinations for Albania are tetanus, hepatitis A and B, rubella and tick-borne encephalitis. Confirm with your GP." },
               { "question": "Can we drink the tap water?", "answer": "It is safe, but bottled water is recommended." }
             ]
           },
@@ -205,7 +205,7 @@
             "title": "Culture and language",
             "items": [
               { "question": "Will anyone speak English?", "answer": "The language is Albanian and many people speak English, especially anywhere touristed. Locals are generally very friendly and helpful toward visitors." },
-              { "question": "What should we know culturally?", "answer": "Albania is a secular country where a relaxed Islam, Christianity and no religion at all coexist comfortably. LGBTQ+ travel is legal, though the client notes public attitudes remain conservative." },
+              { "question": "What should we know culturally?", "answer": "Albania is a secular country where a relaxed Islam, Christianity and no religion at all coexist comfortably. LGBTQ+ travel is legal, though public attitudes remain conservative." },
               { "question": "What is raki?", "answer": "The national drink, offered everywhere and entirely optional. Alcohol is legal and widely available." }
             ]
           },
@@ -214,7 +214,7 @@
             "items": [
               { "question": "Power plugs?", "answer": "230 volts, 50Hz, type C and F sockets: pack a European adaptor." },
               { "question": "How good is the walking?", "answer": "Excellent, on both signed and unmarked routes, and the trekking in the north is highly rewarding. The tours fold day walks in wherever you want them." },
-              { "question": "Can we camp wild?", "answer": "Prohibited by law but not strictly enforced, per the client's own guidance. The tours use hotels and guest houses throughout." }
+              { "question": "Can we camp wild?", "answer": "Prohibited by law, though not strictly enforced. The tours use hotels and guest houses throughout." }
             ]
           }
         ]
@@ -231,7 +231,7 @@
         "variant": "split-founding",
         "eyebrow": "Why this exists",
         "heading": "Albania Travel was established to minimise the number of third parties extracting payments from Australians booking to travel to Albania.",
-        "subheading": "That sentence is the client's own, and it is the whole business model. Here is what it means in practice.",
+        "subheading": "That sentence is the whole business model. Here is what it means in practice.",
         "image": "travellers-saranda-harbour.jpg"
       },
       {
@@ -256,7 +256,7 @@
         "background": "surface",
         "eyebrow": "In their words",
         "heading": "Five real reviews, uncut and unrotated",
-        "intro": "Published by the client, shown in full rather than trimmed into a carousel. The guides named are real people."
+        "intro": "All five, in full. The guides named in them are real people."
       },
       {
         "blockType": "personCta",
@@ -292,7 +292,7 @@
         "blockType": "routeRibbon",
         "variant": "strip",
         "background": "neutral",
-        "heading": "The three shapes, for reference"
+        "heading": "The three tours, for reference"
       }
     ]
   }

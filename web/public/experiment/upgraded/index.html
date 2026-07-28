@@ -41,8 +41,8 @@
   header.bar{position:sticky;top:0;z-index:40;background:rgba(251,248,241,.82);
     backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--rule)}
   .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brandmark{display:flex;align-items:center;gap:.55rem;font-family:var(--serif);font-weight:800;
-    font-size:1.15rem;letter-spacing:.01em;color:var(--primary)}
+  .brandmark{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+  .brandmark .logo{height:30px;width:auto;display:block}
   .brandmark .pin{width:22px;height:22px;color:var(--accent)}
   nav.main{display:flex;gap:1.6rem;align-items:center;font-weight:600;font-size:.94rem}
   nav.main a{text-decoration:none;color:var(--text);opacity:.82}
@@ -212,6 +212,15 @@
   .final-actions{display:flex;flex-direction:column;gap:.8rem}
   @media(max-width:820px){.final .wrap{grid-template-columns:1fr}}
 
+  .founders-pair{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+  .fp{margin:0;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(30,42,33,.55)}
+  .fp img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .fp figcaption{position:absolute;left:.6rem;bottom:.6rem;background:var(--surface);border-radius:10px;
+    padding:.34rem .6rem;font-weight:700;color:var(--primary);font-size:.76rem;box-shadow:0 10px 22px -14px rgba(30,42,33,.55)}
+  .fp--placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:3/4;
+    background:linear-gradient(160deg,var(--primary-soft),var(--accent-tint));border:1px dashed var(--border);box-shadow:none}
+  .fp--placeholder .fp__mono{font-family:var(--serif);font-weight:800;font-size:clamp(3rem,7vw,4.5rem);color:var(--primary);opacity:.5;line-height:1}
+  .fp--placeholder figcaption{position:static;background:transparent;box-shadow:none;margin-top:.7rem;color:var(--muted);font-weight:600;font-size:.74rem}
   footer.foot{background:var(--secondary);color:var(--invert-muted);padding:2.4rem 0;font-size:.86rem}
   footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   footer b{color:var(--invert);font-family:var(--serif)}
@@ -224,10 +233,9 @@
 <body>
 <header class="bar">
   <div class="wrap">
-    <div class="brandmark">
-      <svg class="pin" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12A7 7 0 1 0 5 10c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" fill="currentColor"/></svg>
-      Albania Travel
-    </div>
+    <a class="brandmark" href="/" aria-label="Albania Travel home">
+      <img src="img/albania-logo.png" alt="Albania Travel" class="logo">
+    </a>
     <nav class="main">
       <a href="#places">Places</a>
       <a href="#tours">Tours</a>
@@ -388,9 +396,15 @@
 <!-- FOUNDERS + TESTIMONIAL -->
 <section class="section" id="people">
   <div class="wrap people reveal">
-    <div class="portrait">
-      <img src="img/geoff-portrait.jpg" alt="Geoff, co-founder of Albania Travel">
-      <span class="tag">Geoff, in Albania</span>
+    <div class="founders-pair">
+      <figure class="fp">
+        <img src="img/geoff-portrait.jpg" alt="Geoff, co-founder of Albania Travel">
+        <figcaption>Geoff, in Albania</figcaption>
+      </figure>
+      <figure class="fp fp--placeholder">
+        <div class="fp__mono" aria-hidden="true">J</div>
+        <figcaption>James &middot; real photo to come</figcaption>
+      </figure>
     </div>
     <div>
       <span class="eyebrow">The two people</span>
@@ -434,7 +448,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <div><b>Albania Travel</b> · Private tours, planned in Australia</div>
+    <div><img src="img/albania-logo-footer.png" alt="Albania Travel" style="height:26px;width:auto;display:block;margin-bottom:.5rem"><span>Private tours, planned in Australia</span></div>
     <div>Operated on the ground by Wander Albania, Tirana · © 2026</div>
   </div>
 </footer>

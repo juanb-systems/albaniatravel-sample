@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albania Travel: private tours, planned in Australia</title>
+<meta name="description" content="Private, unhurried tours of Albania, shaped by two Australians who know it and run by the local operator they partner with. Honest euro prices, no middlemen, an Australian you can ring.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#2E5B3E; --primary-light:#3F7A55; --secondary:#1E2A21;
+    --accent:#A85A1B; --accent-strong:#8A4A15; --accent-tint:#F6E3C8;
+    --neutral:#F4EDDC; --surface:#FBF8F1; --primary-soft:#E3EDE0;
+    --text:#232E24; --muted:#5A675A; --invert:#F6F3E9; --invert-muted:#C3D0BE;
+    --rule:#DCD2BA; --border:#75816E;
+    --serif:'Alegreya',Georgia,serif; --sans:'Nunito',system-ui,sans-serif; --hand:'Caveat',cursive;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--surface);color:var(--text);font-family:var(--sans);
+    font-size:clamp(1rem,1.05vw,1.0625rem);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.05;margin:0}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+  .eyebrow{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+    font-size:.72rem;color:var(--accent-strong);display:inline-flex;gap:.6rem;align-items:center}
+  .eyebrow::before{content:"";width:1.6rem;height:2px;background:var(--accent);display:inline-block}
+  .hand{font-family:var(--hand);font-size:1.5rem;color:var(--accent-strong);line-height:1}
+
+  /* reveal: robust, only hides once JS has confirmed it will reveal, and a failsafe reveals all */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  html:not(.js) .reveal{opacity:1;transform:none}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- top bar ---------- */
+  header.bar{position:sticky;top:0;z-index:40;background:rgba(251,248,241,.82);
+    backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--rule)}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brandmark{display:flex;align-items:center;gap:.55rem;font-family:var(--serif);font-weight:800;
+    font-size:1.15rem;letter-spacing:.01em;color:var(--primary)}
+  .brandmark .pin{width:22px;height:22px;color:var(--accent)}
+  nav.main{display:flex;gap:1.6rem;align-items:center;font-weight:600;font-size:.94rem}
+  nav.main a{text-decoration:none;color:var(--text);opacity:.82}
+  nav.main a:hover{opacity:1;color:var(--primary)}
+  .call{display:inline-flex;gap:.5rem;align-items:center;background:var(--primary);color:var(--invert);
+    text-decoration:none;font-weight:700;padding:.6rem 1.05rem;border-radius:999px;font-size:.92rem}
+  .call:hover{background:var(--primary-light)}
+  @media(max-width:820px){nav.main{display:none}}
+
+  /* ---------- hero: asymmetric split, oversized headline overlapping arched image ---------- */
+  .hero{position:relative;padding:clamp(2.5rem,6vw,5rem) 0 clamp(3rem,7vw,6rem)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+  .hero-copy .eyebrow{margin-bottom:1.4rem}
+  .hero h1{font-size:clamp(2.7rem,6.4vw,5.4rem);letter-spacing:-.015em}
+  .hero h1 .em{color:var(--primary);font-style:italic;font-weight:800}
+  .hero .lede{font-size:clamp(1.08rem,1.5vw,1.28rem);color:var(--muted);max-width:34ch;margin:1.5rem 0 0}
+  .hero .cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;
+    padding:.85rem 1.4rem;border-radius:999px;font-size:1rem;transition:transform .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:var(--invert)}
+  .btn-primary:hover{background:var(--accent-strong)}
+  .btn-ghost{background:transparent;color:var(--primary);border:1.5px solid var(--border)}
+  .hero-sign{margin-top:1.7rem;display:flex;align-items:baseline;gap:.6rem}
+  .hero-sign .hand{transform:rotate(-3deg)}
+  .hero-sign span{color:var(--muted);font-size:.9rem}
+  .hero-media{position:relative}
+  .hero-media .arch{border-radius:50% 50% 14px 14px/32% 32% 14px 14px;overflow:hidden;
+    box-shadow:0 30px 60px -30px rgba(30,42,33,.5);aspect-ratio:4/5}
+  .hero-media .arch img{width:100%;height:100%;object-fit:cover}
+  .hero-media .cap{position:absolute;right:.7rem;bottom:.7rem;color:#fff;font-size:.72rem;
+    opacity:.9;text-shadow:0 1px 6px rgba(0,0,0,.6);writing-mode:vertical-rl}
+  .hero-media .chip{position:absolute;left:-1.2rem;bottom:2.2rem;background:var(--surface);
+    border:1px solid var(--rule);border-radius:14px;padding:.8rem 1rem;box-shadow:0 16px 30px -20px rgba(30,42,33,.5);max-width:210px}
+  .hero-media .chip b{color:var(--primary);font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+  .hero-media .chip small{color:var(--muted);font-size:.78rem}
+  @media(max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:2rem}
+    .hero-media{order:-1}
+    .hero-media .arch{aspect-ratio:3/3.4;max-width:460px;margin:0 auto}
+    .hero .lede{max-width:none}
+    .hero-media .chip{left:.4rem}
+  }
+
+  /* ---------- place-name index marquee ---------- */
+  .index-strip{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    background:var(--neutral);overflow:hidden;padding:.85rem 0}
+  .marquee{display:flex;gap:2.4rem;white-space:nowrap;width:max-content;animation:slide 34s linear infinite;
+    font-family:var(--serif);font-size:1.2rem;color:var(--primary);align-items:center}
+  .marquee span{opacity:.55}
+  .marquee .dot{color:var(--accent);opacity:1}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.marquee{animation:none}}
+
+  /* ---------- places: asymmetric editorial mosaic ---------- */
+  .section{padding:clamp(3.5rem,7vw,6.5rem) 0}
+  .sec-head{max-width:60ch}
+  .sec-head h2{font-size:clamp(2rem,4vw,3.1rem);margin:1rem 0 .6rem;letter-spacing:-.01em}
+  .sec-head p{color:var(--muted);font-size:1.1rem;margin:0}
+  .mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(.7rem,1.4vw,1.1rem);margin-top:2.6rem}
+  .tile{position:relative;overflow:hidden;border-radius:16px;min-height:200px}
+  .tile img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .9s ease}
+  .tile:hover img{transform:scale(1.06)}
+  .tile::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(30,42,33,0) 34%,rgba(30,42,33,.82) 100%)}
+  .tile .lab{position:absolute;left:1rem;bottom:.85rem;z-index:2;color:#fff;text-shadow:0 1px 8px rgba(20,28,22,.7)}
+  .tile .lab b{font-family:var(--serif);font-size:1.4rem;display:block;line-height:1}
+  .tile .lab small{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;opacity:.9}
+  .tile.arch{border-radius:44% 44% 16px 16px/26% 26% 16px 16px}
+  .t-a{grid-column:span 5;min-height:360px}
+  .t-b{grid-column:span 4;min-height:360px}
+  .t-c{grid-column:span 3;min-height:360px}
+  .t-d{grid-column:span 3}
+  .t-e{grid-column:span 3}
+  .t-f{grid-column:span 3}
+  .t-g{grid-column:span 3}
+  .more{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.8rem;font-weight:700;
+    color:var(--accent-strong);text-decoration:none}
+  .more:hover{gap:.7rem}
+  @media(max-width:820px){
+    .t-a,.t-b,.t-c,.t-d,.t-e,.t-f,.t-g{grid-column:span 6;min-height:240px}
+  }
+
+  /* ---------- tours: lead + two, editorial ---------- */
+  .tours{background:var(--neutral)}
+  .tour-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1rem,2vw,1.6rem);margin-top:2.6rem;align-items:start}
+  .tour{background:var(--surface);border:1px solid var(--rule);border-radius:20px;padding:clamp(1.4rem,2.4vw,2rem);
+    display:flex;flex-direction:column}
+  .tour.lead{background:var(--primary);color:var(--invert);border-color:transparent}
+  .tour .style{font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;color:var(--accent-strong);font-weight:700}
+  .tour.lead .style{color:var(--accent-tint)}
+  .tour h3{font-size:clamp(1.5rem,2.6vw,2.1rem);margin:.5rem 0 .3rem}
+  .tour .meta{font-weight:700;color:var(--primary)}
+  .tour.lead .meta{color:var(--accent-tint)}
+  .tour p{color:var(--muted);margin:.7rem 0 1rem}
+  .tour.lead p{color:var(--invert-muted)}
+  .route{display:flex;flex-wrap:wrap;gap:.35rem .5rem;margin:.3rem 0 1.1rem;font-size:.86rem}
+  .route .stop{display:inline-flex;align-items:center;gap:.4rem;color:var(--text)}
+  .tour.lead .route .stop{color:var(--invert)}
+  .route .stop::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .tiers{border-top:1px dashed var(--rule);margin-top:auto;padding-top:1rem;display:grid;gap:.7rem;font-size:.9rem}
+  .tour.lead .tiers{border-color:rgba(246,243,233,.28)}
+  .tiers .tlabel{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:var(--accent-tint);opacity:.9}
+  .tier{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+  .tier b{font-family:var(--serif);font-size:1.3rem;white-space:nowrap;color:#fff;font-weight:800}
+  .tier b .frm{font-family:var(--sans);font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--accent-tint);margin-right:.35rem;vertical-align:.15em}
+  .tier span{color:var(--invert-muted);text-align:right}
+  .tour.lead .tier span{color:var(--invert-muted)}
+  .tour .go{margin-top:1.1rem;font-weight:700;color:var(--accent-strong);text-decoration:none;display:inline-flex;gap:.4rem}
+  .tour.lead .go{color:var(--accent-tint)}
+  .tour .go:hover{gap:.7rem}
+  .tour-side{display:grid;gap:clamp(1rem,2vw,1.6rem)}
+  @media(max-width:820px){.tour-grid{grid-template-columns:1fr}}
+
+  /* ---------- honesty chain: connected rail ---------- */
+  .chain{background:var(--primary-soft)}
+  .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.4rem;position:relative}
+  .rail::before{content:"";position:absolute;left:2%;right:2%;top:18px;height:2px;
+    background:repeating-linear-gradient(90deg,var(--primary) 0 8px,transparent 8px 16px);opacity:.5}
+  .node{position:relative}
+  .node .dot{width:38px;height:38px;border-radius:50%;background:var(--surface);border:2px solid var(--primary);
+    display:grid;place-items:center;font-family:var(--serif);font-weight:800;color:var(--primary);position:relative;z-index:2}
+  .node.you .dot{background:var(--accent);border-color:var(--accent);color:#fff}
+  .node h4{font-family:var(--serif);font-size:1.2rem;margin:1rem 0 .2rem}
+  .node .where{font-weight:700;color:var(--accent-strong);font-size:.82rem}
+  .node p{color:var(--muted);font-size:.92rem;margin:.35rem 0 0}
+  @media(max-width:820px){.rail{grid-template-columns:1fr 1fr}.rail::before{display:none}}
+
+  /* ---------- full-bleed cinematic moment ---------- */
+  .moment{position:relative;min-height:clamp(360px,52vw,560px);display:grid;place-items:center;text-align:center;
+    color:#fff;overflow:hidden}
+  .moment img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .moment::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,42,33,.35),rgba(30,42,33,.62))}
+  .moment .inner{position:relative;z-index:2;max-width:36ch;padding:2rem}
+  .moment blockquote{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.9rem);line-height:1.18;margin:0;font-weight:700}
+  .moment .src{margin-top:1.2rem;font-size:.86rem;letter-spacing:.06em;opacity:.9}
+
+  /* ---------- founders + testimonial ---------- */
+  .people{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+  .people .portrait{position:relative}
+  .people .portrait img{border-radius:20px;aspect-ratio:4/5;object-fit:cover;width:100%;
+    box-shadow:0 30px 60px -34px rgba(30,42,33,.55)}
+  .people .portrait .tag{position:absolute;left:1rem;bottom:1rem;background:var(--surface);border-radius:12px;
+    padding:.5rem .8rem;font-weight:700;color:var(--primary);box-shadow:0 12px 24px -16px rgba(0,0,0,.5)}
+  .people h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:.8rem}
+  .people .quote{font-family:var(--serif);font-size:1.2rem;line-height:1.5;color:var(--text);border-left:3px solid var(--accent);
+    padding-left:1.1rem;margin:0 0 1.4rem}
+  .people .quote cite{display:block;font-family:var(--sans);font-style:normal;font-weight:700;font-size:.9rem;
+    color:var(--muted);margin-top:.7rem}
+  .cards2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .pcard{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:1.1rem 1.2rem}
+  .pcard .who{font-family:var(--serif);font-weight:800;color:var(--primary);font-size:1.25rem}
+  .pcard .num{font-weight:800;font-size:1.15rem;margin:.2rem 0}
+  .pcard a{color:var(--accent-strong);text-decoration:none;font-size:.86rem;font-weight:600}
+  @media(max-width:820px){.people{grid-template-columns:1fr}.people .portrait img{max-width:360px}}
+
+  /* ---------- final CTA ---------- */
+  .final{background:var(--primary);color:var(--invert)}
+  .final .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;
+    padding-top:clamp(3rem,6vw,5rem);padding-bottom:clamp(3rem,6vw,5rem)}
+  .final h2{font-size:clamp(2rem,4vw,3rem);color:var(--invert)}
+  .final p{color:var(--invert-muted);margin:1rem 0 0;max-width:44ch}
+  .final .hand{color:var(--accent-tint);display:block;margin-top:1.2rem}
+  .final .btn-primary{background:var(--accent-tint);color:var(--secondary)}
+  .final .btn-primary:hover{background:#fff}
+  .final-actions{display:flex;flex-direction:column;gap:.8rem}
+  @media(max-width:820px){.final .wrap{grid-template-columns:1fr}}
+
+  footer.foot{background:var(--secondary);color:var(--invert-muted);padding:2.4rem 0;font-size:.86rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  footer b{color:var(--invert);font-family:var(--serif)}
+
+  /* experiment ribbon */
+  .ribbon{background:var(--secondary);color:var(--invert);text-align:center;font-size:.8rem;padding:.5rem;letter-spacing:.03em}
+  .ribbon a{color:var(--accent-tint)}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <div class="brandmark">
+      <svg class="pin" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12A7 7 0 1 0 5 10c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" fill="currentColor"/></svg>
+      Albania Travel
+    </div>
+    <nav class="main">
+      <a href="#places">Places</a>
+      <a href="#tours">Tours</a>
+      <a href="#chain">How it works</a>
+      <a href="#people">Geoff &amp; James</a>
+    </nav>
+    <a class="call" href="#final">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1Z"/></svg>
+      Call Geoff
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Private tours, planned in Australia</span>
+      <h1>Albania, while it still feels like a <span class="em">secret</span>.</h1>
+      <p class="lede">Private, unhurried tours of Europe's most underrated country, shaped by two Australians who know it, run by the local operator they partner with, and priced without the middlemen.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#tours">See the three tours →</a>
+        <a class="btn btn-ghost" href="#people">Talk to Geoff or James</a>
+      </div>
+      <div class="hero-sign">
+        <span class="hand">from Geoff &amp; James</span>
+        <span>two Australians you can actually ring</span>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="arch"><img src="img/komani-lake-reflections.jpg" alt="The green water of Lake Komani mirroring the gorge walls" loading="eager"></div>
+      <div class="chip"><b>€1,220</b><small>from, per person. The real operator price, straight from Tirana.</small></div>
+      <span class="cap">Lake Komani</span>
+    </div>
+  </div>
+</section>
+
+<!-- INDEX MARQUEE -->
+<div class="index-strip" aria-hidden="true">
+  <div class="marquee">
+    <span>Gjipe</span><b class="dot">·</b><span>Theth</span><b class="dot">·</b><span>Berat</span><b class="dot">·</b><span>Lake Komani</span><b class="dot">·</b><span>Ksamil</span><b class="dot">·</b><span>Gjirokastra</span><b class="dot">·</b><span>Valbona</span><b class="dot">·</b><span>Tirana</span><b class="dot">·</b>
+    <span>Gjipe</span><b class="dot">·</b><span>Theth</span><b class="dot">·</b><span>Berat</span><b class="dot">·</b><span>Lake Komani</span><b class="dot">·</b><span>Ksamil</span><b class="dot">·</b><span>Gjirokastra</span><b class="dot">·</b><span>Valbona</span><b class="dot">·</b><span>Tirana</span><b class="dot">·</b>
+  </div>
+</div>
+
+<!-- PLACES MOSAIC -->
+<section class="section" id="places">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The evidence</span>
+      <h2>Worth flying across the world for.</h2>
+      <p>Most Australians cannot picture Albania yet. That is rather the point. A sample of the places these tours actually visit.</p>
+    </div>
+    <div class="mosaic reveal">
+      <a class="tile t-a arch" href="#tours"><img src="img/gjipe-beach-aerial.jpg" alt="Gjipe beach from the air"><span class="lab"><b>Gjipe</b><small>The coast</small></span></a>
+      <a class="tile t-b" href="#tours"><img src="img/komani-lake-gorge.jpg" alt="Lake Komani gorge"><span class="lab"><b>Lake Komani</b><small>The mountains</small></span></a>
+      <a class="tile t-c" href="#tours"><img src="img/berat-old-town.jpg" alt="Berat old town"><span class="lab"><b>Berat</b><small>Living history</small></span></a>
+      <a class="tile t-d" href="#tours"><img src="img/theth-valley-church.jpg" alt="Theth valley church"><span class="lab"><b>Theth</b><small>The mountains</small></span></a>
+      <a class="tile t-e" href="#tours"><img src="img/ksamil-beaches-aerial.jpg" alt="Ksamil islands"><span class="lab"><b>Ksamil</b><small>The coast</small></span></a>
+      <a class="tile t-f" href="#tours"><img src="img/gjirokaster-hillside.jpg" alt="Gjirokastra hillside"><span class="lab"><b>Gjirokastra</b><small>Living history</small></span></a>
+      <a class="tile t-g" href="#tours"><img src="img/valbona-valley.jpg" alt="Valbona valley"><span class="lab"><b>Valbona</b><small>The mountains</small></span></a>
+    </div>
+    <a class="more" href="#tours">See all the places →</a>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="section tours" id="tours">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The tours</span>
+      <h2>Three shapes to start from.</h2>
+      <p>Every tour is private and every itinerary is yours to change. These are the three starting shapes, with honest from-prices straight from the operator in Tirana.</p>
+    </div>
+    <div class="tour-grid reveal">
+      <article class="tour lead">
+        <span class="style">9-day leisurely cultural private tour</span>
+        <h3>Albania Highlights</h3>
+        <div class="meta">9 days, 8 nights · from €1,220 pp</div>
+        <p>A relaxed north-to-south loop for travellers who want to see as much of Albania as nine days allows: the Alps, the castles, the winery table, the boat day and the Riviera, ending in Tirana.</p>
+        <div class="route">
+          <span class="stop">Shkodra</span><span class="stop">Lake Komani</span><span class="stop">Valbona</span><span class="stop">Kruja</span><span class="stop">Berat</span><span class="stop">Vlora</span><span class="stop">Riviera</span><span class="stop">Tirana</span>
+        </div>
+        <div class="tiers">
+          <div class="tlabel">Three ways to travel, per person</div>
+          <div class="tier"><b><span class="frm">from</span>€1,220</b><span>Self-drive · 3-star+ half board, vehicle &amp; insurance</span></div>
+          <div class="tier"><b><span class="frm">from</span>€1,970</b><span>With an English-speaking driver-guide</span></div>
+          <div class="tier"><b><span class="frm">from</span>€2,440</b><span>Premium 4–5 star, with driver-guide</span></div>
+        </div>
+        <a class="go" href="#final">See the full route →</a>
+      </article>
+      <div class="tour-side">
+        <article class="tour">
+          <span class="style">9-day unhurried tour, extended stays</span>
+          <h3>Albania Discovery</h3>
+          <div class="meta">9 days, 8 nights · from €1,220 pp</div>
+          <p>The same country at half the pace: multi-night stays in fewer places, each day's excursion chosen on the day. Their word for it is unhurried, and it is the right word.</p>
+          <a class="go" href="#final">See the full route →</a>
+        </article>
+        <article class="tour">
+          <span class="style">14-day regional private tour</span>
+          <h3>Balkans Explorer</h3>
+          <div class="meta">14 days, 13 nights · from €2,740 pp</div>
+          <p>Two weeks across four countries: the Albanian circuit plus Kosovo's monastery towns, Skopje, Lake Ohrid and a ferry day on Corfu. Border crossings handled on an Australian passport.</p>
+          <a class="go" href="#final">See the full route →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONESTY CHAIN -->
+<section class="section chain" id="chain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How it stays honest</span>
+      <h2>Every hand in the chain, named.</h2>
+      <p>The founding idea is simple: fewer hands between you and Albania, and every hand named. This is the whole chain.</p>
+    </div>
+    <div class="rail reveal">
+      <div class="node you">
+        <div class="dot">1</div>
+        <h4>You</h4>
+        <div class="where">Anywhere in Australia</div>
+        <p>Ring or email whenever the idea takes hold. No booking engine in between.</p>
+      </div>
+      <div class="node">
+        <div class="dot">2</div>
+        <h4>Geoff &amp; James</h4>
+        <div class="where">The planning side</div>
+        <p>Two Australians who know the country and do the planning themselves.</p>
+      </div>
+      <div class="node">
+        <div class="dot">3</div>
+        <h4>Wander Albania</h4>
+        <div class="where">Tirana, Albania</div>
+        <p>The local operator who sets the prices and runs every tour on the ground.</p>
+      </div>
+      <div class="node">
+        <div class="dot">4</div>
+        <h4>Your driver-guide</h4>
+        <div class="where">On the road with you</div>
+        <p>Local, English-speaking, and the people the reviews rave about by name.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CINEMATIC MOMENT -->
+<section class="moment reveal">
+  <img src="img/riviera-beach-umbrellas.jpg" alt="A turquoise bay on the Albanian Riviera">
+  <div class="inner">
+    <blockquote>Nine days, and not one of them arranged by a stranger in a call centre.</blockquote>
+    <div class="src">The Albanian Riviera · on the Highlights loop</div>
+  </div>
+</section>
+
+<!-- FOUNDERS + TESTIMONIAL -->
+<section class="section" id="people">
+  <div class="wrap people reveal">
+    <div class="portrait">
+      <img src="img/geoff-portrait.jpg" alt="Geoff, co-founder of Albania Travel">
+      <span class="tag">Geoff, in Albania</span>
+    </div>
+    <div>
+      <span class="eyebrow">The two people</span>
+      <h2>The product is an Australian you can ring.</h2>
+      <blockquote class="quote">
+        “From the beginning, Albania Travel made the planning easy and removed any apprehension about travelling somewhere completely new. Through their local partner Wander Albania, everything was organised seamlessly. What stood out was Ermal, who became much more than a driver. One of the best travel experiences we have had in decades.”
+        <cite>Frances, Ross &amp; Margaret · Australia, group of three, May 2026</cite>
+      </blockquote>
+      <div class="cards2">
+        <div class="pcard">
+          <div class="who">Geoff</div>
+          <div class="num">0432 848 573</div>
+          <a href="mailto:geoff@albania-travel.com.au">geoff@albania-travel.com.au</a>
+        </div>
+        <div class="pcard">
+          <div class="who">James</div>
+          <div class="num">0433 944 603</div>
+          <a href="mailto:james@albania-travel.com.au">james@albania-travel.com.au</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="final">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--accent-tint)">Start with a conversation</span>
+      <h2>No booking engine. No obligation.</h2>
+      <p>Tell Geoff or James what kind of trip you are imagining and they will tell you what it looks like on the ground, and what it honestly costs.</p>
+      <p style="color:var(--invert-muted);font-size:.9rem;margin-top:.6rem">The same two people, start to finish.</p>
+    </div>
+    <div class="final-actions">
+      <a class="btn btn-primary" href="mailto:geoff@albania-travel.com.au">Send an enquiry instead</a>
+      <a class="btn btn-ghost" style="color:var(--invert);border-color:rgba(246,243,233,.4)" href="tel:+61432848573">Call Geoff · 0432 848 573</a>
+      <a class="btn btn-ghost" style="color:var(--invert);border-color:rgba(246,243,233,.4)" href="tel:+61433944603">Call James · 0433 944 603</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><b>Albania Travel</b> · Private tours, planned in Australia</div>
+    <div>Operated on the ground by Wander Albania, Tirana · © 2026</div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function(){
+    var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    function showAll(){ els.forEach(function(e){ e.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+    els.forEach(function(e){
+      var r = e.getBoundingClientRect();
+      if(r.top < window.innerHeight){ e.classList.add('in'); }   // already in view at load
+      else { io.observe(e); }
+    });
+    // failsafe: nothing may ever stay hidden
+    window.addEventListener('load', function(){ setTimeout(showAll, 2500); });
+  })();
+</script>
+</body>
+</html>

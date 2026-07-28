@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albania Travel: does the current build need an upgrade?</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700;800&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#2E5B3E;--primary-light:#3F7A55;--secondary:#1E2A21;--accent:#A85A1B;--accent-strong:#8A4A15;
+    --accent-tint:#F6E3C8;--neutral:#F4EDDC;--surface:#FBF8F1;--primary-soft:#E3EDE0;
+    --text:#232E24;--muted:#5A675A;--invert:#F6F3E9;--invert-muted:#C3D0BE;--rule:#DCD2BA;--border:#75816E;
+    --serif:'Alegreya',Georgia,serif;--sans:'Nunito',system-ui,sans-serif;--hand:'Caveat',cursive;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--surface);color:var(--text);font-family:var(--sans);line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:var(--accent-strong)}
+  h1,h2,h3{font-family:var(--serif);line-height:1.08;margin:0;color:var(--text)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.4rem)}
+  .eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--accent-strong);
+    display:inline-flex;gap:.6rem;align-items:center}
+  .eyebrow::before{content:"";width:1.6rem;height:2px;background:var(--accent)}
+  .hero{padding:clamp(2.5rem,6vw,4.5rem) 0 1.5rem}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);letter-spacing:-.015em;margin:1rem 0 0}
+  .hero h1 em{color:var(--primary);font-weight:800}
+  .hero .sub{color:var(--muted);font-size:1.12rem;max-width:64ch;margin:1.1rem 0 0}
+
+  .verdict{background:var(--primary);color:var(--invert);border-radius:20px;padding:clamp(1.5rem,3vw,2.4rem);
+    margin:2.4rem 0;box-shadow:0 30px 60px -40px rgba(30,42,33,.6)}
+  .verdict h2{color:var(--invert);font-size:1.5rem;margin-bottom:.8rem}
+  .verdict p{color:var(--invert-muted);margin:.6rem 0 0}
+  .verdict b{color:var(--accent-tint)}
+  .verdict .score-line{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.4rem;font-family:var(--serif)}
+  .verdict .score-line div{font-size:1rem;color:var(--invert-muted)}
+  .verdict .score-line b{font-size:2rem;display:block;color:#fff}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin:1rem 0 2rem}
+  .card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+  .card.win{border-color:var(--primary);box-shadow:0 20px 50px -34px rgba(46,91,62,.6)}
+  .card .top{padding:1.2rem 1.3rem .9rem}
+  .tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;padding:.28rem .7rem;border-radius:999px;display:inline-block}
+  .tag.old{background:var(--neutral);color:var(--muted)}
+  .tag.new{background:var(--accent);color:#fff}
+  .card h3{font-size:1.5rem;margin:.7rem 0 .3rem}
+  .card p{color:var(--muted);font-size:.95rem;margin:.3rem 0 0}
+  .shot{border-top:1px solid var(--rule);background:var(--neutral);max-height:460px;overflow:hidden;position:relative}
+  .shot img{width:100%}
+  .shot::after{content:"";position:absolute;inset:auto 0 0 0;height:70px;background:linear-gradient(transparent,var(--neutral))}
+  .card .foot{padding:1rem 1.3rem;display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;font-weight:700;padding:.7rem 1.15rem;
+    border-radius:999px;font-size:.92rem}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-strong)}
+  .muted-note{color:var(--muted);font-size:.85rem}
+
+  .scores{width:100%;border-collapse:collapse;margin:1rem 0 2rem;font-size:.95rem;background:var(--surface);
+    border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+  .scores th,.scores td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--rule)}
+  .scores th{background:var(--neutral);font-family:var(--sans);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .scores td.n{text-align:right;font-family:var(--serif);font-weight:700}
+  .scores tr:last-child td{border-bottom:none;background:var(--primary-soft);font-weight:800}
+  .scores .up{color:var(--primary)}
+
+  .diag{background:var(--neutral);border-radius:16px;padding:clamp(1.3rem,2.5vw,2rem);margin:0 0 2rem}
+  .diag h2{font-size:1.4rem;margin-bottom:.6rem}
+  .diag ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--text)}
+  .diag li{margin:.5rem 0}
+  .diag b{color:var(--primary)}
+  .issues{margin:0 0 2rem}
+  .issue{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--border);border-radius:10px;padding:.8rem 1rem;margin:.6rem 0}
+  .issue.high{border-left-color:#a3341f}.issue.medium{border-left-color:var(--accent)}.issue.low{border-left-color:var(--primary-light)}
+  .issue .sev{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .issue b{display:block;margin:.15rem 0}
+  .hand{font-family:var(--hand);color:var(--accent-strong);font-size:1.5rem}
+  footer{background:var(--secondary);color:var(--invert-muted);padding:2rem 0;font-size:.85rem;margin-top:2rem}
+  @media(max-width:800px){.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Design experiment · Albania Travel home page</span>
+    <h1>Did the current build need an <em>upgrade</em>?</h1>
+    <p class="sub">The current Albania Travel home page was built by the standard workflow: a stack of full-width blocks. I rebuilt the same home on the same real content, photography and brand, but with the layout composed freely. Then an independent art-director review scored both. Here is the before, the after, and the honest verdict.</p>
+
+    <div class="verdict">
+      <h2>The verdict</h2>
+      <div id="verdict-body">
+        <p><b>Yes. The current build needed the upgrade.</b> On identical content, the freeform rebuild scored <b>8/10 against the current build's 6</b> from an independent art-director review. The current build is competent and honest, but it can only stack full-width bands, so it reads as a good template rather than a site made for this business. Freeing the layout is what turns the brand's real weapon (credibility, real photography, two named people you can ring) up to full volume.</p>
+        <p><b>And the current build ships a real bug.</b> Five of its six sections start invisible and only appear once you scroll to them, so on first paint or a fast scroll the page looks half-empty. The upgrade fixes that with a reveal that cannot leave content hidden.</p>
+        <p><b>The review also earned its keep.</b> It caught four things to fix on the upgrade before showing anyone (all now fixed) plus two content-truth details for Geoff to confirm before it ever goes live. That safety pass is exactly what lets the studio stop checking every build by hand.</p>
+      </div>
+      <div class="score-line" id="score-line">
+        <div>Current build<b>6.0</b></div>
+        <div>The upgrade<b>8.0</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cols">
+    <div class="card">
+      <div class="top">
+        <span class="tag old">Current build</span>
+        <h3>The block-stack</h3>
+        <p>Hero, a uniform grid of arched cards, three equal tour cards, a chain band, one quote, a CTA band. Nothing broken by design, but nothing that could only be this business. This is the ceiling James felt stuck under.</p>
+      </div>
+      <div class="shot"><img src="img/current-build.jpg" alt="Current Albania Travel home page, full length"></div>
+      <div class="foot"><a href="/" style="font-weight:700;color:var(--accent-strong);text-decoration:none">Open the live current build &rarr;</a><span class="muted-note">The root of this site.</span></div>
+    </div>
+    <div class="card win">
+      <div class="top">
+        <span class="tag new">The upgrade · live</span>
+        <h3>Freeform, same content</h3>
+        <p>Oversized headline with the real from-price beside it, a place-name index, an asymmetric photo mosaic, a lead tour with its route and price tiers, a connected honesty chain, a full-bleed moment, and Geoff's real portrait. Redesigned for mobile.</p>
+      </div>
+      <div class="shot"><img src="img/upgrade-desktop.jpg" alt="Upgraded Albania Travel home page, full length"></div>
+      <div class="foot">
+        <a class="btn btn-primary" href="/experiment/upgraded/">Open the live upgrade →</a>
+        <span class="muted-note">Scroll it. Real photography, real prices, no invented content.</span>
+      </div>
+    </div>
+  </div>
+
+  <table class="scores" id="scores">
+    <thead><tr><th>Dimension</th><th style="text-align:right">Current</th><th style="text-align:right">Upgrade</th></tr></thead>
+    <tbody id="scores-body">
+      <tr><td>Layout ambition</td><td class="n">5</td><td class="n up">9</td></tr>
+      <tr><td>Typography</td><td class="n">7</td><td class="n up">8</td></tr>
+      <tr><td>Imagery use</td><td class="n">6</td><td class="n up">9</td></tr>
+      <tr><td>Brand fit</td><td class="n">8</td><td class="n up">8</td></tr>
+      <tr><td>Craft / finish</td><td class="n">7</td><td class="n up">8</td></tr>
+      <tr><td>Trust on sight</td><td class="n">7</td><td class="n up">9</td></tr>
+      <tr><td>Overall</td><td class="n">6.0</td><td class="n up">8.0</td></tr>
+    </tbody>
+  </table>
+
+  <div class="diag">
+    <h2>What the current build actually has wrong</h2>
+    <ul>
+      <li><b>The block-stack is the ceiling.</b> Every section is a full-width band stacked vertically, one idea each. It cannot express hierarchy, so the strongest content (the two founders, the honest prices, the destination photography) lands at the same volume as everything else.</li>
+      <li><b>A real reveal bug.</b> The sections are set to invisible until scrolled into view, and the observer does not fire on first paint. On load and on a fast scroll the page shows a hero and then empty space. The upgrade uses a reveal that reveals-then-hides only when it can guarantee the content comes back, plus a failsafe.</li>
+      <li><b>The people are hidden.</b> Geoff and James, the actual product, sit as a small footnote in the chain. The upgrade gives them a section with a real portrait and both direct numbers.</li>
+    </ul>
+  </div>
+
+  <div class="issues">
+    <h2 style="font-size:1.4rem;margin-bottom:.4rem">Honest issues found in the upgrade</h2>
+    <p class="muted-note" style="margin:0 0 .8rem">From the independent review. This is the safety net that replaces checking every build by hand.</p>
+    <div id="issues-body">
+      <div class="issue high"><span class="sev">high · fixed</span><b>An internal “experiment” banner sat at the top of the page.</b>On a brand built on honesty it read as unfinished. Removed from the live upgrade, so it now looks like a real site.</div>
+      <div class="issue high"><span class="sev">high · fixed</span><b>The tour price ladder was easy to misread.</b>The reviewer read it as illogical. The figures were in fact correct and ascending (self-drive €1,220, driver-guide €1,970, premium €2,440, straight from the operator), but if a careful reader misread it, it wasn’t legible enough for a pricing-honesty brand. Now shown large, each marked “from”, unmistakably ascending.</div>
+      <div class="issue medium"><span class="sev">medium · fixed</span><b>The full-bleed photo was captioned “The Albanian Riviera” over a gorge shot.</b>A wrong location is the exact credibility crack this brand can’t afford. Swapped for a true Riviera coastline image.</div>
+      <div class="issue medium"><span class="sev">medium · fixed</span><b>On-photo place labels risked low contrast on the brightest images.</b>Added a stronger gradient scrim and a text shadow so every label stays readable.</div>
+      <div class="issue low"><span class="sev">low · to confirm</span><b>Verify the operator prices before any real launch.</b>The €1,220 hero price and all three tiers should be confirmed as the current Wander Albania from-prices. They come from the build’s own content, but a live public price must be current.</div>
+      <div class="issue low"><span class="sev">low · note</span><b>James has no portrait in the photo library.</b>The founder photo is Geoff (the only real portrait supplied); James is represented by name and direct number. Add a real James photo when there is one. The brand’s rule is genuine photography only, never invented.</div>
+    </div>
+    <p style="margin-top:1.2rem"><span class="hand">built for James, on the same idea we proved on NJ Electrical</span></p>
+  </div>
+</div>
+
+<footer><div class="wrap">Albania Travel design experiment · same content, two layouts · built to test whether the current build needed an upgrade.</div></footer>
+</body>
+</html>
